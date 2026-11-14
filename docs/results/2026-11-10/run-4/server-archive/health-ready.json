@@ -1,0 +1,1 @@
+[{"name" : "deployments-status", "outcome" : true, "data" : [{ "ROOT.war" : "OK" }]},{"name" : "boot-errors", "outcome" : true},{"name" : "suspend-state", "outcome" : true, "data" : [{ "value" : "RUNNING" }]},{"name" : "server-state", "outcome" : true, "data" : [{ "value" : "running" }]},{ "outcome" : true }]

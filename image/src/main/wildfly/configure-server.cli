@@ -1,0 +1,42 @@
+# Runs once at build time against the provisioned server (embedded, offline).
+# Nothing here is executed when a pod starts; the image contains the finished standalone.xml.
+# The ${env.*} expressions are stored as expressions and resolved by WildFly at boot.
+
+# Discovery: a pod network has no multicast. Replace MPING in the tcp stack with DNS_PING,
+# which asks the headless service k8s/service-discovery.yaml for the IP addresses of all pods.
+/subsystem=jgroups/stack=tcp/protocol=MPING:remove()
+/subsystem=jgroups/stack=tcp/protocol=dns.DNS_PING:add(add-index=0, properties={dns_query="${env.JGROUPS_DNS_QUERY}", dns_record_type="A"})
+/subsystem=jgroups/channel=ee:write-attribute(name=stack, value=tcp)
+
+# Topology: the Kubernetes node name (Downward API, spec.nodeName) becomes the JGroups rack.
+# Infinispan then keeps the two copies of a session on pods of different nodes whenever the
+# replicas run on at least two nodes. WildFly 39 to 42 do not pass the "machine" attribute on
+# to Infinispan, "rack" does reach it.
+/subsystem=jgroups/stack=tcp/transport=TCP:write-attribute(name=rack, value="${env.NODE_NAME:unknown}")
+
+# Departed members: UNICAST3 resends unacknowledged messages to a member that has left the view
+# until conn_close_timeout expires (JGroups default: 240 s). Each attempt opens a TCP connection to
+# the address of the removed pod, which no longer answers, and waits sock_conn_timeout (300 ms in
+# WildFly). JGroups 5.5 sends all messages of a member from a single bundler thread, so for those
+# four minutes every cluster message of the replica waits as well. Infinispan's own Kubernetes
+# stack uses 5 s.
+/subsystem=jgroups/stack=tcp/protocol=UNICAST3:write-attribute(name=properties, value={conn_close_timeout=5000})
+
+# Logging: plain text to stdout (no ANSI colours); the container runtime collects it. The logging
+# layer also defines a rotating server.log; it is removed, nothing is written to the file system.
+/subsystem=logging/console-handler=CONSOLE:write-attribute(name=named-formatter, value=PATTERN)
+/subsystem=logging/root-logger=ROOT:remove-handler(name=FILE)
+/subsystem=logging/periodic-rotating-file-handler=FILE:remove()
+
+# TLS: the layers define a key store standalone/configuration/application.keystore with a key manager
+# that creates a self-signed certificate on first use, and an SSL context for it. No HTTPS listener
+# uses them; TLS ends at the ingress. They are removed: the key store file does not exist, and the
+# configuration directory is read-only in the image.
+/subsystem=elytron/server-ssl-context=applicationSSC:remove()
+/subsystem=elytron/key-manager=applicationKM:remove()
+/subsystem=elytron/key-store=applicationKS:remove()
+
+# Deployment: the WAR is part of the image (/opt/server/application/ROOT.war) and is deployed as
+# unmanaged content. The server does not copy it into its writable content repository, and no
+# deployment scanner is involved.
+/deployment=ROOT.war:add(content=[{path=application/ROOT.war, relative-to=jboss.home.dir, archive=true}], enabled=true)

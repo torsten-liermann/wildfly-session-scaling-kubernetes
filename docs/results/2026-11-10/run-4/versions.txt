@@ -1,0 +1,14 @@
+date: 2026-11-10T14:26:30.133Z
+commit: 985bbef
+image: wildfly-session-scaling:1.0.0-SNAPSHOT sha256:cb9a92fc5d4d62b1206b4e264563e8a4305a795ad77c5fea8d6ff872f7b235d1
+update image: wildfly-session-scaling:1.0.1-SNAPSHOT sha256:78eea48b4277ed12137c9f684381b401d0181e69e2c1ce194408014c9c6ea924
+database image: postgres:18.6-alpine@sha256:123b17998ccaf47e53b502e8c6a1e79afd8f579c6f3eec83c563da026f957395
+k3s image: rancher/k3s:v1.37.1-k3s1
+container engine: 29.9.2
+k3d version v5.9.0
+k3s version v1.35.5-k3s1 (default)
+Client Version: v1.37.1
+Server Version: v1.37.1+k3s1
+java: openjdk version "21.0.13" 2026-10-20 LTS
+server: WFLYSRV0025: WildFly 42.0.0.Final 
+database: postgres (PostgreSQL) 18.6

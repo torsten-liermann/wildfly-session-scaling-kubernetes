@@ -1,0 +1,17 @@
+# Headless service for JGroups DNS_PING. It lists every pod, ready or not, because a
+# starting pod has to find the running replicas before it can become ready.
+apiVersion: v1
+kind: Service
+metadata:
+  name: session-scaling-discovery
+  labels:
+    app.kubernetes.io/name: session-scaling
+spec:
+  clusterIP: None
+  publishNotReadyAddresses: true
+  selector:
+    app.kubernetes.io/name: session-scaling
+  ports:
+    - name: jgroups
+      port: 7600
+      targetPort: jgroups

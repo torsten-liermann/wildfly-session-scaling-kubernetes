@@ -1,0 +1,24 @@
+# Used by verify-session-scaling.sh only: k8s/ plus one change for the throw-away k3d cluster.
+#
+# The check stops a whole agent node. CoreDNS, the ingress controller and the database run as single
+# replicas in k3d; the script moves the k3s components to the server node, and this overlay keeps the
+# database there as well, so that stopping an agent stops only replicas of the application.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../k8s
+patches:
+  - target:
+      kind: Deployment
+      name: session-scaling-db
+    patch: |-
+      - op: add
+        path: /spec/template/spec/nodeSelector
+        value:
+          node-role.kubernetes.io/control-plane: "true"
+      - op: add
+        path: /spec/template/spec/tolerations
+        value:
+          - key: node-role.kubernetes.io/control-plane
+            operator: Exists
+            effect: NoSchedule

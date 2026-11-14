@@ -1,0 +1,13 @@
+11:06:23.610 image wssk-diag/session-scaling:diag sha256:01a65580878dff2ea082c7c274fd8b938c3631f3cff476b5f5ce5db350da661c, docker arguments: -e DIAG_CONN_CLOSE_TIMEOUT=30000 -e DIAG_SOCK_CONN_TIMEOUT=1000
+11:06:39.070 created 25 sessions on a and b (0..23 for the read loop, 24 for requests during thread dumps)
+11:06:48.949 c1 joined (172.31.250.21)
+11:07:05.573 stopping c1 (SIGTERM)
+11:07:06.155 c1 stopped
+11:07:16.619 three thread dumps of a (in a.log)
+11:08:12.911 c2 joined (172.31.250.22)
+11:08:29.385 stopping c2 (SIGTERM)
+11:08:29.966 c2 stopped
+11:09:35.242 c3 joined (172.31.250.23)
+11:09:51.591 stopping c3 (SIGTERM)
+11:09:52.191 c3 stopped
+11:10:51.930 done

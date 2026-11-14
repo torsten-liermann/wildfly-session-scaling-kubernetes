@@ -1,0 +1,10 @@
+14:25:29  unpacked wildfly-session-scaling-server-1.0.0-SNAPSHOT.tar.gz (141389589 bytes, 765 files)
+14:25:29  start script bin/standalone.sh: present
+14:25:29  start script bin/standalone.bat: present
+14:25:31  archive and /opt/server in wildfly-session-scaling:1.0.0-SNAPSHOT: 765 files, identical names and content
+14:25:32  started bin/standalone.sh in eclipse-temurin:21.0.13_9-jre-noble@sha256:0eda5830ed7b669abc246a8dc520ea8a23cab06f9a8d4b6964109e2f2394e46f as user 1001:1001 (container 5878d2a37fb4), HTTP 127.0.0.1:32776, management 127.0.0.1:32777
+14:25:47  /health/ready returned HTTP 200 16.0 s after docker run; WFLYSRV0025: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) started in 14808ms - Started 484 of 633 services (334 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+14:25:48  servlet session created and read: {"sessionId":"tH8C7rmTHfzBB-wmeX-MtLjKpM8ztzYMbDjRWEyY","requestCount":2,"beanVisits":2}
+14:25:48  order form: HTTP 200, step 1
+14:25:49  stopped with SIGTERM: WFLYSRV0050: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) stopped in 166ms
+14:25:49  RESULT: PASSED, details in target/server-archive

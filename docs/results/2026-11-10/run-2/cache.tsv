@@ -1,0 +1,18 @@
+2026-11-10T12:37:14.552Z	1 two replicas	session-scaling-85dc458f7f-9vkmt	session-scaling-85dc458f7f-r6lfh	7.00	ok
+2026-11-10T12:38:12.949Z	2 HPA scale-up	session-scaling-85dc458f7f-9vkmt	session-scaling-85dc458f7f-c5dw5	7.10	ok
+2026-11-10T12:38:13.018Z	2 HPA scale-up	session-scaling-85dc458f7f-9vkmt	session-scaling-85dc458f7f-r6lfh	7.10	ok
+2026-11-10T12:38:13.101Z	2 HPA scale-up	session-scaling-85dc458f7f-9vkmt	session-scaling-85dc458f7f-z9hqv	7.10	ok
+2026-11-10T12:39:23.483Z	3 node drain	session-scaling-85dc458f7f-9rrcs	session-scaling-85dc458f7f-9vkmt	7.20	ok
+2026-11-10T12:39:23.540Z	3 node drain	session-scaling-85dc458f7f-9rrcs	session-scaling-85dc458f7f-j9qcg	7.20	ok
+2026-11-10T12:39:23.592Z	3 node drain	session-scaling-85dc458f7f-9rrcs	session-scaling-85dc458f7f-z9hqv	7.20	ok
+2026-11-10T12:39:48.004Z	4 node stopped	session-scaling-85dc458f7f-9vkmt	session-scaling-85dc458f7f-j9qcg	7.30	ok
+2026-11-10T12:41:07.636Z	4b node started again	session-scaling-85dc458f7f-9rrcs	session-scaling-85dc458f7f-9vkmt	7.40	ok
+2026-11-10T12:41:07.684Z	4b node started again	session-scaling-85dc458f7f-9rrcs	session-scaling-85dc458f7f-j9qcg	7.40	ok
+2026-11-10T12:41:07.754Z	4b node started again	session-scaling-85dc458f7f-9rrcs	session-scaling-85dc458f7f-z9hqv	7.40	ok
+2026-11-10T12:46:52.514Z	5a HPA scale-down to 3	session-scaling-85dc458f7f-9vkmt	session-scaling-85dc458f7f-j9qcg	7.50	ok
+2026-11-10T12:46:52.563Z	5a HPA scale-down to 3	session-scaling-85dc458f7f-9vkmt	session-scaling-85dc458f7f-z9hqv	7.50	ok
+2026-11-10T12:47:50.175Z	5b HPA scale-down to 2	session-scaling-85dc458f7f-9vkmt	session-scaling-85dc458f7f-z9hqv	7.60	ok
+2026-11-10T12:48:54.700Z	6 rolling update	session-scaling-66c7888bb4-h4h2m	session-scaling-66c7888bb4-k9wlg	7.70	ok
+2026-11-10T12:49:29.381Z	7 pod deleted	session-scaling-66c7888bb4-k9wlg	session-scaling-66c7888bb4-rgf6r	7.80	ok
+2026-11-10T12:50:17.504Z	8b JVM restarted	session-scaling-66c7888bb4-k9wlg	session-scaling-66c7888bb4-nq8pb	7.90	ok
+2026-11-10T12:50:17.557Z	8b JVM restarted	session-scaling-66c7888bb4-k9wlg	session-scaling-66c7888bb4-rgf6r	7.90	ok

@@ -1,0 +1,16 @@
+10:56:27.089 image wssk-diag/session-scaling:fixed sha256:ee69488a9b3fee24d87d94b716bb9fd85b6b05a6bbcc3030a5b918a48c9b75b8, docker arguments: none
+10:56:42.363 created 25 sessions on a and b (0..23 for the read loop, 24 for requests during thread dumps)
+10:56:52.284 c1 joined (172.31.250.21)
+10:57:09.785 stopping c1 (SIGTERM)
+10:57:10.531 c1 stopped
+10:57:21.915 three thread dumps of a (in a.log)
+10:58:09.317 c2 joined (172.31.250.22)
+10:58:26.621 stopping c2 (SIGTERM)
+10:58:27.336 c2 stopped
+10:59:24.826 c3 joined (172.31.250.23)
+10:59:41.669 stopping c3 (SIGTERM)
+10:59:42.404 c3 stopped
+11:00:39.742 c4 joined (172.31.250.24)
+11:00:56.491 stopping c4 (SIGTERM)
+11:00:57.570 c4 stopped
+11:01:47.565 done

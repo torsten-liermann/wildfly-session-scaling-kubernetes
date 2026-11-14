@@ -1,0 +1,61 @@
+Leaves (time in the log of a, member):
+  10:57:10.034 wssk-diag-c1
+  10:58:26.913 wssk-diag-c2
+  10:59:41.916 wssk-diag-c3
+  11:00:56.840 wssk-diag-c4
+
+Reads                            count  > 0.2 s   mean s    max s  wrong
+before the first leave             171        1    0.027    0.229      0
+0-5 s after a leave                 61       15    0.190    1.185      0
+5-30 s after a leave               653        5    0.016    0.341      0
+30-60 s after a leave              735        1    0.014    0.336      0
+60-240 s after a leave             300        0    0.020    0.114      0
+
+Slow reads (> 0.25 s) per leave:
+  wssk-diag-c1: 6, first 1.0 s, last 5.5 s after the leave
+  wssk-diag-c2: none
+  wssk-diag-c3: 6, first 1.0 s, last 5.2 s after the leave
+  wssk-diag-c4: 6, first 1.0 s, last 5.2 s after the leave
+
+Reads slower than 0.1 s, 50 ms bins (lower bound:count):
+  0.10:7  0.20:2  0.30:7  0.35:4  0.40:1  0.55:1  0.60:1  1.15:6
+
+UNICAST3 retransmissions per leave (sample before the leave to the last sample of the cycle):
+  c1: a 79, b 34
+  c2: a 0, b 0
+  c3: a 75, b 32
+  c4: a 65, b 29
+
+UNICAST3 samples (time, sample, member, retransmissions, unacknowledged messages, send connections):
+  10:57:06.068	c1 before	a	1	0	2
+  10:57:09.761	c1 before	b	1	10	2
+  10:57:14.360	c1 +1s	a	59	3	2
+  10:57:18.116	c1 +1s	b	33	7	1
+  10:57:29.724	c1 +15s	a	77	0	1
+  10:57:33.436	c1 +15s	b	35	4	1
+  10:57:54.703	c1 end	a	80	1	1
+  10:57:58.310	c1 end	b	35	2	1
+  10:58:22.965	c2 before	a	80	0	2
+  10:58:26.586	c2 before	b	35	0	2
+  10:58:31.150	c2 +1s	a	80	0	2
+  10:58:34.596	c2 +1s	b	35	0	1
+  10:58:45.693	c2 +15s	a	80	0	1
+  10:58:49.166	c2 +15s	b	35	3	1
+  10:59:11.451	c2 end	a	80	0	1
+  10:59:14.859	c2 end	b	35	0	1
+  10:59:38.248	c3 before	a	80	2	2
+  10:59:41.642	c3 before	b	36	0	2
+  10:59:46.059	c3 +1s	a	140	2	2
+  10:59:49.295	c3 +1s	b	68	0	1
+  11:00:01.648	c3 +15s	a	154	3	1
+  11:00:06.082	c3 +15s	b	68	0	1
+  11:00:26.276	c3 end	a	155	0	1
+  11:00:29.782	c3 end	b	68	0	1
+  11:00:53.186	c4 before	a	156	3	2
+  11:00:56.468	c4 before	b	68	10	2
+  11:01:01.325	c4 +1s	a	213	3	2
+  11:01:04.988	c4 +1s	b	97	0	1
+  11:01:15.987	c4 +15s	a	221	3	1
+  11:01:19.547	c4 +15s	b	97	0	1
+  11:01:40.477	c4 end	a	221	0	1
+  11:01:44.014	c4 end	b	97	0	1

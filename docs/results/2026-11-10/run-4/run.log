@@ -1,0 +1,122 @@
+14:26:30  creating k3d cluster session-scaling (rancher/k3s:v1.37.1-k3s1): 1 server, 3 agents, ingress on http://127.0.0.1:18080
+[36mINFO[0m[0000] Prep: Network                                
+[36mINFO[0m[0000] Created network 'k3d-session-scaling'        
+[36mINFO[0m[0000] Created image volume k3d-session-scaling-images 
+[36mINFO[0m[0000] Starting new tools node...                   
+[36mINFO[0m[0000] Starting node 'k3d-session-scaling-tools'    
+[36mINFO[0m[0001] Creating node 'k3d-session-scaling-server-0' 
+[36mINFO[0m[0001] Creating node 'k3d-session-scaling-agent-0'  
+[36mINFO[0m[0001] Creating node 'k3d-session-scaling-agent-1'  
+[36mINFO[0m[0001] Creating node 'k3d-session-scaling-agent-2'  
+[36mINFO[0m[0001] Creating LoadBalancer 'k3d-session-scaling-serverlb' 
+[36mINFO[0m[0001] Using the k3d-tools node to gather environment information 
+[36mINFO[0m[0001] HostIP: using network gateway 172.20.0.1 address 
+[36mINFO[0m[0001] Starting cluster 'session-scaling'           
+[36mINFO[0m[0001] Starting servers...                          
+[36mINFO[0m[0001] Starting node 'k3d-session-scaling-server-0' 
+[36mINFO[0m[0009] Starting agents...                           
+[36mINFO[0m[0009] Starting node 'k3d-session-scaling-agent-1'  
+[36mINFO[0m[0009] Starting node 'k3d-session-scaling-agent-0'  
+[36mINFO[0m[0009] Starting node 'k3d-session-scaling-agent-2'  
+[36mINFO[0m[0014] Starting helpers...                          
+[36mINFO[0m[0014] Starting node 'k3d-session-scaling-serverlb' 
+[36mINFO[0m[0020] Injecting records for hostAliases (incl. host.k3d.internal) and for 5 network members into CoreDNS configmap... 
+[36mINFO[0m[0022] Cluster 'session-scaling' created successfully! 
+[36mINFO[0m[0022] You can now use it like this:                
+export KUBECONFIG=$(k3d kubeconfig write session-scaling)
+kubectl cluster-info
+14:27:16  importing wildfly-session-scaling:1.0.0-SNAPSHOT, wildfly-session-scaling:1.0.1-SNAPSHOT and postgres:18.6-alpine@sha256:123b17998ccaf47e53b502e8c6a1e79afd8f579c6f3eec83c563da026f957395 into the cluster
+[36mINFO[0m[0000] Importing image(s) into cluster 'session-scaling' 
+[36mINFO[0m[0000] Starting new tools node...                   
+[36mINFO[0m[0000] Starting node 'k3d-session-scaling-tools'    
+[36mINFO[0m[0001] Saving 2 image(s) from runtime...            
+[36mINFO[0m[0008] Importing images into nodes...               
+[36mINFO[0m[0008] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110152717.tar' into node 'k3d-session-scaling-server-0'... 
+[36mINFO[0m[0008] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110152717.tar' into node 'k3d-session-scaling-agent-2'... 
+[36mINFO[0m[0008] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110152717.tar' into node 'k3d-session-scaling-agent-0'... 
+[36mINFO[0m[0008] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110152717.tar' into node 'k3d-session-scaling-agent-1'... 
+[36mINFO[0m[0022] Removing the tarball(s) from image volume... 
+[36mINFO[0m[0023] Removing k3d-tools node...                   
+[36mINFO[0m[0024] Successfully imported image(s)               
+[36mINFO[0m[0024] Successfully imported 2 image(s) into 1 cluster(s) 
+[36mINFO[0m[0000] Importing image(s) into cluster 'session-scaling' 
+[36mINFO[0m[0000] Starting new tools node...                   
+[36mINFO[0m[0000] Starting node 'k3d-session-scaling-tools'    
+[36mINFO[0m[0001] Saving 1 image(s) from runtime...            
+[36mINFO[0m[0005] Importing images into nodes...               
+[36mINFO[0m[0005] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110152741.tar' into node 'k3d-session-scaling-agent-2'... 
+[36mINFO[0m[0005] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110152741.tar' into node 'k3d-session-scaling-agent-1'... 
+[36mINFO[0m[0005] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110152741.tar' into node 'k3d-session-scaling-server-0'... 
+[36mINFO[0m[0005] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110152741.tar' into node 'k3d-session-scaling-agent-0'... 
+[31mERRO[0m[0014] failed to import images in node 'k3d-session-scaling-agent-1': Exec process in node 'k3d-session-scaling-agent-1' failed with exit code '1': Logs from failed access process:
+ctr: content digest sha256:6e0fed84616720849d95cafaeb6e8107bc77049001b8d17dcbd6f91594b6bd50: not found 
+[31mERRO[0m[0014] failed to import images in node 'k3d-session-scaling-agent-2': Exec process in node 'k3d-session-scaling-agent-2' failed with exit code '1': Logs from failed access process:
+ctr: content digest sha256:6e0fed84616720849d95cafaeb6e8107bc77049001b8d17dcbd6f91594b6bd50: not found 
+[31mERRO[0m[0014] failed to import images in node 'k3d-session-scaling-server-0': Exec process in node 'k3d-session-scaling-server-0' failed with exit code '1': Logs from failed access process:
+ctr: content digest sha256:6e0fed84616720849d95cafaeb6e8107bc77049001b8d17dcbd6f91594b6bd50: not found 
+[31mERRO[0m[0014] failed to import images in node 'k3d-session-scaling-agent-0': Exec process in node 'k3d-session-scaling-agent-0' failed with exit code '1': Logs from failed access process:
+ctr: content digest sha256:6e0fed84616720849d95cafaeb6e8107bc77049001b8d17dcbd6f91594b6bd50: not found 
+[36mINFO[0m[0014] Removing the tarball(s) from image volume... 
+[36mINFO[0m[0015] Removing k3d-tools node...                   
+[36mINFO[0m[0015] Successfully imported image(s)               
+[36mINFO[0m[0015] Successfully imported 1 image(s) into 1 cluster(s) 
+14:27:56  deploying k8s/ (through scripts/k3d: the database runs on the server node)
+namespace/session-scaling created
+namespace/session-scaling configured
+configmap/session-scaling-db-schema-mbm844d2tm created
+service/session-scaling created
+service/session-scaling-db created
+service/session-scaling-discovery created
+deployment.apps/session-scaling created
+deployment.apps/session-scaling-db created
+poddisruptionbudget.policy/session-scaling created
+horizontalpodautoscaler.autoscaling/session-scaling created
+ingress.networking.k8s.io/session-scaling created
+14:29:00  created 24 servlet sessions through the ingress; creating replicas: 12×session-scaling-85dc458f7f-vllfp 12×session-scaling-85dc458f7f-ztlq7 
+14:29:04  opened 6 order forms through the ingress (Faces views created on: 6×session-scaling-85dc458f7f-vllfp )
+14:29:04  reading one more servlet session through the ingress twice a second until the end (ingress-probe.tsv)
+14:29:12  1 two replicas: 2 replicas on 2 nodes [vllfp@session-scaling-agent-2 ztlq7@session-scaling-agent-1], session reads 48/48, Faces postbacks 12/12, cache invalidations seen 1/1 (price now 7.00), slowest read 0.086313s, slowest postback 0.639029s, owners on different nodes 128/128 segments, rack = node 2/2
+14:29:12  starting CPU load with 6 workers on /load
+14:29:43  2 HPA set the deployment to 4 replicas 30.3 s after the load started: session-scaling Deployment/session-scaling cpu: 237%/60% 2 4 3 106s
+14:30:10  2 the two new replicas were ready and members of the cluster 27.7 s after the HPA decision was seen
+14:30:10  load stopped; the scale-down stabilization window (300 s) starts
+14:30:32  2 HPA scale-up: 4 replicas on 3 nodes [4c96r@session-scaling-agent-0 vllfp@session-scaling-agent-2 ztlq7@session-scaling-agent-1 zvd79@session-scaling-agent-2], session reads 96/96, Faces postbacks 24/24, cache invalidations seen 3/3 (price now 7.10), slowest read 0.381485s, slowest postback 1.411287s, owners on different nodes 128/128 segments, rack = node 4/4
+14:30:33  draining k3d-session-scaling-agent-2 (session-scaling-85dc458f7f-vllfp session-scaling-85dc458f7f-zvd79 )
+14:31:11  3 drain of k3d-session-scaling-agent-2 finished: 5 evictions refused by the PodDisruptionBudget until a replacement was ready
+14:32:12  3 node drain: 4 replicas on 2 nodes [4c96r@session-scaling-agent-0 jfnc5@session-scaling-agent-0 pntvx@session-scaling-agent-1 ztlq7@session-scaling-agent-1], session reads 96/96, Faces postbacks 24/24, cache invalidations seen 3/3 (price now 7.20), slowest read 1.198960s, slowest postback 1.242164s, owners on different nodes 128/128 segments, rack = node 4/4
+14:32:13  stopping node k3d-session-scaling-agent-1 with docker kill (the k3d node container): replicas session-scaling-85dc458f7f-pntvx session-scaling-85dc458f7f-ztlq7 die without shutdown
+14:32:14  4 node k3d-session-scaling-agent-1 stopped at 14:32:14.427 with replicas session-scaling-85dc458f7f-pntvx session-scaling-85dc458f7f-ztlq7; the remaining replicas run on 1 node(s): 4c96r@session-scaling-agent-0 jfnc5@session-scaling-agent-0
+14:32:17  4 the remaining replicas had a settled view without the stopped replicas 3.2 s after the stop
+14:32:25  4 node stopped: 2 replicas on 1 nodes [4c96r@session-scaling-agent-0 jfnc5@session-scaling-agent-0], session reads 48/48, Faces postbacks 12/12, cache invalidations seen 1/1 (price now 7.30), slowest read 0.069181s, slowest postback 0.531971s, owners on different nodes 0/128 segments, rack = node 2/2
+14:33:01  4 Kubernetes reported k3d-session-scaling-agent-1 NotReady 47.5 s after the stop
+14:33:01  4 the service had no ready endpoints on the stopped node any more 47.6 s after the stop
+14:33:01  starting node k3d-session-scaling-agent-1 again
+14:33:08  4 node k3d-session-scaling-agent-1 Ready again 6.5 s after the start
+14:33:33  4 all 4 replicas ready and members of the cluster 31.1 s after the node start, 79.2 s after the stop
+14:33:55  4b node started again: 4 replicas on 2 nodes [4c96r@session-scaling-agent-0 jfnc5@session-scaling-agent-0 pntvx@session-scaling-agent-1 ztlq7@session-scaling-agent-1], session reads 96/96, Faces postbacks 24/24, cache invalidations seen 3/3 (price now 7.40), slowest read 0.183940s, slowest postback 1.400892s, owners on different nodes 128/128 segments, rack = node 4/4
+14:33:55  waiting for the HPA to scale down (stabilization window, then one pod per minute)
+14:39:14  5 HPA set the deployment to 3 replicas at 14:39:14.526
+14:39:37  5a HPA scale-down to 3: 3 replicas on 2 nodes [4c96r@session-scaling-agent-0 jfnc5@session-scaling-agent-0 pntvx@session-scaling-agent-1], session reads 72/72, Faces postbacks 18/18, cache invalidations seen 2/2 (price now 7.50), slowest read 0.097111s, slowest postback 0.131445s, owners on different nodes 128/128 segments, rack = node 3/3
+14:40:15  5 HPA set the deployment to 2 replicas at 14:40:15.762
+14:40:34  5b HPA scale-down to 2: 2 replicas on 2 nodes [jfnc5@session-scaling-agent-0 pntvx@session-scaling-agent-1], session reads 48/48, Faces postbacks 12/12, cache invalidations seen 1/1 (price now 7.60), slowest read 0.813754s, slowest postback 0.449515s, owners on different nodes 128/128 segments, rack = node 2/2
+14:40:34  rolling update to wildfly-session-scaling:1.0.1-SNAPSHOT
+14:41:24  6 rolling update finished after 50.7 s
+14:41:37  6 rolling update: 2 replicas on 2 nodes [ht8jp@session-scaling-agent-0 vj5m7@session-scaling-agent-2], session reads 48/48, Faces postbacks 12/12, cache invalidations seen 1/1 (price now 7.70), slowest read 0.077216s, slowest postback 1.846228s, owners on different nodes 128/128 segments, rack = node 2/2
+14:41:37  deleting pod session-scaling-66c7888bb4-ht8jp
+14:41:50  7 pod session-scaling-66c7888bb4-ht8jp gone after 13 s (terminationGracePeriodSeconds: 60)
+14:42:11  7 pod deleted: 2 replicas on 2 nodes [7bhr9@session-scaling-agent-1 vj5m7@session-scaling-agent-2], session reads 48/48, Faces postbacks 12/12, cache invalidations seen 1/1 (price now 7.80), slowest read 0.091626s, slowest postback 1.511225s, owners on different nodes 128/128 segments, rack = node 2/2
+14:42:11  order form 0 was last served by session-scaling-66c7888bb4-vj5m7; killing its JVM (PID 129 in the container) with SIGKILL
+14:42:11  8 JVM of session-scaling-66c7888bb4-vj5m7 killed with SIGKILL: kubectl exec started at 14:42:11.623 and returned at 14:42:11.864; the last answer of session-scaling-66c7888bb4-vj5m7 (order form 0) had arrived at 14:42:11.289
+14:42:14  8 order form 0 continued through the ingress on session-scaling-66c7888bb4-7bhr9 2.5 s after the kill (2 attempt(s); view 502ffce1-e6d4-4c55-a669-1acf6b1ada70 created by session-scaling-85dc458f7f-vllfp, 27 lines, with every line, including the one added by the last answer of session-scaling-66c7888bb4-vj5m7)
+14:42:14  8 the remaining replicas had a settled view without session-scaling-66c7888bb4-vj5m7 2.7 s after the kill
+14:42:17  8 JVM killed: 1 replicas on 1 nodes [7bhr9@session-scaling-agent-1], session reads 24/24, Faces postbacks 6/6, cache invalidations seen n/a (price now 7.80), slowest read 0.033982s, slowest postback 0.082911s, owners on different nodes 0/128 segments, rack = node 1/1
+14:42:36  8 container of session-scaling-66c7888bb4-vj5m7 restarted, ready and member of the cluster 24.8 s after the kill
+14:42:45  8b JVM restarted: 2 replicas on 2 nodes [7bhr9@session-scaling-agent-1 vj5m7@session-scaling-agent-2], session reads 48/48, Faces postbacks 12/12, cache invalidations seen 1/1 (price now 7.90), slowest read 0.077535s, slowest postback 1.388384s, owners on different nodes 128/128 segments, rack = node 2/2
+14:42:50  9 order forms submitted through the ingress: 6/6 orders in the database with every line and the expected total (lines per form: 30 28 28 28 28 28)
+14:42:54  RESULT: PASSED, details in target/verify-final
+[36mINFO[0m[0000] Deleting cluster 'session-scaling'           
+[36mINFO[0m[0007] Deleting cluster network 'k3d-session-scaling' 
+[36mINFO[0m[0007] Deleting 1 attached volumes...               
+[36mINFO[0m[0007] Removing cluster details from default kubeconfig... 
+[36mINFO[0m[0007] Removing standalone kubeconfig file (if there is one)... 
+[36mINFO[0m[0007] Successfully deleted cluster session-scaling! 

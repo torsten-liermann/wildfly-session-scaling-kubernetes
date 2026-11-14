@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.github.torsten-liermann</groupId>
+    <artifactId>wildfly-jsf-jpa-kubernetes</artifactId>
+    <version>${revision}</version>
+  </parent>
+
+  <artifactId>session-scaling-app</artifactId>
+  <packaging>war</packaging>
+  <name>Session scaling demo application</name>
+
+  <properties>
+    <!-- The image is built by the image module -->
+    <jib.skip>true</jib.skip>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <!--
+        The only Jakarta EE API on the compile class path is Jakarta EE 10 (besides PrimeFaces and,
+        for the diagnostics in ClusterServlet, Infinispan). WildFly 42 implements Jakarta EE 11 and
+        runs Jakarta EE 10 applications unchanged. The exclusion keeps the newer API versions managed
+        by the WildFly BOM off the compile class path; the jar itself contains all Jakarta EE 10 API
+        classes.
+      -->
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
+      <version>${version.jakartaee}</version>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.primefaces</groupId>
+      <artifactId>primefaces</artifactId>
+      <version>${version.primefaces}</version>
+    </dependency>
+    <dependency>
+      <!-- Only for the owner diagnostics in ClusterServlet; the server provides the module -->
+      <groupId>org.infinispan</groupId>
+      <artifactId>infinispan-core</artifactId>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.infinispan</groupId>
+      <artifactId>infinispan-commons</artifactId>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+  </build>
+</project>

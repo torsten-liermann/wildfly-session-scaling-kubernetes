@@ -1,0 +1,13 @@
+# A node drain (kubectl drain, cluster upgrades) evicts at most one replica at a time.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: session-scaling
+  labels:
+    app.kubernetes.io/name: session-scaling
+spec:
+  maxUnavailable: 1
+  unhealthyPodEvictionPolicy: AlwaysAllow
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: session-scaling

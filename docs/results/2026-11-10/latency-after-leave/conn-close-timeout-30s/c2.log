@@ -1,0 +1,90 @@
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /opt/server
+
+  JAVA: /opt/java/openjdk/bin/java
+
+  JAVA_OPTS:  @"/opt/server/bin/jdk.serialFilter" -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+
+=========================================================================
+
+2026-11-10 11:03:33,600 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+2026-11-10 11:03:34,657 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.6.Final
+2026-11-10 11:03:34,860 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) starting
+2026-11-10 11:03:36,054 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.9.4.Final
+2026-11-10 11:03:36,537 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 12) WFLYCTL0028: Attribute 'statistics-enabled' in the resource at address '/subsystem=jgroups/channel=ee' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2026-11-10 11:03:36,727 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2026-11-10 11:03:36,752 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.8.16.Final
+2026-11-10 11:03:36,762 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.8.16.Final
+2026-11-10 11:03:36,791 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 26) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2026-11-10 11:03:36,796 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 25) WFLYNAM0001: Activating Naming Subsystem
+2026-11-10 11:03:36,916 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 22) WFLYCLINF0001: Activating Infinispan subsystem.
+2026-11-10 11:03:36,920 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 21) WFLYHEALTH0001: Activating Base Health Subsystem
+2026-11-10 11:03:36,923 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 23) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2026-11-10 11:03:36,927 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 24) WFLYCLJG0001: Activating JGroups subsystem. JGroups version 5.5.8
+2026-11-10 11:03:36,941 INFO  [org.jboss.as.naming] (MSC service thread 1-5) WFLYNAM0003: Starting Naming Service
+2026-11-10 11:03:36,949 INFO  [org.jboss.remoting] (MSC service thread 1-6) JBoss Remoting version 5.0.32.Final
+2026-11-10 11:03:37,059 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0003: Undertow 2.4.4.Final starting
+2026-11-10 11:03:37,081 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-6) WFLYELY00023: KeyStore file '/opt/server/standalone/configuration/application.keystore' does not exist. Used blank.
+2026-11-10 11:03:37,094 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-6) WFLYELY01084: KeyStore /opt/server/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+2026-11-10 11:03:37,105 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 27) WFLYUT0112: The value 'require-host-http11' attribute in the '/subsystem=undertow/server=default-server/http-listener=default' resource is 'false', which will be ignored. The server now always enforces the RFC 9112 requirement that HTTP/1.1 request messages include a Host header.
+2026-11-10 11:03:37,284 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0012: Started server default-server.
+2026-11-10 11:03:37,287 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) Queuing requests.
+2026-11-10 11:03:37,289 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0018: Host default-host starting
+2026-11-10 11:03:37,292 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
+2026-11-10 11:03:37,292 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-9) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+2026-11-10 11:03:37,898 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-8) WFLYSRV0018: Deployment "deployment.ROOT.war" is using a private module ("org.infinispan.core") which may be changed or removed in future versions without notice.
+2026-11-10 11:03:37,973 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment ROOT.war
+2026-11-10 11:03:38,071 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-8) HV000001: Hibernate Validator 9.1.1.Final
+2026-11-10 11:03:38,561 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 36) WFLYCLJG0040: Configuration of channel ee does not guarantee message confidentiality between cluster members. Consider encrypting intra-cluster communication by configuring the channel transport with TLS or by adding the ASYM_ENCRYPT or SYM_ENCRYPT protocol to the protocol stack.
+2026-11-10 11:03:38,564 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 36) WFLYCLJG0039: Configuration of channel ee does not require member authentication. Consider blocking untrusted cluster members by requiring TLS client authentication on the channel transport or by adding the AUTH protocol to the protocol stack.
+2026-11-10 11:03:38,581 INFO  [org.jboss.weld.Version] (MSC service thread 1-4) WELD-000900: 6.0.4 (Final)
+2026-11-10 11:03:38,610 WARN  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 36) WFLYCLJG0031: Ignoring unrecognized TCP property: bundler.use_single_sender_thread
+2026-11-10 11:03:38,777 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 34) WFLYCLJG0032: Connecting 'ee' channel. 'wssk-diag-c2' joining cluster 'ejb' via /172.31.250.22:7600
+2026-11-10 11:03:38,785 INFO  [org.jgroups.JChannel] (ServerService Thread Pool -- 34) local_addr: wssk-diag-c2(v=16.2.3, r=rack-c2), name: wssk-diag-c2
+2026-11-10 11:03:38,814 INFO  [org.jgroups.protocols.FD_SOCK2] (ServerService Thread Pool -- 34) server listening on /172.31.250.22:7601
+2026-11-10 11:03:38,947 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 34) WFLYCLJG0033: Connected 'ee' channel. 'wssk-diag-c2' joined cluster 'ejb' with view: [wssk-diag-a(v=16.2.3, r=rack-a)|4] (3) [wssk-diag-a(v=16.2.3, r=rack-a), wssk-diag-b(v=16.2.3, r=rack-b), wssk-diag-c2(v=16.2.3, r=rack-c2)]
+2026-11-10 11:03:39,528 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 36) ISPN000974: Virtual threads support: unavailable
+2026-11-10 11:03:40,068 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 30) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+2026-11-10 11:03:40,122 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 30) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T11:03:40.121539420Z
+2026-11-10 11:03:40,547 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-c2(v=16.2.3, r=rack-c2)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], phase READ_OLD_WRITE_ALL, topology id 15
+2026-11-10 11:03:40,594 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t5) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], topology id 15
+2026-11-10 11:03:40,653 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,wssk-diag-c2(v=16.2.3, r=rack-c2)) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T11:03:40.576921055Z and done 2026-11-10T11:03:40.653658295Z
+2026-11-10 11:03:40,849 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,wssk-diag-c2(v=16.2.3, r=rack-c2)) [Context=default-server] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], phase READ_OLD_WRITE_ALL, topology id 15
+2026-11-10 11:03:40,854 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t13) [Context=default-server] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], topology id 15
+2026-11-10 11:03:40,858 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p3-t3) WFLYCLINF0002: Started default-server cache from web container
+2026-11-10 11:03:40,860 INFO  [org.infinispan.CONTAINER] (blocking-thread--p3-t2) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2026-11-10 11:03:40,891 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,wssk-diag-c2(v=16.2.3, r=rack-c2)) ISPN000973: Task 'state-transfer-default-server' started at 2026-11-10T11:03:40.853656389Z and done 2026-11-10T11:03:40.891876755Z
+2026-11-10 11:03:40,892 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-c2(v=16.2.3, r=rack-c2)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], phase READ_OLD_WRITE_ALL, topology id 15
+2026-11-10 11:03:40,905 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p3-t2) WFLYCLINF0002: Started ROOT.war cache from web container
+2026-11-10 11:03:40,925 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-c2(v=16.2.3, r=rack-c2)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], topology id 15
+2026-11-10 11:03:40,975 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,wssk-diag-c2(v=16.2.3, r=rack-c2)) ISPN000973: Task 'state-transfer-ROOT.war' started at 2026-11-10T11:03:40.923080020Z and done 2026-11-10T11:03:40.975106067Z
+2026-11-10 11:03:41,569 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 31) WFLYUT0021: Registered web context: '/' for server 'default-server'
+2026-11-10 11:03:41,609 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
+2026-11-10 11:03:41,677 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2026-11-10 11:03:41,730 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://0.0.0.0:9990/management
+2026-11-10 11:03:41,730 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0054: Admin console is not enabled
+2026-11-10 11:03:41,732 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) started in 8780ms - Started 341 of 430 services (231 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+*** JBossAS process (129) received TERM signal ***
+2026-11-10 11:03:58,463 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0211: Suspending server with 20000 ms timeout.
+2026-11-10 11:03:58,473 INFO  [org.jboss.as.txn] (ServerService Thread Pool -- 12) WFLYTX0048: Transactions subsystem: waiting for in-flight transactions to terminate
+2026-11-10 11:03:58,473 INFO  [org.jboss.as.txn] (ServerService Thread Pool -- 12) WFLYTX0049: Transactions subsystem: all in-flight transactions terminated
+2026-11-10 11:03:58,474 INFO  [org.jboss.as.txn] (ServerService Thread Pool -- 12) WFLYTX0046: Transactions subsystem: starting transactions recovery suspension
+2026-11-10 11:03:58,475 INFO  [org.jboss.as.txn] (ServerService Thread Pool -- 12) WFLYTX0047: Transactions subsystem: transactions recovery suspension completed
+2026-11-10 11:03:58,477 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2026-11-10 11:03:58,488 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTP listener default suspending
+2026-11-10 11:03:58,491 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 8) WFLYUT0022: Unregistered web context: '/' from server 'default-server'
+2026-11-10 11:03:58,499 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 0.0.0.0:8080
+2026-11-10 11:03:58,504 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0019: Host default-host stopping
+2026-11-10 11:03:58,534 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0004: Undertow 2.4.4.Final stopping
+2026-11-10 11:03:58,537 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p3-t3) WFLYCLINF0003: Stopped ROOT.war cache from web container
+2026-11-10 11:03:58,561 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p3-t2) WFLYCLINF0003: Stopped default-server cache from web container
+2026-11-10 11:03:58,566 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 8) ISPN000720: Stopping all caches in cache container
+2026-11-10 11:03:58,567 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment ROOT.war (runtime-name: ROOT.war) in 84ms
+2026-11-10 11:03:58,637 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 8) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T11:03:58.636193575Z
+2026-11-10 11:03:58,651 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 8) WFLYCLJG0034: Disconnecting 'ee' channel. 'wssk-diag-c2' leaving cluster 'ejb' with view: [wssk-diag-a(v=16.2.3, r=rack-a)|4] (3) [wssk-diag-a(v=16.2.3, r=rack-a), wssk-diag-b(v=16.2.3, r=rack-b), wssk-diag-c2(v=16.2.3, r=rack-c2)]
+2026-11-10 11:03:58,666 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 8) WFLYCLJG0035: Disconnected 'ee' channel. 'wssk-diag-c2' left cluster 'ejb'
+2026-11-10 11:03:58,681 INFO  [org.jboss.as] (MSC service thread 1-9) WFLYSRV0050: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) stopped in 198ms
+*** JBossAS process (129) received TERM signal ***

@@ -1,0 +1,186 @@
+Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+Maven home: /root/.m2/wrapper/dists/apache-maven-3.9.16/56ba1f9f
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/java/openjdk
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.12.115+deb13.1-amd64", arch: "amd64", family: "unix"
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] WildFly session scaling on Kubernetes                              [pom]
+[INFO] Session scaling demo application                                   [war]
+[INFO] Session scaling demo image                                         [jar]
+[INFO] 
+[INFO] ---< io.github.torsten-liermann:wildfly-session-scaling-kubernetes >----
+[INFO] Building WildFly session scaling on Kubernetes 1.0.0-SNAPSHOT      [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ wildfly-session-scaling-kubernetes ---
+[INFO] 
+[INFO] --- flatten:1.9.0:clean (flatten-clean) @ wildfly-session-scaling-kubernetes ---
+[INFO] 
+[INFO] --- enforcer:3.7.0:enforce (enforce-build-environment) @ wildfly-session-scaling-kubernetes ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.RequirePluginVersions passed
+[INFO] Rule 3: org.apache.maven.enforcer.rules.dependency.RequireReleaseDeps passed
+[INFO] 
+[INFO] --- flatten:1.9.0:flatten (flatten) @ wildfly-session-scaling-kubernetes ---
+[INFO] Generating flattened POM of project io.github.torsten-liermann:wildfly-session-scaling-kubernetes:pom:1.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- jib:3.5.2:dockerBuild (default-cli) @ wildfly-session-scaling-kubernetes ---
+[INFO] Skipping containerization because packaging is 'pom'...
+[INFO] 
+[INFO] -----------< io.github.torsten-liermann:session-scaling-app >-----------
+[INFO] Building Session scaling demo application 1.0.0-SNAPSHOT           [2/3]
+[INFO]   from app/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ session-scaling-app ---
+[INFO] 
+[INFO] --- flatten:1.9.0:clean (flatten-clean) @ session-scaling-app ---
+[INFO] 
+[INFO] --- enforcer:3.7.0:enforce (enforce-build-environment) @ session-scaling-app ---
+[INFO] Rule 2: org.apache.maven.enforcer.rules.RequirePluginVersions passed
+[INFO] Rule 3: org.apache.maven.enforcer.rules.dependency.RequireReleaseDeps passed
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ session-scaling-app ---
+[INFO] skip non existing resourceDirectory /workspace/app/src/main/resources
+[INFO] 
+[INFO] --- flatten:1.9.0:flatten (flatten) @ session-scaling-app ---
+[INFO] Generating flattened POM of project io.github.torsten-liermann:session-scaling-app:war:1.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ session-scaling-app ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug release 21] to target/classes
+[WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+  reason: class file for org.infinispan.factories.scopes.Scopes not found
+[WARNING] /workspace/app/src/main/java/io/github/torstenliermann/sessionscaling/ClusterServlet.java: unknown enum constant org.infinispan.factories.scopes.Scopes.NAMED_CACHE
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ session-scaling-app ---
+[INFO] skip non existing resourceDirectory /workspace/app/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ session-scaling-app ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ session-scaling-app ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- war:3.5.1:war (default-war) @ session-scaling-app ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [session-scaling-app] in [/workspace/app/target/session-scaling-app]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/workspace/app/src/main/webapp]
+[INFO] Building war: /workspace/app/target/session-scaling-app.war
+[INFO] 
+[INFO] --- jib:3.5.2:dockerBuild (default-cli) @ session-scaling-app ---
+[INFO] Skipping containerization because jib-maven-plugin: skip = true
+[INFO] 
+[INFO] ----------< io.github.torsten-liermann:session-scaling-image >----------
+[INFO] Building Session scaling demo image 1.0.0-SNAPSHOT                 [3/3]
+[INFO]   from image/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ session-scaling-image ---
+[INFO] 
+[INFO] --- flatten:1.9.0:clean (flatten-clean) @ session-scaling-image ---
+[INFO] 
+[INFO] --- enforcer:3.7.0:enforce (enforce-build-environment) @ session-scaling-image ---
+[INFO] Rule 2: org.apache.maven.enforcer.rules.RequirePluginVersions passed
+[INFO] Rule 3: org.apache.maven.enforcer.rules.dependency.RequireReleaseDeps passed
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ session-scaling-image ---
+[INFO] skip non existing resourceDirectory /workspace/image/src/main/resources
+[INFO] 
+[INFO] --- flatten:1.9.0:flatten (flatten) @ session-scaling-image ---
+[INFO] Generating flattened POM of project io.github.torsten-liermann:session-scaling-image:jar:1.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ session-scaling-image ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ session-scaling-image ---
+[INFO] skip non existing resourceDirectory /workspace/image/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ session-scaling-image ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ session-scaling-image ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- antrun:3.2.0:run (create-empty-classes-directory) @ session-scaling-image ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /workspace/image/target/classes
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- dependency:3.11.0:copy (copy-application) @ session-scaling-image ---
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ session-scaling-image ---
+[INFO] Skipping packaging of the jar
+[INFO] 
+[INFO] --- wildfly:6.2.0.Final:package (provision-server) @ session-scaling-image ---
+[INFO] Provisioning server in /workspace/image/target/server
+[INFO] Resolving feature-packs
+[INFO] Installing packages
+[INFO] Resolving artifacts
+[INFO] Generating configurations
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Nov 10, 2026 8:17:07 AM org.jboss.msc.service.ServiceContainerImpl <clinit>
+INFO: JBoss MSC version 1.5.6.Final
+Nov 10, 2026 8:17:08 AM org.jboss.as.server.ApplicationServerService start
+INFO: WFLYSRV0049: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) starting
+Nov 10, 2026 8:17:08 AM org.jboss.as.server.ApplicationServerService checkIfRootUser
+WARN: WFLYSRV0316: Server started as root. If this user has elevated privileges, it is discouraged to run the server under this account, as it can compromise system security. You can dismiss this warning by starting the server with: -Djboss.ignore.root.username.warning=true
+Nov 10, 2026 8:17:08 AM org.jboss.as.server.ServerService finishBoot
+INFO: WFLYSRV0212: Resuming server
+Nov 10, 2026 8:17:08 AM org.jboss.as.server.BootstrapListener printBootStatisticsMessage
+INFO: WFLYSRV0025: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) started in 1163ms - Started 27 of 30 services (3 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+Nov 10, 2026 8:17:09 AM org.wildfly.security.Version <clinit>
+INFO: ELY00001: WildFly Elytron version 2.9.4.Final
+Nov 10, 2026 8:17:11 AM org.jboss.as.server.ApplicationServerService stop
+INFO: WFLYSRV0050: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) stopped in 22ms
+[INFO] Copying extra content to server
+[INFO] Executing CLI commands and scripts
+[disconnected /] embed-server --server-config=standalone.xml
+[standalone@embedded /] /subsystem=jgroups/stack=tcp/protocol=MPING:remove()
+{"outcome" => "success"}
+[standalone@embedded /] /subsystem=jgroups/stack=tcp/protocol=dns.DNS_PING:add(add-index=0, properties={dns_query="${env.JGROUPS_DNS_QUERY}", dns_record_type="A"})
+{"outcome" => "success"}
+[standalone@embedded /] /subsystem=jgroups/channel=ee:write-attribute(name=stack, value=tcp)
+{"outcome" => "success"}
+[standalone@embedded /] /subsystem=jgroups/stack=tcp/transport=TCP:write-attribute(name=rack, value="${env.NODE_NAME:unknown}")
+{"outcome" => "success"}
+[standalone@embedded /] /subsystem=logging/console-handler=CONSOLE:write-attribute(name=named-formatter, value=PATTERN)
+{"outcome" => "success"}
+[standalone@embedded /] /deployment=ROOT.war:add(content=[{path=application/ROOT.war, relative-to=jboss.home.dir, archive=true}], enabled=true)
+{"outcome" => "success"}
+[standalone@embedded /] stop-embedded-server
+[INFO] 
+[INFO] --- jib:3.5.2:dockerBuild (default-cli) @ session-scaling-image ---
+[INFO] 
+[INFO] Containerizing application to Docker daemon as wildfly-session-scaling:1.0.0-SNAPSHOT...
+[INFO] Getting manifest for base image eclipse-temurin:21.0.13_9-jre-noble@sha256:0eda5830ed7b669abc246a8dc520ea8a23cab06f9a8d4b6964109e2f2394e46f...
+[INFO] Building jvm arg files layer...
+[INFO] Building extra files layer...
+[INFO] The base image requires auth. Trying again for eclipse-temurin:21.0.13_9-jre-noble@sha256:0eda5830ed7b669abc246a8dc520ea8a23cab06f9a8d4b6964109e2f2394e46f...
+[INFO] Using base image with digest: sha256:0eda5830ed7b669abc246a8dc520ea8a23cab06f9a8d4b6964109e2f2394e46f
+[INFO] 
+[INFO] Container entrypoint set to [/opt/server/bin/standalone.sh, --read-only-server-config=standalone.xml, -Djboss.server.data.dir=/tmp/wildfly/data, -Djboss.server.temp.dir=/tmp/wildfly/tmp, -Djboss.server.log.dir=/tmp/wildfly/log, -Dorg.wildfly.sigterm.suspend.timeout=20]
+[INFO] Loading to Docker daemon...
+[INFO] 
+[INFO] Built image to Docker daemon as wildfly-session-scaling:1.0.0-SNAPSHOT
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for WildFly session scaling on Kubernetes 1.0.0-SNAPSHOT:
+[INFO] 
+[INFO] WildFly session scaling on Kubernetes .............. SUCCESS [  2.146 s]
+[INFO] Session scaling demo application ................... SUCCESS [  3.763 s]
+[INFO] Session scaling demo image ......................... SUCCESS [ 32.160 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  38.463 s
+[INFO] Finished at: 2026-11-10T08:17:33Z
+[INFO] ------------------------------------------------------------------------

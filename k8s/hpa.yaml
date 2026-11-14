@@ -1,0 +1,31 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: session-scaling
+  labels:
+    app.kubernetes.io/name: session-scaling
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: session-scaling
+  # Two replicas hold the two copies of every session
+  minReplicas: 2
+  maxReplicas: 4
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 60
+  behavior:
+    scaleDown:
+      # Scale down only after five minutes of lower recommendations (the Kubernetes default) ...
+      stabilizationWindowSeconds: 300
+      # ... and then remove at most one pod per minute, so that Infinispan restores the
+      # second copy of the sessions of a removed pod before the next one goes.
+      policies:
+        - type: Pods
+          value: 1
+          periodSeconds: 60

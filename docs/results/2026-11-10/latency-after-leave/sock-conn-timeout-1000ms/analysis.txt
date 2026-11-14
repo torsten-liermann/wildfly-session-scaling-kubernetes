@@ -1,0 +1,50 @@
+Leaves (time in the log of a, member):
+  11:07:05.840 wssk-diag-c1
+  11:08:29.581 wssk-diag-c2
+  11:09:51.834 wssk-diag-c3
+
+Reads                            count  > 0.2 s   mean s    max s  wrong
+before the first leave             170        1    0.026    0.248      0
+0-5 s after a leave                 43        3    0.140    1.955      0
+5-30 s after a leave               200       18    0.239    3.980      0
+30-60 s after a leave              621        3    0.020    2.720      0
+60-240 s after a leave             302        1    0.020    0.269      0
+
+Slow reads (> 0.25 s) per leave:
+  wssk-diag-c1: 12, first 2.3 s, last 31.4 s after the leave
+  wssk-diag-c2: 12, first 2.3 s, last 30.4 s after the leave
+  wssk-diag-c3: none
+
+Reads slower than 0.1 s, 50 ms bins (lower bound:count):
+  0.10:1  0.20:1  0.25:1  1.00:1  1.70:6  1.75:4  1.80:1  1.95:1  2.00:1  2.70:3  3.00:3  3.70:1  3.95:3
+
+UNICAST3 retransmissions per leave (sample before the leave to the last sample of the cycle):
+  c1: a 566, b 568
+  c2: a 532, b 266
+  c3: a 0, b 0
+
+UNICAST3 samples (time, sample, member, retransmissions, unacknowledged messages, send connections):
+  11:07:02.132	c1 before	a	0	3	2
+  11:07:05.547	c1 before	b	1	7	2
+  11:07:09.198	c1 +1s	a	57	5	2
+  11:07:12.226	c1 +1s	b	116	2	2
+  11:07:24.764	c1 +15s	a	345	6	2
+  11:07:28.029	c1 +15s	b	410	4	2
+  11:07:59.728	c1 end	a	566	0	1
+  11:08:02.968	c1 end	b	569	3	1
+  11:08:26.127	c2 before	a	567	0	2
+  11:08:29.364	c2 before	b	569	0	2
+  11:08:33.437	c2 +1s	a	630	3	2
+  11:08:36.711	c2 +1s	b	629	1	2
+  11:08:48.540	c2 +15s	a	899	3	2
+  11:08:51.934	c2 +15s	b	763	2	2
+  11:09:23.575	c2 end	a	1099	1	1
+  11:09:26.460	c2 end	b	835	1	1
+  11:09:48.454	c3 before	a	1100	0	2
+  11:09:51.568	c3 before	b	835	0	2
+  11:09:55.390	c3 +1s	a	1100	0	2
+  11:09:58.483	c3 +1s	b	835	7	2
+  11:10:10.989	c3 +15s	a	1100	2	2
+  11:10:14.047	c3 +15s	b	835	0	2
+  11:10:45.599	c3 end	a	1100	1	1
+  11:10:48.783	c3 end	b	835	0	1

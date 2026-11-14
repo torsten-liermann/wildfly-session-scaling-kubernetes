@@ -1,0 +1,17 @@
+2026-11-10T14:29:06.558Z	1 two replicas	session-scaling-85dc458f7f-vllfp	session-scaling-85dc458f7f-ztlq7	7.00	ok
+2026-11-10T14:30:15.072Z	2 HPA scale-up	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-vllfp	7.10	ok
+2026-11-10T14:30:15.112Z	2 HPA scale-up	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-ztlq7	7.10	ok
+2026-11-10T14:30:15.158Z	2 HPA scale-up	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-zvd79	7.10	ok
+2026-11-10T14:31:19.816Z	3 node drain	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-jfnc5	7.20	ok
+2026-11-10T14:31:19.872Z	3 node drain	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-pntvx	7.20	ok
+2026-11-10T14:31:19.920Z	3 node drain	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-ztlq7	7.20	ok
+2026-11-10T14:32:18.398Z	4 node stopped	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-jfnc5	7.30	ok
+2026-11-10T14:33:37.452Z	4b node started again	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-jfnc5	7.40	ok
+2026-11-10T14:33:37.519Z	4b node started again	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-pntvx	7.40	ok
+2026-11-10T14:33:37.582Z	4b node started again	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-ztlq7	7.40	ok
+2026-11-10T14:39:29.049Z	5a HPA scale-down to 3	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-jfnc5	7.50	ok
+2026-11-10T14:39:29.096Z	5a HPA scale-down to 3	session-scaling-85dc458f7f-4c96r	session-scaling-85dc458f7f-pntvx	7.50	ok
+2026-11-10T14:40:27.327Z	5b HPA scale-down to 2	session-scaling-85dc458f7f-jfnc5	session-scaling-85dc458f7f-pntvx	7.60	ok
+2026-11-10T14:41:28.079Z	6 rolling update	session-scaling-66c7888bb4-ht8jp	session-scaling-66c7888bb4-vj5m7	7.70	ok
+2026-11-10T14:42:03.241Z	7 pod deleted	session-scaling-66c7888bb4-7bhr9	session-scaling-66c7888bb4-vj5m7	7.80	ok
+2026-11-10T14:42:38.313Z	8b JVM restarted	session-scaling-66c7888bb4-7bhr9	session-scaling-66c7888bb4-vj5m7	7.90	ok

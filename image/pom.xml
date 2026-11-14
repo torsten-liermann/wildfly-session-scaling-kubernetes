@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.github.torsten-liermann</groupId>
+    <artifactId>wildfly-jsf-jpa-kubernetes</artifactId>
+    <version>${revision}</version>
+  </parent>
+
+  <artifactId>session-scaling-image</artifactId>
+  <!-- jar, not pom: Jib skips projects with pom packaging. The module has no sources. -->
+  <packaging>jar</packaging>
+  <name>Session scaling demo image</name>
+
+  <properties>
+    <!-- The module produces an image, no jar: nothing to install or deploy into a Maven repository -->
+    <maven.install.skip>true</maven.install.skip>
+    <maven.deploy.skip>true</maven.deploy.skip>
+    <!-- Platform of the base image and thus of the built image; the base image is a multi-platform image -->
+    <image.architecture>amd64</image.architecture>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>session-scaling-app</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+      <!-- provided: build order and resolution only; Jib must not add the WAR as a library -->
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <skipIfEmpty>true</skipIfEmpty>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <!-- Jib expects target/classes even in a module without classes or resources -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>create-empty-classes-directory</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <mkdir dir="${project.build.outputDirectory}"/>
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <!-- 1. Put the application WAR into the extra content that is copied into the server -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-application</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>session-scaling-app</artifactId>
+                  <version>${project.version}</version>
+                  <type>war</type>
+                  <destFileName>ROOT.war</destFileName>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>${project.build.directory}/server-content/application</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <!-- 2. Provision a trimmed WildFly with Galleon and deploy the WAR as the root context -->
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-maven-plugin</artifactId>
+        <configuration>
+          <feature-packs>
+            <feature-pack>
+              <location>org.wildfly:wildfly-galleon-pack:${version.wildfly}</location>
+            </feature-pack>
+            <feature-pack>
+              <!-- PostgreSQL driver and datasource, configured through environment variables -->
+              <location>org.wildfly:wildfly-datasources-galleon-pack:${version.wildfly.datasources}</location>
+            </feature-pack>
+          </feature-packs>
+          <layers>
+            <!-- Distributable HTTP sessions: Infinispan cache "web", JGroups -->
+            <layer>web-clustering</layer>
+            <layer>cdi</layer>
+            <!-- Jakarta Faces (Mojarra); PrimeFaces is part of the WAR -->
+            <layer>jsf</layer>
+            <!-- Jakarta Persistence (Hibernate) with an Infinispan second-level cache for several replicas -->
+            <layer>jpa-distributed</layer>
+            <layer>postgresql-datasource</layer>
+            <layer>logging</layer>
+            <layer>health</layer>
+          </layers>
+          <excluded-layers>
+            <!-- The image is immutable; the WAR is deployed at build time -->
+            <layer>deployment-scanner</layer>
+          </excluded-layers>
+          <!-- Provision again on every build; otherwise an existing target/server is reused unchanged -->
+          <overwrite-provisioned-server>true</overwrite-provisioned-server>
+          <!-- The CLI script deploys the WAR from /opt/server/application as unmanaged content -->
+          <skipDeployment>true</skipDeployment>
+          <extra-server-content-dirs>
+            <!-- Boot logging configuration -->
+            <extra-content>${project.basedir}/src/main/server</extra-content>
+            <!-- The application WAR (see maven-dependency-plugin above) -->
+            <extra-content>${project.build.directory}/server-content</extra-content>
+          </extra-server-content-dirs>
+          <packaging-scripts>
+            <packaging-script>
+              <scripts>
+                <script>${project.basedir}/src/main/wildfly/configure-server.cli</script>
+              </scripts>
+            </packaging-script>
+          </packaging-scripts>
+        </configuration>
+        <executions>
+          <execution>
+            <id>provision-server</id>
+            <phase>package</phase>
+            <goals>
+              <goal>package</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <!--
+          3. The same server as an archive for an installation without containers, next to the image:
+          target/wildfly-session-scaling-server-${project.version}.tar.gz and .zip
+          (scripts/verify-server-archive.sh starts it and compares it with the image)
+        -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptors>
+            <descriptor>src/main/assembly/server.xml</descriptor>
+          </descriptors>
+          <finalName>wildfly-session-scaling-server-${project.version}</finalName>
+          <appendAssemblyId>false</appendAssemblyId>
+          <attach>false</attach>
+        </configuration>
+        <executions>
+          <execution>
+            <id>server-archive</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <!-- 4. Build the image: JRE base image plus the provisioned server as extra directory -->
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <configuration>
+          <from>
+            <image>${runtime.image}</image>
+            <platforms>
+              <platform>
+                <os>linux</os>
+                <architecture>${image.architecture}</architecture>
+              </platform>
+            </platforms>
+          </from>
+          <to>
+            <image>${image.name}</image>
+          </to>
+          <container>
+            <creationTime>${project.build.outputTimestamp}</creationTime>
+            <filesModificationTime>${project.build.outputTimestamp}</filesModificationTime>
+            <user>1001:1001</user>
+            <workingDirectory>/opt/server</workingDirectory>
+            <environment>
+              <!-- standalone.sh starts Java in the background, traps SIGTERM and passes it on -->
+              <LAUNCH_JBOSS_IN_BACKGROUND>true</LAUNCH_JBOSS_IN_BACKGROUND>
+              <!-- standalone.sh writes the process ID of the JVM here; the check script uses it for a SIGKILL -->
+              <JBOSS_PIDFILE>/tmp/wildfly.pid</JBOSS_PIDFILE>
+              <JBOSS_JAVA_SIZING>-XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m</JBOSS_JAVA_SIZING>
+            </environment>
+            <entrypoint>
+              <arg>/opt/server/bin/standalone.sh</arg>
+              <arg>--read-only-server-config=standalone.xml</arg>
+              <!-- Everything the server writes goes to /tmp; the image itself stays read-only -->
+              <arg>-Djboss.server.data.dir=/tmp/wildfly/data</arg>
+              <arg>-Djboss.server.temp.dir=/tmp/wildfly/tmp</arg>
+              <arg>-Djboss.server.log.dir=/tmp/wildfly/log</arg>
+              <!-- On SIGTERM: suspend (finish running requests, stop taking new ones), then stop -->
+              <arg>-Dorg.wildfly.sigterm.suspend.timeout=20</arg>
+            </entrypoint>
+            <ports>
+              <port>8080</port>
+              <port>9990</port>
+              <port>7600</port>
+            </ports>
+          </container>
+          <extraDirectories>
+            <paths>
+              <!--
+                The same files as the server archive (src/main/assembly/server.xml).
+                Three layers on top of the JRE base image, in this order: the server, which changes only
+                with the WildFly version and its configuration and is the same in every build; the
+                application; the software bill of materials Galleon writes at every provisioning. A new
+                application version replaces only the top two layers; nodes that already have the server
+                layer do not pull it again.
+              -->
+              <path>
+                <from>${project.build.directory}/server</from>
+                <into>/opt/server</into>
+                <excludes>
+                  <exclude>.galleon/**</exclude>
+                  <exclude>.installation/**</exclude>
+                  <exclude>application/**</exclude>
+                  <exclude>sbom.cdx.json.gz</exclude>
+                  <!-- Written by the build-time CLI run; at runtime these directories are under /tmp/wildfly -->
+                  <exclude>standalone/data/**</exclude>
+                  <exclude>standalone/log/**</exclude>
+                  <exclude>standalone/tmp/**</exclude>
+                  <exclude>standalone/configuration/standalone_xml_history/**</exclude>
+                  <exclude>standalone/deployments/**</exclude>
+                </excludes>
+              </path>
+              <path>
+                <from>${project.build.directory}/server/application</from>
+                <into>/opt/server/application</into>
+              </path>
+              <path>
+                <from>${project.build.directory}/server</from>
+                <into>/opt/server</into>
+                <includes>
+                  <include>sbom.cdx.json.gz</include>
+                </includes>
+              </path>
+            </paths>
+            <permissions>
+              <permission>
+                <file>/opt/server/bin/*.sh</file>
+                <mode>755</mode>
+              </permission>
+            </permissions>
+          </extraDirectories>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

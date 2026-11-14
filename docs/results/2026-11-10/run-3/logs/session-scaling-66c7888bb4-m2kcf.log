@@ -1,0 +1,161 @@
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /opt/server
+
+  JAVA: /opt/java/openjdk/bin/java
+
+  JAVA_OPTS:  @"/opt/server/bin/jdk.serialFilter" -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+
+=========================================================================
+
+2026-11-10 14:19:07,829 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+2026-11-10 14:19:08,888 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.6.Final
+2026-11-10 14:19:09,075 INFO  [org.jboss.as] (MSC service thread 1-3) WFLYSRV0049: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) starting
+2026-11-10 14:19:10,297 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.9.4.Final
+2026-11-10 14:19:11,230 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2026-11-10 14:19:11,258 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.8.16.Final
+2026-11-10 14:19:11,268 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.8.16.Final
+2026-11-10 14:19:11,314 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 34) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2026-11-10 14:19:11,315 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 27) WFLYCLINF0001: Activating Infinispan subsystem.
+2026-11-10 14:19:11,331 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 33) WFLYNAM0001: Activating Naming Subsystem
+2026-11-10 14:19:11,332 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 26) WFLYHEALTH0001: Activating Base Health Subsystem
+2026-11-10 14:19:11,347 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 30) WFLYCLJG0001: Activating JGroups subsystem. JGroups version 5.5.8
+2026-11-10 14:19:11,349 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 28) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2026-11-10 14:19:11,368 INFO  [org.jboss.as.connector] (MSC service thread 1-7) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.22.Final)
+2026-11-10 14:19:11,373 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 32) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2026-11-10 14:19:11,382 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 5.0.32.Final
+2026-11-10 14:19:11,400 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 22) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.7)
+2026-11-10 14:19:11,410 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = postgresql
+2026-11-10 14:19:11,414 INFO  [org.jboss.as.naming] (MSC service thread 1-7) WFLYNAM0003: Starting Naming Service
+2026-11-10 14:19:11,440 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0003: Undertow 2.4.4.Final starting
+2026-11-10 14:19:11,482 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 35) WFLYUT0112: The value 'require-host-http11' attribute in the '/subsystem=undertow/server=default-server/http-listener=default' resource is 'false', which will be ignored. The server now always enforces the RFC 9112 requirement that HTTP/1.1 request messages include a Host header.
+2026-11-10 14:19:11,555 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2026-11-10 14:19:11,568 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) Queuing requests.
+2026-11-10 14:19:11,571 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0018: Host default-host starting
+2026-11-10 14:19:11,610 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+2026-11-10 14:19:11,789 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
+2026-11-10 14:19:11,901 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/PostgreSQLDS]
+2026-11-10 14:19:13,751 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) WFLYJPA0002: Read persistence.xml for orders
+2026-11-10 14:19:13,856 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-9) WFLYSRV0018: Deployment "deployment.ROOT.war" is using a private module ("org.infinispan.core") which may be changed or removed in future versions without notice.
+2026-11-10 14:19:13,898 INFO  [org.jipijapa] (MSC service thread 1-9) JIPIORMV7020260: Second level cache enabled for ROOT.war#orders
+2026-11-10 14:19:13,927 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 44) WFLYCLJG0040: Configuration of channel ee does not guarantee message confidentiality between cluster members. Consider encrypting intra-cluster communication by configuring the channel transport with TLS or by adding the ASYM_ENCRYPT or SYM_ENCRYPT protocol to the protocol stack.
+2026-11-10 14:19:13,929 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 44) WFLYCLJG0039: Configuration of channel ee does not require member authentication. Consider blocking untrusted cluster members by requiring TLS client authentication on the channel transport or by adding the AUTH protocol to the protocol stack.
+2026-11-10 14:19:13,968 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment ROOT.war
+2026-11-10 14:19:14,069 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-8) HV000001: Hibernate Validator 9.1.1.Final
+2026-11-10 14:19:14,089 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 46) WFLYCLJG0032: Connecting 'ee' channel. 'session-scaling-66c7888bb4-m2kcf' joining cluster 'ejb' via /10.42.2.9:7600
+2026-11-10 14:19:14,096 INFO  [org.jgroups.JChannel] (ServerService Thread Pool -- 46) local_addr: session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes), name: session-scaling-66c7888bb4-m2kcf
+2026-11-10 14:19:14,121 INFO  [org.jgroups.protocols.FD_SOCK2] (ServerService Thread Pool -- 46) server listening on /10.42.2.9:7601
+2026-11-10 14:19:14,259 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 46) WFLYCLJG0033: Connected 'ee' channel. 'session-scaling-66c7888bb4-m2kcf' joined cluster 'ejb' with view: [session-scaling-66c7888bb4-6xknt(v=16.2.3, r=27 bytes)|17] (3) [session-scaling-66c7888bb4-6xknt(v=16.2.3, r=27 bytes), session-scaling-66c7888bb4-lp9r8(v=16.2.3, r=27 bytes), session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)]
+2026-11-10 14:19:14,431 INFO  [org.jipijapa] (MSC service thread 1-9) JIPIORMV7020260: Second level cache enabled for ROOT.war#orders
+2026-11-10 14:19:14,774 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 45) ISPN000974: Virtual threads support: unavailable
+2026-11-10 14:19:15,055 INFO  [org.jboss.weld.Version] (MSC service thread 1-9) WELD-000900: 6.0.4 (Final)
+2026-11-10 14:19:15,368 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 46) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+2026-11-10 14:19:15,453 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 46) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T14:19:15.452080479Z
+2026-11-10 14:19:15,514 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 38) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+2026-11-10 14:19:15,518 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 38) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T14:19:15.517849590Z
+2026-11-10 14:19:16,134 INFO  [org.infinispan.LIFECYCLE] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-6xknt, session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], phase READ_OLD_WRITE_ALL, topology id 75
+2026-11-10 14:19:16,159 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], phase READ_OLD_WRITE_ALL, topology id 77
+2026-11-10 14:19:16,186 INFO  [org.infinispan.LIFECYCLE] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-6xknt, session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], phase READ_OLD_WRITE_ALL, topology id 75
+2026-11-10 14:19:16,204 INFO  [org.infinispan.LIFECYCLE] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], phase READ_OLD_WRITE_ALL, topology id 77
+2026-11-10 14:19:16,268 INFO  [org.infinispan.CLUSTER] (thread-7,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-66c7888bb4-6xknt left the cluster
+2026-11-10 14:19:16,269 INFO  [org.infinispan.CLUSTER] (thread-7,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-66c7888bb4-6xknt left the cluster
+2026-11-10 14:19:16,269 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t5) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-6xknt, session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], topology id 75
+2026-11-10 14:19:16,270 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t5) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-6xknt, session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], topology id 75
+2026-11-10 14:19:16,271 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t8) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], topology id 77
+2026-11-10 14:19:16,273 INFO  [org.infinispan.CLUSTER] (thread-7,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-66c7888bb4-6xknt left the cluster
+2026-11-10 14:19:16,273 INFO  [org.infinispan.CLUSTER] (thread-7,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-66c7888bb4-6xknt left the cluster
+2026-11-10 14:19:16,276 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t7) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T14:19:16.233274141Z and done 2026-11-10T14:19:16.276357388Z
+2026-11-10 14:19:16,333 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t13) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T14:19:16.233274221Z and done 2026-11-10T14:19:16.333809903Z
+2026-11-10 14:19:16,344 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], phase READ_OLD_WRITE_ALL, topology id 80
+2026-11-10 14:19:16,353 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t7) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], topology id 77
+2026-11-10 14:19:16,355 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t15) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], topology id 80
+2026-11-10 14:19:16,357 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t13) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T14:19:16.345757332Z and done 2026-11-10T14:19:16.357098447Z
+2026-11-10 14:19:16,355 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], phase READ_OLD_WRITE_ALL, topology id 80
+2026-11-10 14:19:16,375 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t16) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], topology id 80
+2026-11-10 14:19:16,394 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T14:19:16.371432067Z and done 2026-11-10T14:19:16.394742552Z
+2026-11-10 14:19:16,395 INFO  [org.infinispan.LIFECYCLE] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T14:19:16.351255657Z and done 2026-11-10T14:19:16.395380938Z
+2026-11-10 14:19:16,560 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 46) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'ROOT.war#orders'
+2026-11-10 14:19:16,581 INFO  [org.hibernate.orm.jpa] (ServerService Thread Pool -- 46) HHH008540: Processing PersistenceUnitInfo [name: orders]
+2026-11-10 14:19:16,606 INFO  [org.infinispan.LIFECYCLE] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=default-server] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], phase READ_OLD_WRITE_ALL, topology id 77
+2026-11-10 14:19:16,614 INFO  [org.infinispan.CONTAINER] (blocking-thread--p6-t2) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2026-11-10 14:19:16,618 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t23) [Context=default-server] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], topology id 77
+2026-11-10 14:19:16,622 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p6-t3) WFLYCLINF0002: Started default-server cache from web container
+2026-11-10 14:19:16,656 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], phase READ_OLD_WRITE_ALL, topology id 77
+2026-11-10 14:19:16,658 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p6-t2) WFLYCLINF0002: Started ROOT.war cache from web container
+2026-11-10 14:19:16,689 INFO  [org.infinispan.LIFECYCLE] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN000973: Task 'state-transfer-default-server' started at 2026-11-10T14:19:16.616899970Z and done 2026-11-10T14:19:16.689041191Z
+2026-11-10 14:19:16,723 INFO  [org.hibernate.orm.core] (ServerService Thread Pool -- 46) HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-10 14:19:16,797 INFO  [org.hibernate.orm.cache] (ServerService Thread Pool -- 46) HHH90001028: Second-level cache region factory [org.infinispan.hibernate.cache.v6.InfinispanRegionFactory]
+2026-11-10 14:19:17,108 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 46) Envers integration enabled? : true
+2026-11-10 14:19:17,331 INFO  [org.infinispan.LIFECYCLE] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf], topology id 77
+2026-11-10 14:19:17,467 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 46) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'ROOT.war#orders'
+2026-11-10 14:19:17,585 INFO  [org.hibernate.orm.connections.pooling] (ServerService Thread Pool -- 46) HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: unknown/unknown
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	JDBC fetch size: undefined/unknown
+	Pool: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-10 14:19:17,966 INFO  [org.infinispan.LIFECYCLE] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN000973: Task 'state-transfer-ROOT.war' started at 2026-11-10T14:19:17.318774483Z and done 2026-11-10T14:19:17.966483140Z
+2026-11-10 14:19:18,537 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 46) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product cache from hibernate container
+2026-11-10 14:19:18,861 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 46) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product-pending-puts cache from hibernate container
+2026-11-10 14:19:18,862 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 46) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product-pending-puts cache from hibernate container
+2026-11-10 14:19:23,801 INFO  [jakarta.enterprise.resource.webcontainer.faces.config] (ServerService Thread Pool -- 38) Initializing Mojarra 4.1.13 for context ''
+2026-11-10 14:19:24,584 INFO  [org.primefaces.webapp.PostConstructApplicationEventListener] (ServerService Thread Pool -- 38) Running on PrimeFaces 16.0.2
+2026-11-10 14:19:24,600 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 38) WFLYUT0021: Registered web context: '/' for server 'default-server'
+2026-11-10 14:19:24,620 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
+2026-11-10 14:19:24,677 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2026-11-10 14:19:24,711 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://0.0.0.0:9990/management
+2026-11-10 14:19:24,712 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0054: Admin console is not enabled
+2026-11-10 14:19:24,712 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) started in 17565ms - Started 484 of 633 services (334 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+2026-11-10 14:19:53,751 ERROR [org.jgroups.protocols.TCP] (Connection.Receiver [10.42.2.9:43733 - 10.42.1.6:7600]-6,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) 10.42.2.9:7600: failed sending graceful close to 10.42.1.6:7600: Broken pipe
+2026-11-10 14:19:55,130 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-66c7888bb4-lp9r8 left the cluster
+2026-11-10 14:19:55,130 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-66c7888bb4-lp9r8 left the cluster
+2026-11-10 14:19:55,131 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-66c7888bb4-lp9r8 left the cluster
+2026-11-10 14:19:55,133 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-66c7888bb4-lp9r8 left the cluster
+2026-11-10 14:19:55,156 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p3-t17) [Context=org.infinispan.CONFIG] ISPN100007: After merge (or coordinator change), recovered members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf] with topology id 84
+2026-11-10 14:19:55,156 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p3-t14) [Context=ROOT.war] ISPN100007: After merge (or coordinator change), recovered members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf] with topology id 81
+2026-11-10 14:19:55,156 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p4-t3) [Context=org.infinispan.CONFIG] ISPN100007: After merge (or coordinator change), recovered members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf] with topology id 84
+2026-11-10 14:19:55,156 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p4-t5) [Context=ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product] ISPN100007: After merge (or coordinator change), recovered members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf] with topology id 33
+2026-11-10 14:19:55,157 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p3-t18) [Context=default-server] ISPN100007: After merge (or coordinator change), recovered members [session-scaling-66c7888bb4-lp9r8, session-scaling-66c7888bb4-m2kcf] with topology id 81
+2026-11-10 14:19:55,166 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p3-t14) [Context=ROOT.war] ISPN100008: Updating cache members list [session-scaling-66c7888bb4-m2kcf], topology id 82
+2026-11-10 14:19:55,169 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p3-t18) [Context=default-server] ISPN100008: Updating cache members list [session-scaling-66c7888bb4-m2kcf], topology id 82
+2026-11-10 14:19:55,172 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p4-t5) [Context=ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product] ISPN100008: Updating cache members list [session-scaling-66c7888bb4-m2kcf], topology id 34
+2026-11-10 14:19:55,172 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p3-t17) [Context=org.infinispan.CONFIG] ISPN100008: Updating cache members list [session-scaling-66c7888bb4-m2kcf], topology id 85
+2026-11-10 14:19:55,172 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p4-t3) [Context=org.infinispan.CONFIG] ISPN100008: Updating cache members list [session-scaling-66c7888bb4-m2kcf], topology id 85
+2026-11-10 14:19:55,182 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p4-t5) [Context=ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product] ISPN100008: Updating cache members list [session-scaling-66c7888bb4-m2kcf], topology id 35
+2026-11-10 14:20:00,948 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100000: Node session-scaling-66c7888bb4-lp9r8 joined the cluster
+2026-11-10 14:20:00,949 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100000: Node session-scaling-66c7888bb4-lp9r8 joined the cluster
+2026-11-10 14:20:00,949 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100000: Node session-scaling-66c7888bb4-lp9r8 joined the cluster
+2026-11-10 14:20:00,950 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) ISPN100000: Node session-scaling-66c7888bb4-lp9r8 joined the cluster
+2026-11-10 14:20:03,400 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], phase READ_OLD_WRITE_ALL, topology id 86
+2026-11-10 14:20:03,403 INFO  [org.infinispan.LIFECYCLE] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], phase READ_OLD_WRITE_ALL, topology id 86
+2026-11-10 14:20:03,407 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t22) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 86
+2026-11-10 14:20:03,412 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], phase READ_OLD_WRITE_ALL, topology id 86
+2026-11-10 14:20:03,413 INFO  [org.infinispan.LIFECYCLE] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], phase READ_OLD_WRITE_ALL, topology id 86
+2026-11-10 14:20:03,416 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t23) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 86
+2026-11-10 14:20:03,584 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100009: Advancing to rebalance phase READ_ALL_WRITE_ALL, topology id 87
+2026-11-10 14:20:03,587 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100009: Advancing to rebalance phase READ_ALL_WRITE_ALL, topology id 87
+2026-11-10 14:20:03,601 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100009: Advancing to rebalance phase READ_NEW_WRITE_ALL, topology id 88
+2026-11-10 14:20:03,603 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100009: Advancing to rebalance phase READ_NEW_WRITE_ALL, topology id 88
+2026-11-10 14:20:03,612 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 89
+2026-11-10 14:20:03,625 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 89
+2026-11-10 14:20:03,764 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=default-server] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], phase READ_OLD_WRITE_ALL, topology id 83
+2026-11-10 14:20:03,765 INFO  [org.infinispan.LIFECYCLE] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=default-server] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], phase READ_OLD_WRITE_ALL, topology id 83
+2026-11-10 14:20:03,767 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t2) [Context=default-server] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 83
+2026-11-10 14:20:03,802 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], phase READ_OLD_WRITE_ALL, topology id 83
+2026-11-10 14:20:03,804 INFO  [org.infinispan.LIFECYCLE] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], phase READ_OLD_WRITE_ALL, topology id 83
+2026-11-10 14:20:03,812 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t4) [Context=ROOT.war] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 83
+2026-11-10 14:20:03,877 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=default-server] ISPN100009: Advancing to rebalance phase READ_ALL_WRITE_ALL, topology id 84
+2026-11-10 14:20:03,913 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=default-server] ISPN100009: Advancing to rebalance phase READ_NEW_WRITE_ALL, topology id 85
+2026-11-10 14:20:03,925 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=default-server] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 86
+2026-11-10 14:20:04,026 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100009: Advancing to rebalance phase READ_ALL_WRITE_ALL, topology id 84
+2026-11-10 14:20:04,036 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100009: Advancing to rebalance phase READ_NEW_WRITE_ALL, topology id 85
+2026-11-10 14:20:04,048 INFO  [org.infinispan.CLUSTER] (thread-9,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 86
+2026-11-10 14:20:05,750 INFO  [org.infinispan.CLUSTER] (thread-12,ejb,session-scaling-66c7888bb4-m2kcf(v=16.2.3, r=27 bytes)) [Context=ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product] ISPN100008: Updating cache members list [session-scaling-66c7888bb4-m2kcf, session-scaling-66c7888bb4-lp9r8], topology id 36

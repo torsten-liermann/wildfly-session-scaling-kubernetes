@@ -1,0 +1,12 @@
+session-scaling-85dc458f7f-vllfp	0	session-scaling-agent-2	2026-11-10T14:27:57Z	2026-11-10T14:27:57Z	2026-11-10T14:28:23Z	26	26	24204
+session-scaling-85dc458f7f-ztlq7	0	session-scaling-agent-1	2026-11-10T14:27:57Z	2026-11-10T14:27:58Z	2026-11-10T14:28:20Z	22	23	18674
+session-scaling-85dc458f7f-4c96r	0	session-scaling-agent-0	2026-11-10T14:29:27Z	2026-11-10T14:29:28Z	2026-11-10T14:29:49Z	21	22	19397
+session-scaling-85dc458f7f-zvd79	0	session-scaling-agent-2	2026-11-10T14:29:42Z	2026-11-10T14:29:43Z	2026-11-10T14:30:08Z	25	26	21776
+session-scaling-85dc458f7f-jfnc5	0	session-scaling-agent-0	2026-11-10T14:30:33Z	2026-11-10T14:30:34Z	2026-11-10T14:30:54Z	20	21	15997
+session-scaling-85dc458f7f-pntvx	0	session-scaling-agent-1	2026-11-10T14:30:59Z	2026-11-10T14:30:59Z	2026-11-10T14:31:15Z	16	16	14787
+session-scaling-85dc458f7f-pntvx	1	session-scaling-agent-1	2026-11-10T14:30:59Z	2026-11-10T14:33:08Z	2026-11-10T14:33:30Z	22	-	19488
+session-scaling-85dc458f7f-ztlq7	1	session-scaling-agent-1	2026-11-10T14:27:57Z	2026-11-10T14:33:08Z	2026-11-10T14:33:29Z	21	-	19337
+session-scaling-66c7888bb4-vj5m7	0	session-scaling-agent-2	2026-11-10T14:40:34Z	2026-11-10T14:40:35Z	2026-11-10T14:40:50Z	15	16	14623
+session-scaling-66c7888bb4-ht8jp	0	session-scaling-agent-0	2026-11-10T14:40:50Z	2026-11-10T14:40:51Z	2026-11-10T14:41:12Z	21	22	16330
+session-scaling-66c7888bb4-7bhr9	0	session-scaling-agent-1	2026-11-10T14:41:37Z	2026-11-10T14:41:38Z	2026-11-10T14:41:59Z	21	22	17066
+session-scaling-66c7888bb4-vj5m7	1	session-scaling-agent-2	2026-11-10T14:40:34Z	2026-11-10T14:42:12Z	2026-11-10T14:42:33Z	21	-	16607

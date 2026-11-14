@@ -1,0 +1,141 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: session-scaling
+  labels:
+    app.kubernetes.io/name: session-scaling
+spec:
+  # No "replicas": the HorizontalPodAutoscaler (hpa.yaml) owns the replica count.
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: session-scaling
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: session-scaling
+    spec:
+      # preStop sleep (10 s) + suspend timeout (20 s) + shutdown, with headroom
+      terminationGracePeriodSeconds: 60
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        seccompProfile:
+          type: RuntimeDefault
+      affinity:
+        podAntiAffinity:
+          # Spread the replicas over the nodes, but still schedule when there are more replicas than nodes
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname
+                labelSelector:
+                  matchLabels:
+                    app.kubernetes.io/name: session-scaling
+      containers:
+        - name: wildfly
+          image: wildfly-session-scaling:1.0.0-SNAPSHOT
+          imagePullPolicy: IfNotPresent
+          # Appended to the image entrypoint (bin/standalone.sh ...). Kubernetes expands $(VAR).
+          args:
+            - -b=0.0.0.0
+            - -bmanagement=0.0.0.0
+            - -bprivate=$(POD_IP)
+            - -Djboss.node.name=$(POD_NAME)
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            # Becomes the JGroups "rack": Infinispan keeps the two copies of a session on different nodes
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            # DNS_PING asks the headless service for the addresses of all replicas
+            - name: JGROUPS_DNS_QUERY
+              value: session-scaling-discovery.$(POD_NAMESPACE).svc.cluster.local
+            # Datasource PostgreSQLDS of the Galleon layer postgresql-datasource
+            - name: POSTGRESQL_HOST
+              value: session-scaling-db
+            - name: POSTGRESQL_DATABASE
+              value: orders
+            - name: POSTGRESQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: session-scaling-db
+                  key: username
+            - name: POSTGRESQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: session-scaling-db
+                  key: password
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: management
+              containerPort: 9990
+            - name: jgroups
+              containerPort: 7600
+            # JGroups failure detection (FD_SOCK2, socket binding jgroups-tcp-fd)
+            - name: jgroups-fd
+              containerPort: 7601
+          resources:
+            requests:
+              cpu: 500m
+              memory: 768Mi
+            limits:
+              memory: 768Mi
+          startupProbe:
+            httpGet:
+              path: /health/started
+              port: management
+            periodSeconds: 2
+            failureThreshold: 60
+          readinessProbe:
+            # DOWN while the server boots, suspends on SIGTERM or has a failed deployment
+            httpGet:
+              path: /health/ready
+              port: management
+            periodSeconds: 5
+            failureThreshold: 2
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: management
+            periodSeconds: 10
+            failureThreshold: 3
+          lifecycle:
+            preStop:
+              # Give endpoints, kube-proxy and the ingress controller time to stop routing
+              # to this pod before WildFly receives SIGTERM and suspends.
+              sleep:
+                seconds: 10
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        # The only writable location: data and temporary files of the server (/tmp/wildfly)
+        - name: tmp
+          emptyDir:
+            sizeLimit: 256Mi

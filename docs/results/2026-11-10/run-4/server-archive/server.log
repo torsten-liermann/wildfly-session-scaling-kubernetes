@@ -1,0 +1,120 @@
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /srv/wildfly
+
+  JAVA: /opt/java/openjdk/bin/java
+
+  JAVA_OPTS:  @"/srv/wildfly/bin/jdk.serialFilter" -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+
+=========================================================================
+
+2026-11-10 14:25:32,946 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+2026-11-10 14:25:33,853 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.6.Final
+2026-11-10 14:25:34,021 INFO  [org.jboss.as] (MSC service thread 1-3) WFLYSRV0049: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) starting
+2026-11-10 14:25:35,070 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.9.4.Final
+2026-11-10 14:25:35,783 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2026-11-10 14:25:35,805 INFO  [org.xnio] (MSC service thread 1-3) XNIO version 3.8.16.Final
+2026-11-10 14:25:35,818 INFO  [org.xnio.nio] (MSC service thread 1-3) XNIO NIO Implementation Version 3.8.16.Final
+2026-11-10 14:25:35,856 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 26) WFLYHEALTH0001: Activating Base Health Subsystem
+2026-11-10 14:25:35,864 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 27) WFLYCLINF0001: Activating Infinispan subsystem.
+2026-11-10 14:25:35,865 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 34) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2026-11-10 14:25:35,867 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 33) WFLYNAM0001: Activating Naming Subsystem
+2026-11-10 14:25:35,871 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 30) WFLYCLJG0001: Activating JGroups subsystem. JGroups version 5.5.8
+2026-11-10 14:25:35,875 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 28) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2026-11-10 14:25:35,887 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 32) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2026-11-10 14:25:35,893 INFO  [org.jboss.as.naming] (MSC service thread 1-8) WFLYNAM0003: Starting Naming Service
+2026-11-10 14:25:35,898 INFO  [org.jboss.as.connector] (MSC service thread 1-5) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.22.Final)
+2026-11-10 14:25:35,937 INFO  [org.jboss.remoting] (MSC service thread 1-9) JBoss Remoting version 5.0.32.Final
+2026-11-10 14:25:35,975 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 22) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.7)
+2026-11-10 14:25:35,980 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = postgresql
+2026-11-10 14:25:36,013 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0003: Undertow 2.4.4.Final starting
+2026-11-10 14:25:36,037 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 35) WFLYUT0112: The value 'require-host-http11' attribute in the '/subsystem=undertow/server=default-server/http-listener=default' resource is 'false', which will be ignored. The server now always enforces the RFC 9112 requirement that HTTP/1.1 request messages include a Host header.
+2026-11-10 14:25:36,086 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0012: Started server default-server.
+2026-11-10 14:25:36,089 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) Queuing requests.
+2026-11-10 14:25:36,090 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0018: Host default-host starting
+2026-11-10 14:25:36,119 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+2026-11-10 14:25:36,248 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
+2026-11-10 14:25:36,345 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0001: Bound data source [java:jboss/datasources/PostgreSQLDS]
+2026-11-10 14:25:37,793 INFO  [org.jboss.as.jpa] (MSC service thread 1-4) WFLYJPA0002: Read persistence.xml for orders
+2026-11-10 14:25:37,893 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-2) WFLYSRV0018: Deployment "deployment.ROOT.war" is using a private module ("org.infinispan.core") which may be changed or removed in future versions without notice.
+2026-11-10 14:25:37,927 INFO  [org.jipijapa] (MSC service thread 1-2) JIPIORMV7020260: Second level cache enabled for ROOT.war#orders
+2026-11-10 14:25:37,956 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 46) WFLYCLJG0040: Configuration of channel ee does not guarantee message confidentiality between cluster members. Consider encrypting intra-cluster communication by configuring the channel transport with TLS or by adding the ASYM_ENCRYPT or SYM_ENCRYPT protocol to the protocol stack.
+2026-11-10 14:25:37,956 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 46) WFLYCLJG0039: Configuration of channel ee does not require member authentication. Consider blocking untrusted cluster members by requiring TLS client authentication on the channel transport or by adding the AUTH protocol to the protocol stack.
+2026-11-10 14:25:37,996 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment ROOT.war
+2026-11-10 14:25:38,103 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-3) HV000001: Hibernate Validator 9.1.1.Final
+2026-11-10 14:25:38,138 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 45) WFLYCLJG0032: Connecting 'ee' channel. '5878d2a37fb4' joining cluster 'ejb' via /127.0.0.1:7600
+2026-11-10 14:25:38,144 INFO  [org.jgroups.JChannel] (ServerService Thread Pool -- 45) local_addr: 5878d2a37fb4(v=16.2.3, r=archive-check), name: 5878d2a37fb4
+2026-11-10 14:25:38,171 INFO  [org.jgroups.protocols.FD_SOCK2] (ServerService Thread Pool -- 45) server listening on /127.0.0.1:7601
+2026-11-10 14:25:38,422 INFO  [org.jipijapa] (MSC service thread 1-3) JIPIORMV7020260: Second level cache enabled for ROOT.war#orders
+2026-11-10 14:25:38,875 INFO  [org.jboss.weld.Version] (MSC service thread 1-3) WELD-000900: 6.0.4 (Final)
+2026-11-10 14:25:40,181 INFO  [org.jgroups.protocols.pbcast.GMS] (ServerService Thread Pool -- 45) 5878d2a37fb4(v=16.2.3, r=archive-check): no members discovered after 2.01s: creating cluster as coordinator
+2026-11-10 14:25:40,195 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 45) WFLYCLJG0033: Connected 'ee' channel. '5878d2a37fb4' joined cluster 'ejb' with view: [5878d2a37fb4(v=16.2.3, r=archive-check)|0] (1) [5878d2a37fb4(v=16.2.3, r=archive-check)]
+2026-11-10 14:25:40,509 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 46) ISPN000974: Virtual threads support: unavailable
+2026-11-10 14:25:40,962 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 45) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+2026-11-10 14:25:41,047 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 45) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T14:25:41.045980268Z
+2026-11-10 14:25:41,082 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 43) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+2026-11-10 14:25:41,084 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 43) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T14:25:41.084618635Z
+2026-11-10 14:25:41,558 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 45) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'ROOT.war#orders'
+2026-11-10 14:25:41,572 INFO  [org.hibernate.orm.jpa] (ServerService Thread Pool -- 45) HHH008540: Processing PersistenceUnitInfo [name: orders]
+2026-11-10 14:25:41,590 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p6-t3) WFLYCLINF0002: Started default-server cache from web container
+2026-11-10 14:25:41,599 INFO  [org.infinispan.CONTAINER] (blocking-thread--p6-t2) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2026-11-10 14:25:41,634 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p6-t2) WFLYCLINF0002: Started ROOT.war cache from web container
+2026-11-10 14:25:41,673 INFO  [org.hibernate.orm.core] (ServerService Thread Pool -- 45) HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-10 14:25:41,725 INFO  [org.hibernate.orm.cache] (ServerService Thread Pool -- 45) HHH90001028: Second-level cache region factory [org.infinispan.hibernate.cache.v6.InfinispanRegionFactory]
+2026-11-10 14:25:42,001 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 45) Envers integration enabled? : true
+2026-11-10 14:25:42,268 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 45) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'ROOT.war#orders'
+2026-11-10 14:25:42,364 INFO  [org.hibernate.orm.connections.pooling] (ServerService Thread Pool -- 45) HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: unknown/unknown
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	JDBC fetch size: undefined/unknown
+	Pool: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-10 14:25:43,086 INFO  [org.infinispan.CLUSTER] (non-blocking-thread--p3-t9) [Context=ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product] ISPN100008: Updating cache members list [5878d2a37fb4], topology id 2
+2026-11-10 14:25:43,095 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 45) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product cache from hibernate container
+2026-11-10 14:25:43,119 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 45) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product-pending-puts cache from hibernate container
+2026-11-10 14:25:43,119 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 45) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product-pending-puts cache from hibernate container
+2026-11-10 14:25:46,381 INFO  [jakarta.enterprise.resource.webcontainer.faces.config] (ServerService Thread Pool -- 54) Initializing Mojarra 4.1.13 for context ''
+2026-11-10 14:25:47,079 INFO  [org.primefaces.webapp.PostConstructApplicationEventListener] (ServerService Thread Pool -- 54) Running on PrimeFaces 16.0.2
+2026-11-10 14:25:47,096 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 54) WFLYUT0021: Registered web context: '/' for server 'default-server'
+2026-11-10 14:25:47,120 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
+2026-11-10 14:25:47,156 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2026-11-10 14:25:47,185 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://0.0.0.0:9990/management
+2026-11-10 14:25:47,185 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0054: Admin console is not enabled
+2026-11-10 14:25:47,186 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) started in 14808ms - Started 484 of 633 services (334 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+2026-11-10 14:25:48,843 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+*** JBossAS process (77) received TERM signal ***
+2026-11-10 14:25:48,850 INFO  [org.jboss.as.txn] (ServerService Thread Pool -- 8) WFLYTX0048: Transactions subsystem: waiting for in-flight transactions to terminate
+2026-11-10 14:25:48,851 INFO  [org.jboss.as.txn] (ServerService Thread Pool -- 8) WFLYTX0049: Transactions subsystem: all in-flight transactions terminated
+2026-11-10 14:25:48,851 INFO  [org.jboss.as.txn] (ServerService Thread Pool -- 8) WFLYTX0046: Transactions subsystem: starting transactions recovery suspension
+2026-11-10 14:25:48,852 INFO  [org.jboss.as.txn] (ServerService Thread Pool -- 8) WFLYTX0047: Transactions subsystem: transactions recovery suspension completed
+2026-11-10 14:25:48,855 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2026-11-10 14:25:48,871 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0008: Undertow HTTP listener default suspending
+2026-11-10 14:25:48,873 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 0.0.0.0:8080
+2026-11-10 14:25:48,875 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 6) WFLYUT0022: Unregistered web context: '/' from server 'default-server'
+2026-11-10 14:25:48,910 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0019: Host default-host stopping
+2026-11-10 14:25:48,917 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0004: Undertow 2.4.4.Final stopping
+2026-11-10 14:25:48,921 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 14) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'ROOT.war#orders'
+2026-11-10 14:25:48,922 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p6-t2) WFLYCLINF0003: Stopped default-server cache from web container
+2026-11-10 14:25:48,922 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p6-t3) WFLYCLINF0003: Stopped ROOT.war cache from web container
+2026-11-10 14:25:48,927 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 8) ISPN000720: Stopping all caches in cache container
+2026-11-10 14:25:48,927 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 14) WFLYCLINF0003: Stopped ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product cache from hibernate container
+2026-11-10 14:25:48,928 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 14) WFLYCLINF0003: Stopped ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product-pending-puts cache from hibernate container
+2026-11-10 14:25:48,933 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 14) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'ROOT.war#orders'
+2026-11-10 14:25:48,935 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 14) ISPN000720: Stopping all caches in cache container
+2026-11-10 14:25:48,935 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0010: Unbound data source [java:jboss/datasources/PostgreSQLDS]
+2026-11-10 14:25:48,940 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 8) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T14:25:48.940393297Z
+2026-11-10 14:25:48,941 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 14) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T14:25:48.940980350Z
+2026-11-10 14:25:48,943 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = postgresql
+2026-11-10 14:25:48,962 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 8) WFLYCLJG0034: Disconnecting 'ee' channel. '5878d2a37fb4' leaving cluster 'ejb' with view: [5878d2a37fb4(v=16.2.3, r=archive-check)|0] (1) [5878d2a37fb4(v=16.2.3, r=archive-check)]
+2026-11-10 14:25:48,968 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment ROOT.war (runtime-name: ROOT.war) in 104ms
+2026-11-10 14:25:49,009 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 8) WFLYCLJG0035: Disconnected 'ee' channel. '5878d2a37fb4' left cluster 'ejb'
+2026-11-10 14:25:49,030 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) stopped in 166ms
+*** JBossAS process (77) received TERM signal ***

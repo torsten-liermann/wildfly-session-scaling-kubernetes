@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="primefaces">
+<h:head>
+  <title>Order</title>
+</h:head>
+<h:body>
+  <h:form id="order">
+    <p:outputPanel id="wizard" layout="block">
+      <!--
+        Machine-readable state of this view for scripts/verify-session-scaling.sh.
+        view: id of the @ViewScoped bean instance; orders: orders in the @SessionScoped OrderHistory.
+      -->
+      <div id="flow-state"
+           data-step="#{orderWizard.step}"
+           data-view="#{orderWizard.instanceId}"
+           data-created-by="#{orderWizard.createdBy}"
+           data-customer="#{orderWizard.customer}"
+           data-lines="#{orderWizard.lines.size()}"
+           data-last-product="#{orderWizard.lastLine.productId}"
+           data-last-price="#{orderWizard.lastLine.unitPrice}"
+           data-total="#{orderWizard.total}"
+           data-actions="#{orderWizard.actions}"
+           data-order="#{orderWizard.orderId}"
+           data-stored-lines="#{orderWizard.storedOrder.lines.size()}"
+           data-stored-total="#{orderWizard.storedOrder.total}"
+           data-orders="#{orderHistory.count}"
+           data-served-by="#{podIdentity.podName()}"></div>
+
+      <p:messages id="messages"/>
+      <p>Step #{orderWizard.step} of 4 · view created by #{orderWizard.createdBy} ·
+        this response from #{podIdentity.podName()} · orders in this session: #{orderHistory.count}</p>
+
+      <h:panelGroup rendered="#{orderWizard.step == 1}" layout="block">
+        <h2>Customer</h2>
+        <p:outputLabel for="customer" value="Name"/>
+        <p:inputText id="customer" value="#{orderWizard.customer}" required="true"/>
+        <!-- A classic full-page postback -->
+        <p:commandButton id="toItems" value="Next" action="#{orderWizard.toItems}" ajax="false"/>
+      </h:panelGroup>
+
+      <h:panelGroup rendered="#{orderWizard.step == 2}" layout="block">
+        <h2>Lines for #{orderWizard.customer}</h2>
+        <p:outputLabel for="product" value="Product"/>
+        <p:selectOneMenu id="product" value="#{orderWizard.productId}">
+          <f:selectItems value="#{orderWizard.products}" var="product" itemValue="#{product.id}"
+                         itemLabel="#{product.name} (#{product.price})"/>
+        </p:selectOneMenu>
+        <p:outputLabel for="quantity" value="Quantity"/>
+        <p:inputText id="quantity" value="#{orderWizard.quantity}" required="true" size="4"/>
+        <!-- PrimeFaces Ajax postbacks: only the panel "wizard" is rendered again -->
+        <p:commandButton id="addLine" value="Add line" action="#{orderWizard.addLine}"
+                         process="@this product quantity" update="wizard"/>
+        <p:commandButton id="toReview" value="Review" action="#{orderWizard.toReview}"
+                         process="@this" update="wizard"/>
+      </h:panelGroup>
+
+      <h:panelGroup rendered="#{orderWizard.step == 3}" layout="block">
+        <h2>Review the order of #{orderWizard.customer}</h2>
+        <p:commandButton id="submit" value="Submit" action="#{orderWizard.submit}"
+                         process="@this" update="wizard"/>
+      </h:panelGroup>
+
+      <h:panelGroup rendered="#{orderWizard.step == 4}" layout="block">
+        <h2>Order #{orderWizard.orderId} stored</h2>
+        <p>#{orderWizard.storedOrder.lines.size()} lines, total #{orderWizard.storedOrder.total},
+          stored by #{orderWizard.storedOrder.submittedBy}</p>
+      </h:panelGroup>
+
+      <p:dataTable id="lines" value="#{orderWizard.lines}" var="line" rendered="#{orderWizard.step ge 2}">
+        <p:column headerText="Product">#{line.productName}</p:column>
+        <p:column headerText="Quantity">#{line.quantity}</p:column>
+        <p:column headerText="Unit price">#{line.unitPrice}</p:column>
+        <p:column headerText="Amount">#{line.amount}</p:column>
+        <f:facet name="footer">Total #{orderWizard.total}</f:facet>
+      </p:dataTable>
+    </p:outputPanel>
+  </h:form>
+</h:body>
+</html>

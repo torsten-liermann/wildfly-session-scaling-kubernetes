@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="orders">
+    <!-- Defined by the Galleon layer postgresql-datasource; connection settings come from the environment -->
+    <jta-data-source>java:jboss/datasources/PostgreSQLDS</jta-data-source>
+    <!-- Entities annotated with @Cacheable go into the second-level cache (Product) -->
+    <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+    <properties>
+      <!-- The schema belongs to the database (k8s/database/schema.sql), not to the replicas -->
+      <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+      <!--
+        A replica must start even while the database is not reachable yet (the pods of a Deployment
+        start in no particular order). Without these settings Hibernate opens a connection at deployment
+        time to determine the SQL dialect, and the deployment fails for good if the database is not up.
+      -->
+      <property name="jakarta.persistence.database-product-name" value="PostgreSQL"/>
+      <property name="jakarta.persistence.database-major-version" value="18"/>
+      <property name="hibernate.boot.allow_jdbc_metadata_access" value="false"/>
+    </properties>
+  </persistence-unit>
+</persistence>

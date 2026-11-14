@@ -1,0 +1,116 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                     MESSAGE
+13m         Normal    Scheduled                      pod/session-scaling-db-77d9665cbd-dqx2w    Successfully assigned session-scaling/session-scaling-db-77d9665cbd-dqx2w to k3d-session-scaling-server-0
+13m         Normal    Scheduled                      pod/session-scaling-85dc458f7f-jtct6       Successfully assigned session-scaling/session-scaling-85dc458f7f-jtct6 to k3d-session-scaling-agent-1
+12m         Normal    Scheduled                      pod/session-scaling-85dc458f7f-nk6br       Successfully assigned session-scaling/session-scaling-85dc458f7f-nk6br to k3d-session-scaling-agent-0
+11m         Normal    Scheduled                      pod/session-scaling-85dc458f7f-sxljp       Successfully assigned session-scaling/session-scaling-85dc458f7f-sxljp to k3d-session-scaling-agent-1
+13m         Normal    Scheduled                      pod/session-scaling-85dc458f7f-vp2vc       Successfully assigned session-scaling/session-scaling-85dc458f7f-vp2vc to k3d-session-scaling-agent-0
+12m         Normal    Scheduled                      pod/session-scaling-85dc458f7f-2fmqj       Successfully assigned session-scaling/session-scaling-85dc458f7f-2fmqj to k3d-session-scaling-agent-2
+10m         Normal    Scheduled                      pod/session-scaling-85dc458f7f-65xwn       Successfully assigned session-scaling/session-scaling-85dc458f7f-65xwn to k3d-session-scaling-agent-2
+2m18s       Normal    Scheduled                      pod/session-scaling-66c7888bb4-lp9r8       Successfully assigned session-scaling/session-scaling-66c7888bb4-lp9r8 to k3d-session-scaling-agent-1
+2m39s       Normal    Scheduled                      pod/session-scaling-66c7888bb4-6xknt       Successfully assigned session-scaling/session-scaling-66c7888bb4-6xknt to k3d-session-scaling-agent-0
+90s         Normal    Scheduled                      pod/session-scaling-66c7888bb4-m2kcf       Successfully assigned session-scaling/session-scaling-66c7888bb4-m2kcf to k3d-session-scaling-agent-2
+13m         Normal    SuccessfulCreate               replicaset/session-scaling-85dc458f7f      Created pod: session-scaling-85dc458f7f-vp2vc
+13m         Normal    SuccessfulCreate               replicaset/session-scaling-db-77d9665cbd   Created pod: session-scaling-db-77d9665cbd-dqx2w
+13m         Normal    SuccessfulRescale              horizontalpodautoscaler/session-scaling    New size: 2; reason: Current number of replicas below Spec.MinReplicas
+13m         Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled up replica set session-scaling-85dc458f7f from 0 to 1
+13m         Normal    ScalingReplicaSet              deployment/session-scaling-db              Scaled up replica set session-scaling-db-77d9665cbd from 0 to 1
+13m         Normal    Created                        pod/session-scaling-85dc458f7f-vp2vc       Container created
+13m         Normal    Started                        pod/session-scaling-85dc458f7f-jtct6       Container started
+13m         Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled up replica set session-scaling-85dc458f7f from 1 to 2
+13m         Normal    Pulled                         pod/session-scaling-85dc458f7f-jtct6       Container image "wildfly-session-scaling:1.0.0-SNAPSHOT" already present on machine and can be accessed by the pod
+13m         Normal    Created                        pod/session-scaling-85dc458f7f-jtct6       Container created
+13m         Normal    Started                        pod/session-scaling-85dc458f7f-vp2vc       Container started
+13m         Normal    Pulling                        pod/session-scaling-db-77d9665cbd-dqx2w    Pulling image "postgres:18.6-alpine@sha256:123b17998ccaf47e53b502e8c6a1e79afd8f579c6f3eec83c563da026f957395"
+13m         Normal    SuccessfulCreate               replicaset/session-scaling-85dc458f7f      Created pod: session-scaling-85dc458f7f-jtct6
+13m         Normal    Pulled                         pod/session-scaling-85dc458f7f-vp2vc       Container image "wildfly-session-scaling:1.0.0-SNAPSHOT" already present on machine and can be accessed by the pod
+13m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-jtct6       Startup probe failed: Get "http://10.42.1.4:9990/health/started": dial tcp 10.42.1.4:9990: connect: connection refused
+13m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-vp2vc       Startup probe failed: Get "http://10.42.0.6:9990/health/started": dial tcp 10.42.0.6:9990: connect: connection refused
+13m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-vp2vc       Startup probe failed: HTTP probe failed with statuscode: 404
+13m         Normal    Created                        pod/session-scaling-db-77d9665cbd-dqx2w    Container created
+13m         Normal    Pulled                         pod/session-scaling-db-77d9665cbd-dqx2w    Successfully pulled image "postgres:18.6-alpine@sha256:123b17998ccaf47e53b502e8c6a1e79afd8f579c6f3eec83c563da026f957395" in 7.599s (7.599s including waiting). Image size: 120090937 bytes.
+13m         Warning   Unhealthy                      pod/session-scaling-db-77d9665cbd-dqx2w    Readiness probe failed: 127.0.0.1:5432 - no response
+13m         Normal    Started                        pod/session-scaling-db-77d9665cbd-dqx2w    Container started
+13m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-jtct6       Readiness probe failed: HTTP probe failed with statuscode: 503
+13m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-vp2vc       Readiness probe failed: HTTP probe failed with statuscode: 503
+12m         Normal    SuccessfulCreate               replicaset/session-scaling-85dc458f7f      Created pod: session-scaling-85dc458f7f-2fmqj
+12m         Normal    SuccessfulCreate               replicaset/session-scaling-85dc458f7f      Created pod: session-scaling-85dc458f7f-nk6br
+12m         Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled up replica set session-scaling-85dc458f7f from 2 to 4
+12m         Normal    SuccessfulRescale              horizontalpodautoscaler/session-scaling    New size: 4; reason: cpu resource utilization (percentage of request) above target
+12m         Normal    Created                        pod/session-scaling-85dc458f7f-nk6br       Container created
+12m         Normal    Pulled                         pod/session-scaling-85dc458f7f-nk6br       Container image "wildfly-session-scaling:1.0.0-SNAPSHOT" already present on machine and can be accessed by the pod
+12m         Normal    Created                        pod/session-scaling-85dc458f7f-2fmqj       Container created
+12m         Normal    Pulled                         pod/session-scaling-85dc458f7f-2fmqj       Container image "wildfly-session-scaling:1.0.0-SNAPSHOT" already present on machine and can be accessed by the pod
+11m         Normal    Started                        pod/session-scaling-85dc458f7f-nk6br       Container started
+11m         Normal    Started                        pod/session-scaling-85dc458f7f-2fmqj       Container started
+11m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-nk6br       Startup probe failed: Get "http://10.42.0.7:9990/health/started": dial tcp 10.42.0.7:9990: connect: connection refused
+11m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-2fmqj       Startup probe failed: Get "http://10.42.2.4:9990/health/started": dial tcp 10.42.2.4:9990: connect: connection refused
+11m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-2fmqj       Readiness probe failed: HTTP probe failed with statuscode: 503
+11m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-nk6br       Readiness probe failed: HTTP probe failed with statuscode: 503
+11m         Normal    Pulled                         pod/session-scaling-85dc458f7f-sxljp       Container image "wildfly-session-scaling:1.0.0-SNAPSHOT" already present on machine and can be accessed by the pod
+11m         Normal    Killing                        pod/session-scaling-85dc458f7f-vp2vc       Stopping container wildfly
+11m         Normal    Created                        pod/session-scaling-85dc458f7f-sxljp       Container created
+11m         Normal    SuccessfulCreate               replicaset/session-scaling-85dc458f7f      Created pod: session-scaling-85dc458f7f-sxljp
+11m         Normal    Started                        pod/session-scaling-85dc458f7f-sxljp       Container started
+11m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-sxljp       Startup probe failed: Get "http://10.42.1.5:9990/health/started": dial tcp 10.42.1.5:9990: connect: connection refused
+10m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-sxljp       Readiness probe failed: HTTP probe failed with statuscode: 503
+10m         Normal    Killing                        pod/session-scaling-85dc458f7f-nk6br       Stopping container wildfly
+10m         Normal    SuccessfulCreate               replicaset/session-scaling-85dc458f7f      Created pod: session-scaling-85dc458f7f-65xwn
+10m         Normal    Started                        pod/session-scaling-85dc458f7f-65xwn       Container started
+10m         Normal    Created                        pod/session-scaling-85dc458f7f-65xwn       Container created
+10m         Normal    Pulled                         pod/session-scaling-85dc458f7f-65xwn       Container image "wildfly-session-scaling:1.0.0-SNAPSHOT" already present on machine and can be accessed by the pod
+10m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-65xwn       Startup probe failed: Get "http://10.42.2.5:9990/health/started": dial tcp 10.42.2.5:9990: connect: connection refused
+10m         Warning   Unhealthy                      pod/session-scaling-85dc458f7f-65xwn       Readiness probe failed: HTTP probe failed with statuscode: 503
+9m15s       Warning   NodeNotReady                   pod/session-scaling-85dc458f7f-2fmqj       Node is not ready
+9m15s       Warning   NodeNotReady                   pod/session-scaling-85dc458f7f-65xwn       Node is not ready
+9m10s       Normal    TaintManagerEviction           pod/session-scaling-85dc458f7f-2fmqj       Cancelling deletion of Pod session-scaling/session-scaling-85dc458f7f-2fmqj
+9m10s       Normal    TaintManagerEviction           pod/session-scaling-85dc458f7f-65xwn       Cancelling deletion of Pod session-scaling/session-scaling-85dc458f7f-65xwn
+9m9s        Normal    SandboxChanged                 pod/session-scaling-85dc458f7f-2fmqj       Pod sandbox changed, it will be killed and re-created.
+9m9s        Normal    SandboxChanged                 pod/session-scaling-85dc458f7f-65xwn       Pod sandbox changed, it will be killed and re-created.
+9m8s        Normal    Created                        pod/session-scaling-85dc458f7f-2fmqj       Container created
+9m8s        Normal    Pulled                         pod/session-scaling-85dc458f7f-2fmqj       Container image "wildfly-session-scaling:1.0.0-SNAPSHOT" already present on machine and can be accessed by the pod
+9m8s        Normal    Started                        pod/session-scaling-85dc458f7f-2fmqj       Container started
+9m8s        Normal    Pulled                         pod/session-scaling-85dc458f7f-65xwn       Container image "wildfly-session-scaling:1.0.0-SNAPSHOT" already present on machine and can be accessed by the pod
+9m8s        Normal    Created                        pod/session-scaling-85dc458f7f-65xwn       Container created
+9m8s        Normal    Started                        pod/session-scaling-85dc458f7f-65xwn       Container started
+9m5s        Warning   Unhealthy                      pod/session-scaling-85dc458f7f-65xwn       Startup probe failed: Get "http://10.42.2.8:9990/health/started": dial tcp 10.42.2.8:9990: connect: connection refused
+9m4s        Warning   Unhealthy                      pod/session-scaling-85dc458f7f-2fmqj       Startup probe failed: Get "http://10.42.2.7:9990/health/started": dial tcp 10.42.2.7:9990: connect: connection refused
+8m53s       Warning   Unhealthy                      pod/session-scaling-85dc458f7f-65xwn       Readiness probe failed: HTTP probe failed with statuscode: 503
+8m52s       Warning   Unhealthy                      pod/session-scaling-85dc458f7f-2fmqj       Readiness probe failed: HTTP probe failed with statuscode: 503
+4m          Normal    SuccessfulDelete               replicaset/session-scaling-85dc458f7f      Deleted pod: session-scaling-85dc458f7f-sxljp
+4m          Normal    Killing                        pod/session-scaling-85dc458f7f-sxljp       Stopping container wildfly
+4m          Normal    SuccessfulRescale              horizontalpodautoscaler/session-scaling    New size: 3; reason: All metrics below target
+4m          Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled down replica set session-scaling-85dc458f7f from 4 to 3
+2m59s       Normal    SuccessfulDelete               replicaset/session-scaling-85dc458f7f      Deleted pod: session-scaling-85dc458f7f-2fmqj
+2m59s       Normal    Killing                        pod/session-scaling-85dc458f7f-2fmqj       Stopping container wildfly
+2m59s       Normal    SuccessfulRescale              horizontalpodautoscaler/session-scaling    New size: 2; reason: All metrics below target
+2m59s       Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled down replica set session-scaling-85dc458f7f from 3 to 2
+2m40s       Normal    SuccessfulCreate               replicaset/session-scaling-66c7888bb4      Created pod: session-scaling-66c7888bb4-6xknt
+2m40s       Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled up replica set session-scaling-66c7888bb4 from 0 to 1
+2m39s       Normal    Created                        pod/session-scaling-66c7888bb4-6xknt       Container created
+2m39s       Normal    Pulled                         pod/session-scaling-66c7888bb4-6xknt       Container image "wildfly-session-scaling:1.0.1-SNAPSHOT" already present on machine and can be accessed by the pod
+2m39s       Normal    Started                        pod/session-scaling-66c7888bb4-6xknt       Container started
+2m35s       Warning   Unhealthy                      pod/session-scaling-66c7888bb4-6xknt       Startup probe failed: Get "http://10.42.0.8:9990/health/started": dial tcp 10.42.0.8:9990: connect: connection refused
+2m23s       Warning   Unhealthy                      pod/session-scaling-66c7888bb4-6xknt       Readiness probe failed: HTTP probe failed with statuscode: 503
+2m18s       Normal    SuccessfulDelete               replicaset/session-scaling-85dc458f7f      Deleted pod: session-scaling-85dc458f7f-65xwn
+2m18s       Normal    Killing                        pod/session-scaling-85dc458f7f-65xwn       Stopping container wildfly
+2m18s       Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled up replica set session-scaling-66c7888bb4 from 1 to 2
+2m18s       Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled down replica set session-scaling-85dc458f7f from 2 to 1
+2m18s       Normal    SuccessfulCreate               replicaset/session-scaling-66c7888bb4      Created pod: session-scaling-66c7888bb4-lp9r8
+2m8s        Warning   Unhealthy                      pod/session-scaling-85dc458f7f-65xwn       Readiness probe failed: Get "http://10.42.2.8:9990/health/ready": dial tcp 10.42.2.8:9990: connect: connection refused
+117s        Normal    SuccessfulDelete               replicaset/session-scaling-85dc458f7f      Deleted pod: session-scaling-85dc458f7f-jtct6
+117s        Normal    Killing                        pod/session-scaling-85dc458f7f-jtct6       Stopping container wildfly
+117s        Normal    ScalingReplicaSet              deployment/session-scaling                 Scaled down replica set session-scaling-85dc458f7f from 1 to 0
+90s         Normal    Killing                        pod/session-scaling-66c7888bb4-6xknt       Stopping container wildfly
+90s         Normal    Pulled                         pod/session-scaling-66c7888bb4-m2kcf       Container image "wildfly-session-scaling:1.0.1-SNAPSHOT" already present on machine and can be accessed by the pod
+90s         Normal    Created                        pod/session-scaling-66c7888bb4-m2kcf       Container created
+90s         Normal    SuccessfulCreate               replicaset/session-scaling-66c7888bb4      Created pod: session-scaling-66c7888bb4-m2kcf
+90s         Normal    Started                        pod/session-scaling-66c7888bb4-m2kcf       Container started
+89s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/session-scaling    failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+89s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/session-scaling    invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+86s         Warning   Unhealthy                      pod/session-scaling-66c7888bb4-m2kcf       Startup probe failed: Get "http://10.42.2.9:9990/health/started": dial tcp 10.42.2.9:9990: connect: connection refused
+74s         Warning   Unhealthy                      pod/session-scaling-66c7888bb4-m2kcf       Readiness probe failed: HTTP probe failed with statuscode: 503
+42s         Normal    Pulled                         pod/session-scaling-66c7888bb4-lp9r8       Container image "wildfly-session-scaling:1.0.1-SNAPSHOT" already present on machine and can be accessed by the pod
+42s         Normal    Created                        pod/session-scaling-66c7888bb4-lp9r8       Container created
+42s         Normal    Started                        pod/session-scaling-66c7888bb4-lp9r8       Container started
+38s         Warning   Unhealthy                      pod/session-scaling-66c7888bb4-lp9r8       Startup probe failed: Get "http://10.42.1.6:9990/health/started": dial tcp 10.42.1.6:9990: connect: connection refused
+26s         Warning   Unhealthy                      pod/session-scaling-66c7888bb4-lp9r8       Readiness probe failed: HTTP probe failed with statuscode: 503

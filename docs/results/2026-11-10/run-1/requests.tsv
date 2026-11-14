@@ -1,0 +1,432 @@
+2026-11-10T08:19:57Z	create	0	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:57Z	create	1	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:57Z	create	2	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:57Z	create	3	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:58Z	create	4	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:58Z	create	5	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:58Z	create	6	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:58Z	create	7	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:58Z	create	8	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:58Z	create	9	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:58Z	create	10	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:58Z	create	11	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:58Z	create	12	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:58Z	create	13	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:58Z	create	14	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:58Z	create	15	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:58Z	create	16	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:58Z	create	17	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:59Z	create	18	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:59Z	create	19	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:59Z	create	20	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:59Z	create	21	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:19:59Z	create	22	session-scaling-6964fc4fb-l5hns	201
+2026-11-10T08:19:59Z	create	23	session-scaling-6964fc4fb-mppn2	201
+2026-11-10T08:20:00Z	1 two replicas	0	session-scaling-6964fc4fb-l5hns	200	0.067953
+2026-11-10T08:20:00Z	1 two replicas	1	session-scaling-6964fc4fb-l5hns	200	0.028842
+2026-11-10T08:20:00Z	1 two replicas	2	session-scaling-6964fc4fb-l5hns	200	0.028843
+2026-11-10T08:20:00Z	1 two replicas	3	session-scaling-6964fc4fb-l5hns	200	0.056620
+2026-11-10T08:20:00Z	1 two replicas	4	session-scaling-6964fc4fb-l5hns	200	0.032989
+2026-11-10T08:20:01Z	1 two replicas	5	session-scaling-6964fc4fb-l5hns	200	0.060014
+2026-11-10T08:20:01Z	1 two replicas	6	session-scaling-6964fc4fb-l5hns	200	0.062869
+2026-11-10T08:20:01Z	1 two replicas	7	session-scaling-6964fc4fb-l5hns	200	0.071940
+2026-11-10T08:20:01Z	1 two replicas	8	session-scaling-6964fc4fb-l5hns	200	0.039084
+2026-11-10T08:20:01Z	1 two replicas	9	session-scaling-6964fc4fb-l5hns	200	0.060094
+2026-11-10T08:20:01Z	1 two replicas	10	session-scaling-6964fc4fb-l5hns	200	0.064752
+2026-11-10T08:20:01Z	1 two replicas	11	session-scaling-6964fc4fb-l5hns	200	0.030702
+2026-11-10T08:20:01Z	1 two replicas	12	session-scaling-6964fc4fb-l5hns	200	0.058142
+2026-11-10T08:20:01Z	1 two replicas	13	session-scaling-6964fc4fb-l5hns	200	0.032845
+2026-11-10T08:20:01Z	1 two replicas	14	session-scaling-6964fc4fb-l5hns	200	0.053502
+2026-11-10T08:20:02Z	1 two replicas	15	session-scaling-6964fc4fb-l5hns	200	0.020323
+2026-11-10T08:20:02Z	1 two replicas	16	session-scaling-6964fc4fb-l5hns	200	0.045911
+2026-11-10T08:20:02Z	1 two replicas	17	session-scaling-6964fc4fb-l5hns	200	0.038019
+2026-11-10T08:20:02Z	1 two replicas	18	session-scaling-6964fc4fb-l5hns	200	0.097949
+2026-11-10T08:20:02Z	1 two replicas	19	session-scaling-6964fc4fb-l5hns	200	0.065060
+2026-11-10T08:20:02Z	1 two replicas	20	session-scaling-6964fc4fb-l5hns	200	0.018137
+2026-11-10T08:20:02Z	1 two replicas	21	session-scaling-6964fc4fb-l5hns	200	0.038887
+2026-11-10T08:20:02Z	1 two replicas	22	session-scaling-6964fc4fb-l5hns	200	0.029710
+2026-11-10T08:20:02Z	1 two replicas	23	session-scaling-6964fc4fb-l5hns	200	0.061043
+2026-11-10T08:20:03Z	1 two replicas	0	session-scaling-6964fc4fb-mppn2	200	0.040142
+2026-11-10T08:20:03Z	1 two replicas	1	session-scaling-6964fc4fb-mppn2	200	0.152149
+2026-11-10T08:20:03Z	1 two replicas	2	session-scaling-6964fc4fb-mppn2	200	0.057069
+2026-11-10T08:20:03Z	1 two replicas	3	session-scaling-6964fc4fb-mppn2	200	0.032819
+2026-11-10T08:20:03Z	1 two replicas	4	session-scaling-6964fc4fb-mppn2	200	0.037437
+2026-11-10T08:20:03Z	1 two replicas	5	session-scaling-6964fc4fb-mppn2	200	0.021493
+2026-11-10T08:20:03Z	1 two replicas	6	session-scaling-6964fc4fb-mppn2	200	0.036825
+2026-11-10T08:20:04Z	1 two replicas	7	session-scaling-6964fc4fb-mppn2	200	0.025060
+2026-11-10T08:20:04Z	1 two replicas	8	session-scaling-6964fc4fb-mppn2	200	0.036980
+2026-11-10T08:20:04Z	1 two replicas	9	session-scaling-6964fc4fb-mppn2	200	0.026052
+2026-11-10T08:20:04Z	1 two replicas	10	session-scaling-6964fc4fb-mppn2	200	0.022150
+2026-11-10T08:20:04Z	1 two replicas	11	session-scaling-6964fc4fb-mppn2	200	0.088146
+2026-11-10T08:20:04Z	1 two replicas	12	session-scaling-6964fc4fb-mppn2	200	0.024126
+2026-11-10T08:20:04Z	1 two replicas	13	session-scaling-6964fc4fb-mppn2	200	0.085226
+2026-11-10T08:20:04Z	1 two replicas	14	session-scaling-6964fc4fb-mppn2	200	0.028547
+2026-11-10T08:20:04Z	1 two replicas	15	session-scaling-6964fc4fb-mppn2	200	0.047724
+2026-11-10T08:20:04Z	1 two replicas	16	session-scaling-6964fc4fb-mppn2	200	0.024786
+2026-11-10T08:20:04Z	1 two replicas	17	session-scaling-6964fc4fb-mppn2	200	0.052641
+2026-11-10T08:20:04Z	1 two replicas	18	session-scaling-6964fc4fb-mppn2	200	0.028091
+2026-11-10T08:20:05Z	1 two replicas	19	session-scaling-6964fc4fb-mppn2	200	0.031463
+2026-11-10T08:20:05Z	1 two replicas	20	session-scaling-6964fc4fb-mppn2	200	0.068297
+2026-11-10T08:20:05Z	1 two replicas	21	session-scaling-6964fc4fb-mppn2	200	0.025387
+2026-11-10T08:20:05Z	1 two replicas	22	session-scaling-6964fc4fb-mppn2	200	0.098366
+2026-11-10T08:20:05Z	1 two replicas	23	session-scaling-6964fc4fb-mppn2	200	0.017788
+2026-11-10T08:20:52Z	2 HPA scale-up	0	session-scaling-6964fc4fb-l5hns	200	0.062102
+2026-11-10T08:20:52Z	2 HPA scale-up	1	session-scaling-6964fc4fb-l5hns	200	0.049326
+2026-11-10T08:20:52Z	2 HPA scale-up	2	session-scaling-6964fc4fb-l5hns	200	0.022646
+2026-11-10T08:20:52Z	2 HPA scale-up	3	session-scaling-6964fc4fb-l5hns	200	0.036472
+2026-11-10T08:20:52Z	2 HPA scale-up	4	session-scaling-6964fc4fb-l5hns	200	0.041614
+2026-11-10T08:20:52Z	2 HPA scale-up	5	session-scaling-6964fc4fb-l5hns	200	0.107609
+2026-11-10T08:20:52Z	2 HPA scale-up	6	session-scaling-6964fc4fb-l5hns	200	0.017824
+2026-11-10T08:20:52Z	2 HPA scale-up	7	session-scaling-6964fc4fb-l5hns	200	0.033244
+2026-11-10T08:20:52Z	2 HPA scale-up	8	session-scaling-6964fc4fb-l5hns	200	0.014117
+2026-11-10T08:20:52Z	2 HPA scale-up	9	session-scaling-6964fc4fb-l5hns	200	0.027224
+2026-11-10T08:20:53Z	2 HPA scale-up	10	session-scaling-6964fc4fb-l5hns	200	0.096354
+2026-11-10T08:20:53Z	2 HPA scale-up	11	session-scaling-6964fc4fb-l5hns	200	0.034384
+2026-11-10T08:20:53Z	2 HPA scale-up	12	session-scaling-6964fc4fb-l5hns	200	0.068811
+2026-11-10T08:20:53Z	2 HPA scale-up	13	session-scaling-6964fc4fb-l5hns	200	0.089503
+2026-11-10T08:20:53Z	2 HPA scale-up	14	session-scaling-6964fc4fb-l5hns	200	0.031778
+2026-11-10T08:20:53Z	2 HPA scale-up	15	session-scaling-6964fc4fb-l5hns	200	0.087585
+2026-11-10T08:20:53Z	2 HPA scale-up	16	session-scaling-6964fc4fb-l5hns	200	0.032929
+2026-11-10T08:20:53Z	2 HPA scale-up	17	session-scaling-6964fc4fb-l5hns	200	0.037750
+2026-11-10T08:20:53Z	2 HPA scale-up	18	session-scaling-6964fc4fb-l5hns	200	0.052622
+2026-11-10T08:20:54Z	2 HPA scale-up	19	session-scaling-6964fc4fb-l5hns	200	0.089397
+2026-11-10T08:20:54Z	2 HPA scale-up	20	session-scaling-6964fc4fb-l5hns	200	0.074589
+2026-11-10T08:20:54Z	2 HPA scale-up	21	session-scaling-6964fc4fb-l5hns	200	0.053077
+2026-11-10T08:20:54Z	2 HPA scale-up	22	session-scaling-6964fc4fb-l5hns	200	0.018181
+2026-11-10T08:20:54Z	2 HPA scale-up	23	session-scaling-6964fc4fb-l5hns	200	0.041661
+2026-11-10T08:20:54Z	2 HPA scale-up	0	session-scaling-6964fc4fb-mppn2	200	0.032403
+2026-11-10T08:20:54Z	2 HPA scale-up	1	session-scaling-6964fc4fb-mppn2	200	0.118236
+2026-11-10T08:20:55Z	2 HPA scale-up	2	session-scaling-6964fc4fb-mppn2	200	0.038697
+2026-11-10T08:20:55Z	2 HPA scale-up	3	session-scaling-6964fc4fb-mppn2	200	0.066201
+2026-11-10T08:20:55Z	2 HPA scale-up	4	session-scaling-6964fc4fb-mppn2	200	0.047624
+2026-11-10T08:20:55Z	2 HPA scale-up	5	session-scaling-6964fc4fb-mppn2	200	0.035670
+2026-11-10T08:20:55Z	2 HPA scale-up	6	session-scaling-6964fc4fb-mppn2	200	0.043173
+2026-11-10T08:20:55Z	2 HPA scale-up	7	session-scaling-6964fc4fb-mppn2	200	0.016918
+2026-11-10T08:20:55Z	2 HPA scale-up	8	session-scaling-6964fc4fb-mppn2	200	0.080604
+2026-11-10T08:20:55Z	2 HPA scale-up	9	session-scaling-6964fc4fb-mppn2	200	0.028860
+2026-11-10T08:20:55Z	2 HPA scale-up	10	session-scaling-6964fc4fb-mppn2	200	0.036704
+2026-11-10T08:20:55Z	2 HPA scale-up	11	session-scaling-6964fc4fb-mppn2	200	0.036324
+2026-11-10T08:20:55Z	2 HPA scale-up	12	session-scaling-6964fc4fb-mppn2	200	0.012632
+2026-11-10T08:20:55Z	2 HPA scale-up	13	session-scaling-6964fc4fb-mppn2	200	0.105109
+2026-11-10T08:20:56Z	2 HPA scale-up	14	session-scaling-6964fc4fb-mppn2	200	0.022255
+2026-11-10T08:20:56Z	2 HPA scale-up	15	session-scaling-6964fc4fb-mppn2	200	0.106186
+2026-11-10T08:20:56Z	2 HPA scale-up	16	session-scaling-6964fc4fb-mppn2	200	0.021300
+2026-11-10T08:20:56Z	2 HPA scale-up	17	session-scaling-6964fc4fb-mppn2	200	0.066524
+2026-11-10T08:20:56Z	2 HPA scale-up	18	session-scaling-6964fc4fb-mppn2	200	0.045534
+2026-11-10T08:20:56Z	2 HPA scale-up	19	session-scaling-6964fc4fb-mppn2	200	0.077730
+2026-11-10T08:20:56Z	2 HPA scale-up	20	session-scaling-6964fc4fb-mppn2	200	0.111811
+2026-11-10T08:20:56Z	2 HPA scale-up	21	session-scaling-6964fc4fb-mppn2	200	0.017082
+2026-11-10T08:20:56Z	2 HPA scale-up	22	session-scaling-6964fc4fb-mppn2	200	0.019070
+2026-11-10T08:20:56Z	2 HPA scale-up	23	session-scaling-6964fc4fb-mppn2	200	0.017514
+2026-11-10T08:20:57Z	2 HPA scale-up	0	session-scaling-6964fc4fb-nrf9n	200	0.014842
+2026-11-10T08:20:57Z	2 HPA scale-up	1	session-scaling-6964fc4fb-nrf9n	200	0.033660
+2026-11-10T08:20:57Z	2 HPA scale-up	2	session-scaling-6964fc4fb-nrf9n	200	0.039851
+2026-11-10T08:20:57Z	2 HPA scale-up	3	session-scaling-6964fc4fb-nrf9n	200	0.020453
+2026-11-10T08:20:57Z	2 HPA scale-up	4	session-scaling-6964fc4fb-nrf9n	200	0.050305
+2026-11-10T08:20:57Z	2 HPA scale-up	5	session-scaling-6964fc4fb-nrf9n	200	0.095407
+2026-11-10T08:20:57Z	2 HPA scale-up	6	session-scaling-6964fc4fb-nrf9n	200	0.053737
+2026-11-10T08:20:58Z	2 HPA scale-up	7	session-scaling-6964fc4fb-nrf9n	200	0.052256
+2026-11-10T08:20:58Z	2 HPA scale-up	8	session-scaling-6964fc4fb-nrf9n	200	0.047880
+2026-11-10T08:20:58Z	2 HPA scale-up	9	session-scaling-6964fc4fb-nrf9n	200	0.047359
+2026-11-10T08:20:58Z	2 HPA scale-up	10	session-scaling-6964fc4fb-nrf9n	200	0.022768
+2026-11-10T08:20:58Z	2 HPA scale-up	11	session-scaling-6964fc4fb-nrf9n	200	0.037485
+2026-11-10T08:20:58Z	2 HPA scale-up	12	session-scaling-6964fc4fb-nrf9n	200	0.032809
+2026-11-10T08:20:58Z	2 HPA scale-up	13	session-scaling-6964fc4fb-nrf9n	200	0.027381
+2026-11-10T08:20:58Z	2 HPA scale-up	14	session-scaling-6964fc4fb-nrf9n	200	0.045568
+2026-11-10T08:20:58Z	2 HPA scale-up	15	session-scaling-6964fc4fb-nrf9n	200	0.054099
+2026-11-10T08:20:58Z	2 HPA scale-up	16	session-scaling-6964fc4fb-nrf9n	200	0.027261
+2026-11-10T08:20:58Z	2 HPA scale-up	17	session-scaling-6964fc4fb-nrf9n	200	0.122720
+2026-11-10T08:20:58Z	2 HPA scale-up	18	session-scaling-6964fc4fb-nrf9n	200	0.025982
+2026-11-10T08:20:59Z	2 HPA scale-up	19	session-scaling-6964fc4fb-nrf9n	200	0.016896
+2026-11-10T08:20:59Z	2 HPA scale-up	20	session-scaling-6964fc4fb-nrf9n	200	0.038799
+2026-11-10T08:20:59Z	2 HPA scale-up	21	session-scaling-6964fc4fb-nrf9n	200	0.036229
+2026-11-10T08:20:59Z	2 HPA scale-up	22	session-scaling-6964fc4fb-nrf9n	200	0.071751
+2026-11-10T08:20:59Z	2 HPA scale-up	23	session-scaling-6964fc4fb-nrf9n	200	0.060513
+2026-11-10T08:21:00Z	2 HPA scale-up	0	session-scaling-6964fc4fb-zdt9f	200	0.144174
+2026-11-10T08:21:00Z	2 HPA scale-up	1	session-scaling-6964fc4fb-zdt9f	200	0.015075
+2026-11-10T08:21:00Z	2 HPA scale-up	2	session-scaling-6964fc4fb-zdt9f	200	0.095853
+2026-11-10T08:21:00Z	2 HPA scale-up	3	session-scaling-6964fc4fb-zdt9f	200	0.036136
+2026-11-10T08:21:00Z	2 HPA scale-up	4	session-scaling-6964fc4fb-zdt9f	200	0.019438
+2026-11-10T08:21:00Z	2 HPA scale-up	5	session-scaling-6964fc4fb-zdt9f	200	0.023846
+2026-11-10T08:21:00Z	2 HPA scale-up	6	session-scaling-6964fc4fb-zdt9f	200	0.024614
+2026-11-10T08:21:00Z	2 HPA scale-up	7	session-scaling-6964fc4fb-zdt9f	200	0.045414
+2026-11-10T08:21:00Z	2 HPA scale-up	8	session-scaling-6964fc4fb-zdt9f	200	0.046903
+2026-11-10T08:21:00Z	2 HPA scale-up	9	session-scaling-6964fc4fb-zdt9f	200	0.049840
+2026-11-10T08:21:00Z	2 HPA scale-up	10	session-scaling-6964fc4fb-zdt9f	200	0.105828
+2026-11-10T08:21:01Z	2 HPA scale-up	11	session-scaling-6964fc4fb-zdt9f	200	0.019511
+2026-11-10T08:21:01Z	2 HPA scale-up	12	session-scaling-6964fc4fb-zdt9f	200	0.137769
+2026-11-10T08:21:01Z	2 HPA scale-up	13	session-scaling-6964fc4fb-zdt9f	200	0.031120
+2026-11-10T08:21:01Z	2 HPA scale-up	14	session-scaling-6964fc4fb-zdt9f	200	0.052284
+2026-11-10T08:21:01Z	2 HPA scale-up	15	session-scaling-6964fc4fb-zdt9f	200	0.049540
+2026-11-10T08:21:01Z	2 HPA scale-up	16	session-scaling-6964fc4fb-zdt9f	200	0.041103
+2026-11-10T08:21:01Z	2 HPA scale-up	17	session-scaling-6964fc4fb-zdt9f	200	0.038279
+2026-11-10T08:21:01Z	2 HPA scale-up	18	session-scaling-6964fc4fb-zdt9f	200	0.053528
+2026-11-10T08:21:01Z	2 HPA scale-up	19	session-scaling-6964fc4fb-zdt9f	200	0.181950
+2026-11-10T08:21:02Z	2 HPA scale-up	20	session-scaling-6964fc4fb-zdt9f	200	0.015850
+2026-11-10T08:21:02Z	2 HPA scale-up	21	session-scaling-6964fc4fb-zdt9f	200	0.048717
+2026-11-10T08:21:02Z	2 HPA scale-up	22	session-scaling-6964fc4fb-zdt9f	200	0.049790
+2026-11-10T08:21:02Z	2 HPA scale-up	23	session-scaling-6964fc4fb-zdt9f	200	0.092760
+2026-11-10T08:21:40Z	3 node drain	0	session-scaling-6964fc4fb-5zn6d	200	0.040288
+2026-11-10T08:21:41Z	3 node drain	1	session-scaling-6964fc4fb-5zn6d	200	0.025826
+2026-11-10T08:21:41Z	3 node drain	2	session-scaling-6964fc4fb-5zn6d	200	0.020321
+2026-11-10T08:21:42Z	3 node drain	3	session-scaling-6964fc4fb-5zn6d	200	1.225454
+2026-11-10T08:21:42Z	3 node drain	4	session-scaling-6964fc4fb-5zn6d	200	0.572405
+2026-11-10T08:21:44Z	3 node drain	5	session-scaling-6964fc4fb-5zn6d	200	1.163179
+2026-11-10T08:21:45Z	3 node drain	6	session-scaling-6964fc4fb-5zn6d	200	1.224013
+2026-11-10T08:21:46Z	3 node drain	7	session-scaling-6964fc4fb-5zn6d	200	1.470623
+2026-11-10T08:21:47Z	3 node drain	8	session-scaling-6964fc4fb-5zn6d	200	0.867655
+2026-11-10T08:21:48Z	3 node drain	9	session-scaling-6964fc4fb-5zn6d	200	0.869543
+2026-11-10T08:21:50Z	3 node drain	10	session-scaling-6964fc4fb-5zn6d	200	1.453177
+2026-11-10T08:21:51Z	3 node drain	11	session-scaling-6964fc4fb-5zn6d	200	0.823848
+2026-11-10T08:21:52Z	3 node drain	12	session-scaling-6964fc4fb-5zn6d	200	1.225278
+2026-11-10T08:21:52Z	3 node drain	13	session-scaling-6964fc4fb-5zn6d	200	0.019606
+2026-11-10T08:21:53Z	3 node drain	14	session-scaling-6964fc4fb-5zn6d	200	1.424767
+2026-11-10T08:21:54Z	3 node drain	15	session-scaling-6964fc4fb-5zn6d	200	0.867429
+2026-11-10T08:21:54Z	3 node drain	16	session-scaling-6964fc4fb-5zn6d	200	0.026851
+2026-11-10T08:21:56Z	3 node drain	17	session-scaling-6964fc4fb-5zn6d	200	1.379833
+2026-11-10T08:21:57Z	3 node drain	18	session-scaling-6964fc4fb-5zn6d	200	1.176859
+2026-11-10T08:21:57Z	3 node drain	19	session-scaling-6964fc4fb-5zn6d	200	0.015588
+2026-11-10T08:21:58Z	3 node drain	20	session-scaling-6964fc4fb-5zn6d	200	0.857393
+2026-11-10T08:21:59Z	3 node drain	21	session-scaling-6964fc4fb-5zn6d	200	1.436532
+2026-11-10T08:22:01Z	3 node drain	22	session-scaling-6964fc4fb-5zn6d	200	1.165197
+2026-11-10T08:22:02Z	3 node drain	23	session-scaling-6964fc4fb-5zn6d	200	1.473499
+2026-11-10T08:22:04Z	3 node drain	0	session-scaling-6964fc4fb-mppn2	200	1.133476
+2026-11-10T08:22:05Z	3 node drain	1	session-scaling-6964fc4fb-mppn2	200	1.169387
+2026-11-10T08:22:06Z	3 node drain	2	session-scaling-6964fc4fb-mppn2	200	1.180786
+2026-11-10T08:22:07Z	3 node drain	3	session-scaling-6964fc4fb-mppn2	200	0.739755
+2026-11-10T08:22:08Z	3 node drain	4	session-scaling-6964fc4fb-mppn2	200	1.482113
+2026-11-10T08:22:09Z	3 node drain	5	session-scaling-6964fc4fb-mppn2	200	0.850107
+2026-11-10T08:22:10Z	3 node drain	6	session-scaling-6964fc4fb-mppn2	200	0.654091
+2026-11-10T08:22:11Z	3 node drain	7	session-scaling-6964fc4fb-mppn2	200	0.577739
+2026-11-10T08:22:12Z	3 node drain	8	session-scaling-6964fc4fb-mppn2	200	1.178021
+2026-11-10T08:22:13Z	3 node drain	9	session-scaling-6964fc4fb-mppn2	200	1.457252
+2026-11-10T08:22:13Z	3 node drain	10	session-scaling-6964fc4fb-mppn2	200	0.020399
+2026-11-10T08:22:15Z	3 node drain	11	session-scaling-6964fc4fb-mppn2	200	1.324916
+2026-11-10T08:22:15Z	3 node drain	12	session-scaling-6964fc4fb-mppn2	200	0.028511
+2026-11-10T08:22:16Z	3 node drain	13	session-scaling-6964fc4fb-mppn2	200	1.251668
+2026-11-10T08:22:17Z	3 node drain	14	session-scaling-6964fc4fb-mppn2	200	0.816753
+2026-11-10T08:22:18Z	3 node drain	15	session-scaling-6964fc4fb-mppn2	200	1.176560
+2026-11-10T08:22:19Z	3 node drain	16	session-scaling-6964fc4fb-mppn2	200	1.222540
+2026-11-10T08:22:20Z	3 node drain	17	session-scaling-6964fc4fb-mppn2	200	0.021917
+2026-11-10T08:22:20Z	3 node drain	18	session-scaling-6964fc4fb-mppn2	200	0.016466
+2026-11-10T08:22:21Z	3 node drain	19	session-scaling-6964fc4fb-mppn2	200	1.052940
+2026-11-10T08:22:22Z	3 node drain	20	session-scaling-6964fc4fb-mppn2	200	1.126049
+2026-11-10T08:22:22Z	3 node drain	21	session-scaling-6964fc4fb-mppn2	200	0.014051
+2026-11-10T08:22:22Z	3 node drain	22	session-scaling-6964fc4fb-mppn2	200	0.020321
+2026-11-10T08:22:22Z	3 node drain	23	session-scaling-6964fc4fb-mppn2	200	0.016139
+2026-11-10T08:22:24Z	3 node drain	0	session-scaling-6964fc4fb-n5hbr	200	1.265803
+2026-11-10T08:22:24Z	3 node drain	1	session-scaling-6964fc4fb-n5hbr	200	0.571448
+2026-11-10T08:22:25Z	3 node drain	2	session-scaling-6964fc4fb-n5hbr	200	0.571962
+2026-11-10T08:22:27Z	3 node drain	3	session-scaling-6964fc4fb-n5hbr	200	1.615110
+2026-11-10T08:22:28Z	3 node drain	4	session-scaling-6964fc4fb-n5hbr	200	1.171487
+2026-11-10T08:22:29Z	3 node drain	5	session-scaling-6964fc4fb-n5hbr	200	1.170784
+2026-11-10T08:22:29Z	3 node drain	6	session-scaling-6964fc4fb-n5hbr	200	0.020780
+2026-11-10T08:22:29Z	3 node drain	7	session-scaling-6964fc4fb-n5hbr	200	0.031294
+2026-11-10T08:22:29Z	3 node drain	8	session-scaling-6964fc4fb-n5hbr	200	0.022765
+2026-11-10T08:22:29Z	3 node drain	9	session-scaling-6964fc4fb-n5hbr	200	0.024914
+2026-11-10T08:22:31Z	3 node drain	10	session-scaling-6964fc4fb-n5hbr	200	1.303026
+2026-11-10T08:22:32Z	3 node drain	11	session-scaling-6964fc4fb-n5hbr	200	1.382715
+2026-11-10T08:22:34Z	3 node drain	12	session-scaling-6964fc4fb-n5hbr	200	1.562377
+2026-11-10T08:22:35Z	3 node drain	13	session-scaling-6964fc4fb-n5hbr	200	1.241113
+2026-11-10T08:22:35Z	3 node drain	14	session-scaling-6964fc4fb-n5hbr	200	0.019322
+2026-11-10T08:22:35Z	3 node drain	15	session-scaling-6964fc4fb-n5hbr	200	0.026136
+2026-11-10T08:22:36Z	3 node drain	16	session-scaling-6964fc4fb-n5hbr	200	1.050169
+2026-11-10T08:22:37Z	3 node drain	17	session-scaling-6964fc4fb-n5hbr	200	0.509077
+2026-11-10T08:22:38Z	3 node drain	18	session-scaling-6964fc4fb-n5hbr	200	1.473303
+2026-11-10T08:22:39Z	3 node drain	19	session-scaling-6964fc4fb-n5hbr	200	1.239894
+2026-11-10T08:22:40Z	3 node drain	20	session-scaling-6964fc4fb-n5hbr	200	0.020182
+2026-11-10T08:22:41Z	3 node drain	21	session-scaling-6964fc4fb-n5hbr	200	1.639804
+2026-11-10T08:22:42Z	3 node drain	22	session-scaling-6964fc4fb-n5hbr	200	0.860471
+2026-11-10T08:22:44Z	3 node drain	23	session-scaling-6964fc4fb-n5hbr	200	1.477575
+2026-11-10T08:22:45Z	3 node drain	0	session-scaling-6964fc4fb-zdt9f	200	0.539435
+2026-11-10T08:22:46Z	3 node drain	1	session-scaling-6964fc4fb-zdt9f	200	1.176159
+2026-11-10T08:22:47Z	3 node drain	2	session-scaling-6964fc4fb-zdt9f	200	1.179967
+2026-11-10T08:22:47Z	3 node drain	3	session-scaling-6964fc4fb-zdt9f	200	0.019334
+2026-11-10T08:22:47Z	3 node drain	4	session-scaling-6964fc4fb-zdt9f	200	0.018801
+2026-11-10T08:22:47Z	3 node drain	5	session-scaling-6964fc4fb-zdt9f	200	0.017347
+2026-11-10T08:22:48Z	3 node drain	6	session-scaling-6964fc4fb-zdt9f	200	1.258997
+2026-11-10T08:22:50Z	3 node drain	7	session-scaling-6964fc4fb-zdt9f	200	1.181937
+2026-11-10T08:22:51Z	3 node drain	8	session-scaling-6964fc4fb-zdt9f	200	1.162450
+2026-11-10T08:22:52Z	3 node drain	9	session-scaling-6964fc4fb-zdt9f	200	1.168981
+2026-11-10T08:22:53Z	3 node drain	10	session-scaling-6964fc4fb-zdt9f	200	0.543573
+2026-11-10T08:22:53Z	3 node drain	11	session-scaling-6964fc4fb-zdt9f	200	0.017897
+2026-11-10T08:22:53Z	3 node drain	12	session-scaling-6964fc4fb-zdt9f	200	0.521371
+2026-11-10T08:22:54Z	3 node drain	13	session-scaling-6964fc4fb-zdt9f	200	0.646998
+2026-11-10T08:22:55Z	3 node drain	14	session-scaling-6964fc4fb-zdt9f	200	1.109597
+2026-11-10T08:22:56Z	3 node drain	15	session-scaling-6964fc4fb-zdt9f	200	1.181928
+2026-11-10T08:22:57Z	3 node drain	16	session-scaling-6964fc4fb-zdt9f	200	0.618420
+2026-11-10T08:22:58Z	3 node drain	17	session-scaling-6964fc4fb-zdt9f	200	1.086553
+2026-11-10T08:22:59Z	3 node drain	18	session-scaling-6964fc4fb-zdt9f	200	0.568399
+2026-11-10T08:22:59Z	3 node drain	19	session-scaling-6964fc4fb-zdt9f	200	0.637183
+2026-11-10T08:23:01Z	3 node drain	20	session-scaling-6964fc4fb-zdt9f	200	1.114799
+2026-11-10T08:23:01Z	3 node drain	21	session-scaling-6964fc4fb-zdt9f	200	0.552289
+2026-11-10T08:23:02Z	3 node drain	22	session-scaling-6964fc4fb-zdt9f	200	1.169183
+2026-11-10T08:23:03Z	3 node drain	23	session-scaling-6964fc4fb-zdt9f	200	0.562099
+2026-11-10T08:26:25Z	4a HPA scale-down to 3	0	session-scaling-6964fc4fb-mppn2	200	0.330980
+2026-11-10T08:26:26Z	4a HPA scale-down to 3	1	session-scaling-6964fc4fb-mppn2	200	0.576223
+2026-11-10T08:26:27Z	4a HPA scale-down to 3	2	session-scaling-6964fc4fb-mppn2	200	0.563540
+2026-11-10T08:26:27Z	4a HPA scale-down to 3	3	session-scaling-6964fc4fb-mppn2	200	0.575789
+2026-11-10T08:26:28Z	4a HPA scale-down to 3	4	session-scaling-6964fc4fb-mppn2	200	0.560200
+2026-11-10T08:26:28Z	4a HPA scale-down to 3	5	session-scaling-6964fc4fb-mppn2	200	0.569978
+2026-11-10T08:26:29Z	4a HPA scale-down to 3	6	session-scaling-6964fc4fb-mppn2	200	0.577618
+2026-11-10T08:26:30Z	4a HPA scale-down to 3	7	session-scaling-6964fc4fb-mppn2	200	0.552323
+2026-11-10T08:26:30Z	4a HPA scale-down to 3	8	session-scaling-6964fc4fb-mppn2	200	0.572334
+2026-11-10T08:26:31Z	4a HPA scale-down to 3	9	session-scaling-6964fc4fb-mppn2	200	0.575701
+2026-11-10T08:26:31Z	4a HPA scale-down to 3	10	session-scaling-6964fc4fb-mppn2	200	0.022842
+2026-11-10T08:26:31Z	4a HPA scale-down to 3	11	session-scaling-6964fc4fb-mppn2	200	0.479164
+2026-11-10T08:26:31Z	4a HPA scale-down to 3	12	session-scaling-6964fc4fb-mppn2	200	0.015710
+2026-11-10T08:26:32Z	4a HPA scale-down to 3	13	session-scaling-6964fc4fb-mppn2	200	0.502927
+2026-11-10T08:26:33Z	4a HPA scale-down to 3	14	session-scaling-6964fc4fb-mppn2	200	0.569600
+2026-11-10T08:26:33Z	4a HPA scale-down to 3	15	session-scaling-6964fc4fb-mppn2	200	0.566740
+2026-11-10T08:26:33Z	4a HPA scale-down to 3	16	session-scaling-6964fc4fb-mppn2	200	0.017916
+2026-11-10T08:26:33Z	4a HPA scale-down to 3	17	session-scaling-6964fc4fb-mppn2	200	0.013475
+2026-11-10T08:26:33Z	4a HPA scale-down to 3	18	session-scaling-6964fc4fb-mppn2	200	0.016880
+2026-11-10T08:26:34Z	4a HPA scale-down to 3	19	session-scaling-6964fc4fb-mppn2	200	0.433560
+2026-11-10T08:26:34Z	4a HPA scale-down to 3	20	session-scaling-6964fc4fb-mppn2	200	0.569238
+2026-11-10T08:26:34Z	4a HPA scale-down to 3	21	session-scaling-6964fc4fb-mppn2	200	0.022534
+2026-11-10T08:26:35Z	4a HPA scale-down to 3	22	session-scaling-6964fc4fb-mppn2	200	0.014130
+2026-11-10T08:26:35Z	4a HPA scale-down to 3	23	session-scaling-6964fc4fb-mppn2	200	0.020253
+2026-11-10T08:26:35Z	4a HPA scale-down to 3	0	session-scaling-6964fc4fb-n5hbr	200	0.086080
+2026-11-10T08:26:35Z	4a HPA scale-down to 3	1	session-scaling-6964fc4fb-n5hbr	200	0.014999
+2026-11-10T08:26:35Z	4a HPA scale-down to 3	2	session-scaling-6964fc4fb-n5hbr	200	0.194610
+2026-11-10T08:26:36Z	4a HPA scale-down to 3	3	session-scaling-6964fc4fb-n5hbr	200	0.268638
+2026-11-10T08:26:36Z	4a HPA scale-down to 3	4	session-scaling-6964fc4fb-n5hbr	200	0.263214
+2026-11-10T08:26:36Z	4a HPA scale-down to 3	5	session-scaling-6964fc4fb-n5hbr	200	0.275409
+2026-11-10T08:26:36Z	4a HPA scale-down to 3	6	session-scaling-6964fc4fb-n5hbr	200	0.026112
+2026-11-10T08:26:36Z	4a HPA scale-down to 3	7	session-scaling-6964fc4fb-n5hbr	200	0.021902
+2026-11-10T08:26:36Z	4a HPA scale-down to 3	8	session-scaling-6964fc4fb-n5hbr	200	0.023474
+2026-11-10T08:26:37Z	4a HPA scale-down to 3	9	session-scaling-6964fc4fb-n5hbr	200	0.016555
+2026-11-10T08:26:38Z	4a HPA scale-down to 3	10	session-scaling-6964fc4fb-n5hbr	200	1.217990
+2026-11-10T08:26:38Z	4a HPA scale-down to 3	11	session-scaling-6964fc4fb-n5hbr	200	0.268261
+2026-11-10T08:26:39Z	4a HPA scale-down to 3	12	session-scaling-6964fc4fb-n5hbr	200	1.173009
+2026-11-10T08:26:40Z	4a HPA scale-down to 3	13	session-scaling-6964fc4fb-n5hbr	200	0.271337
+2026-11-10T08:26:40Z	4a HPA scale-down to 3	14	session-scaling-6964fc4fb-n5hbr	200	0.014772
+2026-11-10T08:26:40Z	4a HPA scale-down to 3	15	session-scaling-6964fc4fb-n5hbr	200	0.019456
+2026-11-10T08:26:41Z	4a HPA scale-down to 3	16	session-scaling-6964fc4fb-n5hbr	200	1.056811
+2026-11-10T08:26:41Z	4a HPA scale-down to 3	17	session-scaling-6964fc4fb-n5hbr	200	0.567840
+2026-11-10T08:26:43Z	4a HPA scale-down to 3	18	session-scaling-6964fc4fb-n5hbr	200	1.178304
+2026-11-10T08:26:43Z	4a HPA scale-down to 3	19	session-scaling-6964fc4fb-n5hbr	200	0.265177
+2026-11-10T08:26:43Z	4a HPA scale-down to 3	20	session-scaling-6964fc4fb-n5hbr	200	0.030455
+2026-11-10T08:26:44Z	4a HPA scale-down to 3	21	session-scaling-6964fc4fb-n5hbr	200	1.093172
+2026-11-10T08:26:45Z	4a HPA scale-down to 3	22	session-scaling-6964fc4fb-n5hbr	200	0.580245
+2026-11-10T08:26:46Z	4a HPA scale-down to 3	23	session-scaling-6964fc4fb-n5hbr	200	1.160950
+2026-11-10T08:26:46Z	4a HPA scale-down to 3	0	session-scaling-6964fc4fb-zdt9f	200	0.023589
+2026-11-10T08:26:47Z	4a HPA scale-down to 3	1	session-scaling-6964fc4fb-zdt9f	200	0.124875
+2026-11-10T08:26:47Z	4a HPA scale-down to 3	2	session-scaling-6964fc4fb-zdt9f	200	0.023276
+2026-11-10T08:26:47Z	4a HPA scale-down to 3	3	session-scaling-6964fc4fb-zdt9f	200	0.019645
+2026-11-10T08:26:47Z	4a HPA scale-down to 3	4	session-scaling-6964fc4fb-zdt9f	200	0.015470
+2026-11-10T08:26:47Z	4a HPA scale-down to 3	5	session-scaling-6964fc4fb-zdt9f	200	0.024377
+2026-11-10T08:26:47Z	4a HPA scale-down to 3	6	session-scaling-6964fc4fb-zdt9f	200	0.337501
+2026-11-10T08:26:47Z	4a HPA scale-down to 3	7	session-scaling-6964fc4fb-zdt9f	200	0.265941
+2026-11-10T08:26:48Z	4a HPA scale-down to 3	8	session-scaling-6964fc4fb-zdt9f	200	0.272828
+2026-11-10T08:26:48Z	4a HPA scale-down to 3	9	session-scaling-6964fc4fb-zdt9f	200	0.248794
+2026-11-10T08:26:49Z	4a HPA scale-down to 3	10	session-scaling-6964fc4fb-zdt9f	200	0.557606
+2026-11-10T08:26:49Z	4a HPA scale-down to 3	11	session-scaling-6964fc4fb-zdt9f	200	0.018269
+2026-11-10T08:26:49Z	4a HPA scale-down to 3	12	session-scaling-6964fc4fb-zdt9f	200	0.501580
+2026-11-10T08:26:49Z	4a HPA scale-down to 3	13	session-scaling-6964fc4fb-zdt9f	200	0.022181
+2026-11-10T08:26:50Z	4a HPA scale-down to 3	14	session-scaling-6964fc4fb-zdt9f	200	0.217807
+2026-11-10T08:26:50Z	4a HPA scale-down to 3	15	session-scaling-6964fc4fb-zdt9f	200	0.265912
+2026-11-10T08:26:50Z	4a HPA scale-down to 3	16	session-scaling-6964fc4fb-zdt9f	200	0.567323
+2026-11-10T08:26:52Z	4a HPA scale-down to 3	17	session-scaling-6964fc4fb-zdt9f	200	1.173745
+2026-11-10T08:26:52Z	4a HPA scale-down to 3	18	session-scaling-6964fc4fb-zdt9f	200	0.566918
+2026-11-10T08:26:52Z	4a HPA scale-down to 3	19	session-scaling-6964fc4fb-zdt9f	200	0.022523
+2026-11-10T08:26:53Z	4a HPA scale-down to 3	20	session-scaling-6964fc4fb-zdt9f	200	0.286618
+2026-11-10T08:26:53Z	4a HPA scale-down to 3	21	session-scaling-6964fc4fb-zdt9f	200	0.475859
+2026-11-10T08:26:54Z	4a HPA scale-down to 3	22	session-scaling-6964fc4fb-zdt9f	200	1.167717
+2026-11-10T08:26:55Z	4a HPA scale-down to 3	23	session-scaling-6964fc4fb-zdt9f	200	0.568542
+2026-11-10T08:27:26Z	4b HPA scale-down to 2	0	session-scaling-6964fc4fb-mppn2	200	0.014671
+2026-11-10T08:27:26Z	4b HPA scale-down to 2	1	session-scaling-6964fc4fb-mppn2	200	0.507836
+2026-11-10T08:27:27Z	4b HPA scale-down to 2	2	session-scaling-6964fc4fb-mppn2	200	0.348269
+2026-11-10T08:27:27Z	4b HPA scale-down to 2	3	session-scaling-6964fc4fb-mppn2	200	0.017652
+2026-11-10T08:27:27Z	4b HPA scale-down to 2	4	session-scaling-6964fc4fb-mppn2	200	0.496843
+2026-11-10T08:27:27Z	4b HPA scale-down to 2	5	session-scaling-6964fc4fb-mppn2	200	0.014861
+2026-11-10T08:27:28Z	4b HPA scale-down to 2	6	session-scaling-6964fc4fb-mppn2	200	0.569699
+2026-11-10T08:27:28Z	4b HPA scale-down to 2	7	session-scaling-6964fc4fb-mppn2	200	0.517160
+2026-11-10T08:27:29Z	4b HPA scale-down to 2	8	session-scaling-6964fc4fb-mppn2	200	0.577395
+2026-11-10T08:27:30Z	4b HPA scale-down to 2	9	session-scaling-6964fc4fb-mppn2	200	0.573258
+2026-11-10T08:27:30Z	4b HPA scale-down to 2	10	session-scaling-6964fc4fb-mppn2	200	0.012735
+2026-11-10T08:27:30Z	4b HPA scale-down to 2	11	session-scaling-6964fc4fb-mppn2	200	0.557912
+2026-11-10T08:27:30Z	4b HPA scale-down to 2	12	session-scaling-6964fc4fb-mppn2	200	0.014836
+2026-11-10T08:27:31Z	4b HPA scale-down to 2	13	session-scaling-6964fc4fb-mppn2	200	0.522552
+2026-11-10T08:27:32Z	4b HPA scale-down to 2	14	session-scaling-6964fc4fb-mppn2	200	0.558901
+2026-11-10T08:27:32Z	4b HPA scale-down to 2	15	session-scaling-6964fc4fb-mppn2	200	0.566335
+2026-11-10T08:27:32Z	4b HPA scale-down to 2	16	session-scaling-6964fc4fb-mppn2	200	0.015570
+2026-11-10T08:27:32Z	4b HPA scale-down to 2	17	session-scaling-6964fc4fb-mppn2	200	0.021514
+2026-11-10T08:27:32Z	4b HPA scale-down to 2	18	session-scaling-6964fc4fb-mppn2	200	0.022042
+2026-11-10T08:27:32Z	4b HPA scale-down to 2	19	session-scaling-6964fc4fb-mppn2	200	0.018153
+2026-11-10T08:27:33Z	4b HPA scale-down to 2	20	session-scaling-6964fc4fb-mppn2	200	0.390685
+2026-11-10T08:27:33Z	4b HPA scale-down to 2	21	session-scaling-6964fc4fb-mppn2	200	0.019065
+2026-11-10T08:27:33Z	4b HPA scale-down to 2	22	session-scaling-6964fc4fb-mppn2	200	0.011789
+2026-11-10T08:27:33Z	4b HPA scale-down to 2	23	session-scaling-6964fc4fb-mppn2	200	0.020619
+2026-11-10T08:27:34Z	4b HPA scale-down to 2	0	session-scaling-6964fc4fb-n5hbr	200	0.625729
+2026-11-10T08:27:34Z	4b HPA scale-down to 2	1	session-scaling-6964fc4fb-n5hbr	200	0.015972
+2026-11-10T08:27:34Z	4b HPA scale-down to 2	2	session-scaling-6964fc4fb-n5hbr	200	0.018873
+2026-11-10T08:27:35Z	4b HPA scale-down to 2	3	session-scaling-6964fc4fb-n5hbr	200	0.438856
+2026-11-10T08:27:35Z	4b HPA scale-down to 2	4	session-scaling-6964fc4fb-n5hbr	200	0.016206
+2026-11-10T08:27:35Z	4b HPA scale-down to 2	5	session-scaling-6964fc4fb-n5hbr	200	0.521365
+2026-11-10T08:27:35Z	4b HPA scale-down to 2	6	session-scaling-6964fc4fb-n5hbr	200	0.011526
+2026-11-10T08:27:35Z	4b HPA scale-down to 2	7	session-scaling-6964fc4fb-n5hbr	200	0.014058
+2026-11-10T08:27:35Z	4b HPA scale-down to 2	8	session-scaling-6964fc4fb-n5hbr	200	0.013887
+2026-11-10T08:27:35Z	4b HPA scale-down to 2	9	session-scaling-6964fc4fb-n5hbr	200	0.019209
+2026-11-10T08:27:36Z	4b HPA scale-down to 2	10	session-scaling-6964fc4fb-n5hbr	200	0.356584
+2026-11-10T08:27:36Z	4b HPA scale-down to 2	11	session-scaling-6964fc4fb-n5hbr	200	0.017386
+2026-11-10T08:27:37Z	4b HPA scale-down to 2	12	session-scaling-6964fc4fb-n5hbr	200	0.620922
+2026-11-10T08:27:37Z	4b HPA scale-down to 2	13	session-scaling-6964fc4fb-n5hbr	200	0.012313
+2026-11-10T08:27:37Z	4b HPA scale-down to 2	14	session-scaling-6964fc4fb-n5hbr	200	0.019631
+2026-11-10T08:27:37Z	4b HPA scale-down to 2	15	session-scaling-6964fc4fb-n5hbr	200	0.012829
+2026-11-10T08:27:37Z	4b HPA scale-down to 2	16	session-scaling-6964fc4fb-n5hbr	200	0.417979
+2026-11-10T08:27:38Z	4b HPA scale-down to 2	17	session-scaling-6964fc4fb-n5hbr	200	0.566573
+2026-11-10T08:27:38Z	4b HPA scale-down to 2	18	session-scaling-6964fc4fb-n5hbr	200	0.564926
+2026-11-10T08:27:39Z	4b HPA scale-down to 2	19	session-scaling-6964fc4fb-n5hbr	200	0.563661
+2026-11-10T08:27:39Z	4b HPA scale-down to 2	20	session-scaling-6964fc4fb-n5hbr	200	0.013148
+2026-11-10T08:27:40Z	4b HPA scale-down to 2	21	session-scaling-6964fc4fb-n5hbr	200	0.581866
+2026-11-10T08:27:40Z	4b HPA scale-down to 2	22	session-scaling-6964fc4fb-n5hbr	200	0.558540
+2026-11-10T08:27:41Z	4b HPA scale-down to 2	23	session-scaling-6964fc4fb-n5hbr	200	0.568409
+2026-11-10T08:28:01Z	5 pod deleted	0	session-scaling-6964fc4fb-mqsp7	200	0.031483
+2026-11-10T08:28:01Z	5 pod deleted	1	session-scaling-6964fc4fb-mqsp7	200	0.430508
+2026-11-10T08:28:02Z	5 pod deleted	2	session-scaling-6964fc4fb-mqsp7	200	0.557747
+2026-11-10T08:28:02Z	5 pod deleted	3	session-scaling-6964fc4fb-mqsp7	200	0.032134
+2026-11-10T08:28:03Z	5 pod deleted	4	session-scaling-6964fc4fb-mqsp7	200	0.476241
+2026-11-10T08:28:03Z	5 pod deleted	5	session-scaling-6964fc4fb-mqsp7	200	0.035254
+2026-11-10T08:28:03Z	5 pod deleted	6	session-scaling-6964fc4fb-mqsp7	200	0.478045
+2026-11-10T08:28:04Z	5 pod deleted	7	session-scaling-6964fc4fb-mqsp7	200	0.558392
+2026-11-10T08:28:04Z	5 pod deleted	8	session-scaling-6964fc4fb-mqsp7	200	0.576135
+2026-11-10T08:28:05Z	5 pod deleted	9	session-scaling-6964fc4fb-mqsp7	200	0.563611
+2026-11-10T08:28:05Z	5 pod deleted	10	session-scaling-6964fc4fb-mqsp7	200	0.020226
+2026-11-10T08:28:06Z	5 pod deleted	11	session-scaling-6964fc4fb-mqsp7	200	0.524794
+2026-11-10T08:28:06Z	5 pod deleted	12	session-scaling-6964fc4fb-mqsp7	200	0.563121
+2026-11-10T08:28:06Z	5 pod deleted	13	session-scaling-6964fc4fb-mqsp7	200	0.021911
+2026-11-10T08:28:07Z	5 pod deleted	14	session-scaling-6964fc4fb-mqsp7	200	0.516553
+2026-11-10T08:28:07Z	5 pod deleted	15	session-scaling-6964fc4fb-mqsp7	200	0.567832
+2026-11-10T08:28:08Z	5 pod deleted	16	session-scaling-6964fc4fb-mqsp7	200	0.559400
+2026-11-10T08:28:09Z	5 pod deleted	17	session-scaling-6964fc4fb-mqsp7	200	0.582148
+2026-11-10T08:28:09Z	5 pod deleted	18	session-scaling-6964fc4fb-mqsp7	200	0.039430
+2026-11-10T08:28:09Z	5 pod deleted	19	session-scaling-6964fc4fb-mqsp7	200	0.017972
+2026-11-10T08:28:09Z	5 pod deleted	20	session-scaling-6964fc4fb-mqsp7	200	0.032095
+2026-11-10T08:28:09Z	5 pod deleted	21	session-scaling-6964fc4fb-mqsp7	200	0.648765
+2026-11-10T08:28:10Z	5 pod deleted	22	session-scaling-6964fc4fb-mqsp7	200	0.563481
+2026-11-10T08:28:11Z	5 pod deleted	23	session-scaling-6964fc4fb-mqsp7	200	0.565865
+2026-11-10T08:28:12Z	5 pod deleted	0	session-scaling-6964fc4fb-n5hbr	200	0.733397
+2026-11-10T08:28:12Z	5 pod deleted	1	session-scaling-6964fc4fb-n5hbr	200	0.017359
+2026-11-10T08:28:12Z	5 pod deleted	2	session-scaling-6964fc4fb-n5hbr	200	0.024918
+2026-11-10T08:28:13Z	5 pod deleted	3	session-scaling-6964fc4fb-n5hbr	200	0.728272
+2026-11-10T08:28:13Z	5 pod deleted	4	session-scaling-6964fc4fb-n5hbr	200	0.021395
+2026-11-10T08:28:14Z	5 pod deleted	5	session-scaling-6964fc4fb-n5hbr	200	0.805276
+2026-11-10T08:28:14Z	5 pod deleted	6	session-scaling-6964fc4fb-n5hbr	200	0.014072
+2026-11-10T08:28:14Z	5 pod deleted	7	session-scaling-6964fc4fb-n5hbr	200	0.013098
+2026-11-10T08:28:14Z	5 pod deleted	8	session-scaling-6964fc4fb-n5hbr	200	0.022503
+2026-11-10T08:28:14Z	5 pod deleted	9	session-scaling-6964fc4fb-n5hbr	200	0.017767
+2026-11-10T08:28:15Z	5 pod deleted	10	session-scaling-6964fc4fb-n5hbr	200	0.686309
+2026-11-10T08:28:15Z	5 pod deleted	11	session-scaling-6964fc4fb-n5hbr	200	0.012629
+2026-11-10T08:28:15Z	5 pod deleted	12	session-scaling-6964fc4fb-n5hbr	200	0.014001
+2026-11-10T08:28:15Z	5 pod deleted	13	session-scaling-6964fc4fb-n5hbr	200	0.768936
+2026-11-10T08:28:15Z	5 pod deleted	14	session-scaling-6964fc4fb-n5hbr	200	0.018194
+2026-11-10T08:28:16Z	5 pod deleted	15	session-scaling-6964fc4fb-n5hbr	200	0.015538
+2026-11-10T08:28:16Z	5 pod deleted	16	session-scaling-6964fc4fb-n5hbr	200	0.016158
+2026-11-10T08:28:16Z	5 pod deleted	17	session-scaling-6964fc4fb-n5hbr	200	0.018144
+2026-11-10T08:28:16Z	5 pod deleted	18	session-scaling-6964fc4fb-n5hbr	200	0.658557
+2026-11-10T08:28:17Z	5 pod deleted	19	session-scaling-6964fc4fb-n5hbr	200	0.872894
+2026-11-10T08:28:18Z	5 pod deleted	20	session-scaling-6964fc4fb-n5hbr	200	0.874270
+2026-11-10T08:28:18Z	5 pod deleted	21	session-scaling-6964fc4fb-n5hbr	200	0.026229
+2026-11-10T08:28:18Z	5 pod deleted	22	session-scaling-6964fc4fb-n5hbr	200	0.011332
+2026-11-10T08:28:18Z	5 pod deleted	23	session-scaling-6964fc4fb-n5hbr	200	0.018853

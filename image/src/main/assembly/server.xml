@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The provisioned server with the application as an archive, for an installation without containers:
+  unpack it, set the environment variables, start bin/standalone.sh (Linux) or bin/standalone.bat
+  (Windows). It holds the same files as /opt/server in the image: the excludes below are those of the
+  first extra directory of the jib-maven-plugin in pom.xml, and the application and the software bill
+  of materials, which the image adds in layers of their own, are included.
+-->
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.2.0 https://maven.apache.org/xsd/assembly-2.2.0.xsd">
+  <id>server</id>
+  <formats>
+    <format>tar.gz</format>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>true</includeBaseDirectory>
+  <fileSets>
+    <fileSet>
+      <directory>${project.build.directory}/server</directory>
+      <outputDirectory>/</outputDirectory>
+      <excludes>
+        <exclude>.galleon/**</exclude>
+        <exclude>.installation/**</exclude>
+        <exclude>standalone/data/**</exclude>
+        <exclude>standalone/log/**</exclude>
+        <exclude>standalone/tmp/**</exclude>
+        <exclude>standalone/configuration/standalone_xml_history/**</exclude>
+        <exclude>standalone/deployments/**</exclude>
+        <exclude>bin/*.sh</exclude>
+      </excludes>
+    </fileSet>
+    <fileSet>
+      <!-- The start scripts for Linux stay executable, also in the zip -->
+      <directory>${project.build.directory}/server/bin</directory>
+      <outputDirectory>bin</outputDirectory>
+      <includes>
+        <include>*.sh</include>
+      </includes>
+      <fileMode>0755</fileMode>
+    </fileSet>
+  </fileSets>
+</assembly>

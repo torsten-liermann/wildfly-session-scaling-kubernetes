@@ -1,0 +1,120 @@
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /opt/server
+
+  JAVA: /opt/java/openjdk/bin/java
+
+  JAVA_OPTS:  @"/opt/server/bin/jdk.serialFilter" -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+
+=========================================================================
+
+2026-11-10 11:01:53,889 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+2026-11-10 11:01:55,097 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.6.Final
+2026-11-10 11:01:55,355 INFO  [org.jboss.as] (MSC service thread 1-4) WFLYSRV0049: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) starting
+2026-11-10 11:01:57,112 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.9.4.Final
+2026-11-10 11:01:57,822 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 8) WFLYCTL0028: Attribute 'statistics-enabled' in the resource at address '/subsystem=jgroups/channel=ee' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2026-11-10 11:01:58,076 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2026-11-10 11:01:58,116 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.8.16.Final
+2026-11-10 11:01:58,137 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.8.16.Final
+2026-11-10 11:01:58,333 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 21) WFLYHEALTH0001: Activating Base Health Subsystem
+2026-11-10 11:01:58,343 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 5.0.32.Final
+2026-11-10 11:01:58,347 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 26) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2026-11-10 11:01:58,347 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 23) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2026-11-10 11:01:58,350 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 22) WFLYCLINF0001: Activating Infinispan subsystem.
+2026-11-10 11:01:58,351 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 25) WFLYNAM0001: Activating Naming Subsystem
+2026-11-10 11:01:58,377 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 24) WFLYCLJG0001: Activating JGroups subsystem. JGroups version 5.5.8
+2026-11-10 11:01:58,414 INFO  [org.jboss.as.naming] (MSC service thread 1-5) WFLYNAM0003: Starting Naming Service
+2026-11-10 11:01:58,455 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0003: Undertow 2.4.4.Final starting
+2026-11-10 11:01:58,479 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 27) WFLYUT0112: The value 'require-host-http11' attribute in the '/subsystem=undertow/server=default-server/http-listener=default' resource is 'false', which will be ignored. The server now always enforces the RFC 9112 requirement that HTTP/1.1 request messages include a Host header.
+2026-11-10 11:01:58,551 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-6) WFLYELY00023: KeyStore file '/opt/server/standalone/configuration/application.keystore' does not exist. Used blank.
+2026-11-10 11:01:58,569 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0012: Started server default-server.
+2026-11-10 11:01:58,574 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) Queuing requests.
+2026-11-10 11:01:58,576 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0018: Host default-host starting
+2026-11-10 11:01:58,576 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-8) WFLYELY01084: KeyStore /opt/server/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+2026-11-10 11:01:58,649 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+2026-11-10 11:01:58,847 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
+2026-11-10 11:01:59,522 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-6) WFLYSRV0018: Deployment "deployment.ROOT.war" is using a private module ("org.infinispan.core") which may be changed or removed in future versions without notice.
+2026-11-10 11:01:59,591 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment ROOT.war
+2026-11-10 11:01:59,701 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-6) HV000001: Hibernate Validator 9.1.1.Final
+2026-11-10 11:02:00,135 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 35) WFLYCLJG0040: Configuration of channel ee does not guarantee message confidentiality between cluster members. Consider encrypting intra-cluster communication by configuring the channel transport with TLS or by adding the ASYM_ENCRYPT or SYM_ENCRYPT protocol to the protocol stack.
+2026-11-10 11:02:00,145 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 35) WFLYCLJG0039: Configuration of channel ee does not require member authentication. Consider blocking untrusted cluster members by requiring TLS client authentication on the channel transport or by adding the AUTH protocol to the protocol stack.
+2026-11-10 11:02:00,148 INFO  [org.jboss.weld.Version] (MSC service thread 1-2) WELD-000900: 6.0.4 (Final)
+2026-11-10 11:02:00,188 WARN  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 35) WFLYCLJG0031: Ignoring unrecognized TCP property: bundler.use_single_sender_thread
+2026-11-10 11:02:00,351 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 32) WFLYCLJG0032: Connecting 'ee' channel. 'wssk-diag-b' joining cluster 'ejb' via /172.31.250.12:7600
+2026-11-10 11:02:00,374 INFO  [org.jgroups.JChannel] (ServerService Thread Pool -- 32) local_addr: wssk-diag-b(v=16.2.3, r=rack-b), name: wssk-diag-b
+2026-11-10 11:02:00,404 INFO  [org.jgroups.protocols.FD_SOCK2] (ServerService Thread Pool -- 32) server listening on /172.31.250.12:7601
+2026-11-10 11:02:00,633 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 32) WFLYCLJG0033: Connected 'ee' channel. 'wssk-diag-b' joined cluster 'ejb' with view: [wssk-diag-a(v=16.2.3, r=rack-a)|1] (2) [wssk-diag-a(v=16.2.3, r=rack-a), wssk-diag-b(v=16.2.3, r=rack-b)]
+2026-11-10 11:02:01,289 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 35) ISPN000974: Virtual threads support: unavailable
+2026-11-10 11:02:02,001 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 34) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+2026-11-10 11:02:02,079 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 34) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T11:02:02.076794103Z
+2026-11-10 11:02:02,607 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 2
+2026-11-10 11:02:02,723 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t5) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 2
+2026-11-10 11:02:02,841 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T11:02:02.685379544Z and done 2026-11-10T11:02:02.840934761Z
+2026-11-10 11:02:03,117 INFO  [org.infinispan.CONTAINER] (blocking-thread--p3-t2) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2026-11-10 11:02:03,117 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=default-server] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 2
+2026-11-10 11:02:03,151 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t14) [Context=default-server] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 2
+2026-11-10 11:02:03,158 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 2
+2026-11-10 11:02:03,163 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p3-t3) WFLYCLINF0002: Started default-server cache from web container
+2026-11-10 11:02:03,169 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p3-t2) WFLYCLINF0002: Started ROOT.war cache from web container
+2026-11-10 11:02:03,202 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 2
+2026-11-10 11:02:03,231 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN000973: Task 'state-transfer-default-server' started at 2026-11-10T11:02:03.150600704Z and done 2026-11-10T11:02:03.231053869Z
+2026-11-10 11:02:03,255 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN000973: Task 'state-transfer-ROOT.war' started at 2026-11-10T11:02:03.198762462Z and done 2026-11-10T11:02:03.255385318Z
+2026-11-10 11:02:03,836 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 33) WFLYUT0021: Registered web context: '/' for server 'default-server'
+2026-11-10 11:02:03,858 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
+2026-11-10 11:02:03,917 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2026-11-10 11:02:03,955 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://0.0.0.0:9990/management
+2026-11-10 11:02:03,956 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0054: Admin console is not enabled
+2026-11-10 11:02:03,957 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) started in 10857ms - Started 341 of 430 services (231 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+2026-11-10 11:02:13,077 INFO  [org.infinispan.CLUSTER] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100000: Node wssk-diag-c1 joined the cluster
+2026-11-10 11:02:13,080 INFO  [org.infinispan.CLUSTER] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100000: Node wssk-diag-c1 joined the cluster
+2026-11-10 11:02:14,948 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c1], phase READ_OLD_WRITE_ALL, topology id 6
+2026-11-10 11:02:14,953 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t17) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c1], topology id 6
+2026-11-10 11:02:15,371 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=default-server] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c1], phase READ_OLD_WRITE_ALL, topology id 6
+2026-11-10 11:02:15,371 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c1], phase READ_OLD_WRITE_ALL, topology id 6
+2026-11-10 11:02:15,377 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t23) [Context=ROOT.war] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c1], topology id 6
+2026-11-10 11:02:15,388 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t24) [Context=default-server] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c1], topology id 6
+2026-11-10 11:02:34,461 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 11
+2026-11-10 11:02:34,478 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=default-server] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 11
+2026-11-10 11:02:34,480 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 11
+2026-11-10 11:02:34,486 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t22) [Context=default-server] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 11
+2026-11-10 11:02:34,503 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN000973: Task 'state-transfer-ROOT.war' started at 2026-11-10T11:02:34.479206778Z and done 2026-11-10T11:02:34.503301285Z
+2026-11-10 11:02:34,530 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 11
+2026-11-10 11:02:34,536 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t5) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 11
+2026-11-10 11:02:34,587 INFO  [org.infinispan.CLUSTER] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100001: Node wssk-diag-c1 left the cluster
+2026-11-10 11:02:34,588 INFO  [org.infinispan.CLUSTER] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100001: Node wssk-diag-c1 left the cluster
+2026-11-10 11:03:38,907 INFO  [org.infinispan.CLUSTER] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100000: Node wssk-diag-c2 joined the cluster
+2026-11-10 11:03:38,907 INFO  [org.infinispan.CLUSTER] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100000: Node wssk-diag-c2 joined the cluster
+2026-11-10 11:03:40,541 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], phase READ_OLD_WRITE_ALL, topology id 15
+2026-11-10 11:03:40,543 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t24) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], topology id 15
+2026-11-10 11:03:40,849 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=default-server] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], phase READ_OLD_WRITE_ALL, topology id 15
+2026-11-10 11:03:40,850 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t8) [Context=default-server] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], topology id 15
+2026-11-10 11:03:40,890 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], phase READ_OLD_WRITE_ALL, topology id 15
+2026-11-10 11:03:40,900 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c2], topology id 15
+2026-11-10 11:03:58,524 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 20
+2026-11-10 11:03:58,532 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 20
+2026-11-10 11:03:58,537 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=default-server] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 20
+2026-11-10 11:03:58,543 INFO  [org.infinispan.LIFECYCLE] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN000973: Task 'state-transfer-ROOT.war' started at 2026-11-10T11:03:58.531575332Z and done 2026-11-10T11:03:58.543826871Z
+2026-11-10 11:03:58,545 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t11) [Context=default-server] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 20
+2026-11-10 11:03:58,582 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 20
+2026-11-10 11:03:58,585 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t21) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 20
+2026-11-10 11:03:58,667 INFO  [org.infinispan.CLUSTER] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100001: Node wssk-diag-c2 left the cluster
+2026-11-10 11:03:58,667 INFO  [org.infinispan.CLUSTER] (thread-6,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100001: Node wssk-diag-c2 left the cluster
+2026-11-10 11:05:02,405 INFO  [org.infinispan.CLUSTER] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100000: Node wssk-diag-c3 joined the cluster
+2026-11-10 11:05:02,406 INFO  [org.infinispan.CLUSTER] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100000: Node wssk-diag-c3 joined the cluster
+2026-11-10 11:05:04,252 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c3], phase READ_OLD_WRITE_ALL, topology id 24
+2026-11-10 11:05:04,255 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t10) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c3], topology id 24
+2026-11-10 11:05:04,518 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=default-server] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c3], phase READ_OLD_WRITE_ALL, topology id 24
+2026-11-10 11:05:04,521 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t16) [Context=default-server] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c3], topology id 24
+2026-11-10 11:05:04,561 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c3], phase READ_OLD_WRITE_ALL, topology id 24
+2026-11-10 11:05:04,568 INFO  [org.infinispan.LIFECYCLE] (thread-7,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b, wssk-diag-c3], topology id 24
+2026-11-10 11:05:22,222 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 29
+2026-11-10 11:05:22,228 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 29
+2026-11-10 11:05:22,235 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=default-server] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 29
+2026-11-10 11:05:22,240 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t18) [Context=default-server] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 29
+2026-11-10 11:05:22,242 INFO  [org.infinispan.LIFECYCLE] (thread-11,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN000973: Task 'state-transfer-ROOT.war' started at 2026-11-10T11:05:22.227365414Z and done 2026-11-10T11:05:22.242611162Z
+2026-11-10 11:05:22,276 INFO  [org.infinispan.LIFECYCLE] (thread-8,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [wssk-diag-a, wssk-diag-b], phase READ_OLD_WRITE_ALL, topology id 29
+2026-11-10 11:05:22,280 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p2-t6) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [wssk-diag-a, wssk-diag-b], topology id 29
+2026-11-10 11:05:22,331 INFO  [org.infinispan.CLUSTER] (thread-11,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100001: Node wssk-diag-c3 left the cluster
+2026-11-10 11:05:22,332 INFO  [org.infinispan.CLUSTER] (thread-11,ejb,wssk-diag-b(v=16.2.3, r=rack-b)) ISPN100001: Node wssk-diag-c3 left the cluster

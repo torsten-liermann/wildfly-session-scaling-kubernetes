@@ -1,0 +1,6 @@
+# Appended to image/src/main/wildfly/configure-server.cli (commit a519536) for the diagnostic image only.
+# The demo image does not contain these lines. The defaults of the expressions are the values that
+# apply without them; the experiments override them with environment variables.
+/subsystem=jgroups/channel=ee:write-attribute(name=statistics-enabled, value=true)
+/subsystem=jgroups/stack=tcp/transport=TCP:write-attribute(name=properties, value={sock_conn_timeout="${env.DIAG_SOCK_CONN_TIMEOUT:300}", bundler_type="${env.DIAG_BUNDLER_TYPE:per-destination}", bundler.use_single_sender_thread="${env.DIAG_SINGLE_SENDER:true}"})
+/subsystem=jgroups/stack=tcp/protocol=UNICAST3:write-attribute(name=properties, value={conn_close_timeout="${env.DIAG_CONN_CLOSE_TIMEOUT:240000}"})

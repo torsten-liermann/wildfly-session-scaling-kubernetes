@@ -1,0 +1,12 @@
+2026-11-10T08:21:05Z node/k3d-session-scaling-agent-0 cordoned
+2026-11-10T08:21:05Z evicting pod session-scaling/session-scaling-6964fc4fb-nrf9n
+2026-11-10T08:21:05Z evicting pod session-scaling/session-scaling-6964fc4fb-l5hns
+2026-11-10T08:21:05Z error when evicting pods/"session-scaling-6964fc4fb-l5hns" -n "session-scaling" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+2026-11-10T08:21:10Z evicting pod session-scaling/session-scaling-6964fc4fb-l5hns
+2026-11-10T08:21:10Z error when evicting pods/"session-scaling-6964fc4fb-l5hns" -n "session-scaling" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+2026-11-10T08:21:15Z evicting pod session-scaling/session-scaling-6964fc4fb-l5hns
+2026-11-10T08:21:15Z error when evicting pods/"session-scaling-6964fc4fb-l5hns" -n "session-scaling" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+2026-11-10T08:21:17Z pod/session-scaling-6964fc4fb-nrf9n evicted
+2026-11-10T08:21:20Z evicting pod session-scaling/session-scaling-6964fc4fb-l5hns
+2026-11-10T08:21:32Z pod/session-scaling-6964fc4fb-l5hns evicted
+2026-11-10T08:21:32Z node/k3d-session-scaling-agent-0 drained

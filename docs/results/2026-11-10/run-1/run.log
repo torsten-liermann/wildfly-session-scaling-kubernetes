@@ -1,0 +1,75 @@
+08:17:34  creating k3d cluster session-scaling (rancher/k3s:v1.37.1-k3s1): 1 server, 3 agents, ingress on http://127.0.0.1:18080
+INFO[0000] portmapping '127.0.0.1:18080:80' targets the loadbalancer: defaulting to [servers:*:proxy agents:*:proxy] 
+INFO[0000] Prep: Network                                
+INFO[0000] Created network 'k3d-session-scaling'        
+INFO[0000] Created image volume k3d-session-scaling-images 
+INFO[0000] Starting new tools node...                   
+INFO[0000] Starting node 'k3d-session-scaling-tools'    
+INFO[0001] Creating node 'k3d-session-scaling-server-0' 
+INFO[0001] Creating node 'k3d-session-scaling-agent-0'  
+INFO[0001] Creating node 'k3d-session-scaling-agent-1'  
+INFO[0001] Creating node 'k3d-session-scaling-agent-2'  
+INFO[0001] Creating LoadBalancer 'k3d-session-scaling-serverlb' 
+INFO[0001] Using the k3d-tools node to gather environment information 
+INFO[0001] HostIP: using network gateway 172.20.0.1 address 
+INFO[0001] Starting cluster 'session-scaling'           
+INFO[0001] Starting servers...                          
+INFO[0002] Starting node 'k3d-session-scaling-server-0' 
+INFO[0010] Starting agents...                           
+INFO[0010] Starting node 'k3d-session-scaling-agent-1'  
+INFO[0010] Starting node 'k3d-session-scaling-agent-2'  
+INFO[0010] Starting node 'k3d-session-scaling-agent-0'  
+INFO[0015] Starting helpers...                          
+INFO[0016] Starting node 'k3d-session-scaling-serverlb' 
+INFO[0022] Injecting records for hostAliases (incl. host.k3d.internal) and for 5 network members into CoreDNS configmap... 
+INFO[0024] Cluster 'session-scaling' created successfully! 
+INFO[0024] You can now use it like this:                
+export KUBECONFIG=$(k3d kubeconfig write session-scaling)
+kubectl cluster-info
+08:18:40  importing wildfly-session-scaling:1.0.0-SNAPSHOT into the cluster
+INFO[0000] Importing image(s) into cluster 'session-scaling' 
+INFO[0000] Starting new tools node...                   
+INFO[0001] Starting node 'k3d-session-scaling-tools'    
+INFO[0001] Saving 1 image(s) from runtime...            
+INFO[0010] Importing images into nodes...               
+INFO[0010] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110091841.tar' into node 'k3d-session-scaling-server-0'... 
+INFO[0010] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110091841.tar' into node 'k3d-session-scaling-agent-2'... 
+INFO[0010] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110091841.tar' into node 'k3d-session-scaling-agent-1'... 
+INFO[0010] Importing images from tarball '/k3d/images/k3d-session-scaling-images-20261110091841.tar' into node 'k3d-session-scaling-agent-0'... 
+INFO[0027] Removing the tarball(s) from image volume... 
+INFO[0028] Removing k3d-tools node...                   
+INFO[0030] Successfully imported image(s)               
+INFO[0030] Successfully imported 1 image(s) into 1 cluster(s) 
+08:19:10  deploying k8s/
+namespace/session-scaling created
+service/session-scaling created
+service/session-scaling-discovery created
+deployment.apps/session-scaling created
+poddisruptionbudget.policy/session-scaling created
+horizontalpodautoscaler.autoscaling/session-scaling created
+ingress.networking.k8s.io/session-scaling created
+08:19:59  created 24 sessions through the ingress; creating replicas: 11×session-scaling-6964fc4fb-l5hns 13×session-scaling-6964fc4fb-mppn2 
+08:19:59  reading one more session through the ingress twice a second until the end (ingress-probe.tsv)
+08:20:06  1 two replicas: 2 replicas on 2 nodes [l5hns@session-scaling-agent-0 mppn2@session-scaling-agent-1], session reads 48/48 (slowest 0.152149s), owners on different nodes 128/128 segments, rack = node 2/2
+08:20:06  starting CPU load with 6 workers on /load
+08:20:27  HPA set the deployment to 4 replicas: session-scaling   Deployment/session-scaling   cpu: 235%/60%   2     4     2     76s
+08:20:50  load stopped; the scale-down stabilization window (300 s) starts
+08:21:03  2 HPA scale-up: 4 replicas on 3 nodes [l5hns@session-scaling-agent-0 mppn2@session-scaling-agent-1 nrf9n@session-scaling-agent-0 zdt9f@session-scaling-agent-2], session reads 96/96 (slowest 0.181950s), owners on different nodes 128/128 segments, rack = node 4/4
+08:21:04  draining k3d-session-scaling-agent-0 (session-scaling-6964fc4fb-l5hns session-scaling-6964fc4fb-nrf9n )
+08:21:32  drain finished: 3 evictions refused by the PodDisruptionBudget
+08:23:04  3 node drain: 4 replicas on 2 nodes [5zn6d@session-scaling-agent-1 mppn2@session-scaling-agent-1 n5hbr@session-scaling-agent-2 zdt9f@session-scaling-agent-2], session reads 96/96 (slowest 1.639804s), owners on different nodes 128/128 segments, rack = node 4/4
+08:23:04  waiting for the HPA to scale down (stabilization window, then one pod per minute)
+08:26:12  HPA set the deployment to 3 replicas
+08:26:56  4a HPA scale-down to 3: 3 replicas on 2 nodes [mppn2@session-scaling-agent-1 n5hbr@session-scaling-agent-2 zdt9f@session-scaling-agent-2], session reads 72/72 (slowest 1.217990s), owners on different nodes 128/128 segments, rack = node 3/3
+08:27:13  HPA set the deployment to 2 replicas
+08:27:41  4b HPA scale-down to 2: 2 replicas on 2 nodes [mppn2@session-scaling-agent-1 n5hbr@session-scaling-agent-2], session reads 48/48 (slowest 0.625729s), owners on different nodes 128/128 segments, rack = node 2/2
+08:27:42  deleting pod session-scaling-6964fc4fb-mppn2
+08:27:55  pod session-scaling-6964fc4fb-mppn2 gone after 13 s (terminationGracePeriodSeconds: 60)
+08:28:19  5 pod deleted: 2 replicas on 2 nodes [mqsp7@session-scaling-agent-0 n5hbr@session-scaling-agent-2], session reads 48/48 (slowest 0.874270s), owners on different nodes 128/128 segments, rack = node 2/2
+08:28:24  RESULT: PASSED, details in the run directory
+INFO[0000] Deleting cluster 'session-scaling'           
+INFO[0006] Deleting cluster network 'k3d-session-scaling' 
+INFO[0006] Deleting 1 attached volumes...               
+INFO[0006] Removing cluster details from default kubeconfig... 
+INFO[0006] Removing standalone kubeconfig file (if there is one)... 
+INFO[0006] Successfully deleted cluster session-scaling! 

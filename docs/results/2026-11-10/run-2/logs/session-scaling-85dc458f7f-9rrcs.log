@@ -1,0 +1,115 @@
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /opt/server
+
+  JAVA: /opt/java/openjdk/bin/java
+
+  JAVA_OPTS:  @"/opt/server/bin/jdk.serialFilter" -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+
+=========================================================================
+
+2026-11-10 12:38:57,250 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+2026-11-10 12:38:58,239 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.6.Final
+2026-11-10 12:38:58,441 INFO  [org.jboss.as] (MSC service thread 1-3) WFLYSRV0049: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) starting
+2026-11-10 12:38:59,636 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.9.4.Final
+2026-11-10 12:39:00,449 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2026-11-10 12:39:00,472 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.8.16.Final
+2026-11-10 12:39:00,482 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.8.16.Final
+2026-11-10 12:39:00,533 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 5.0.32.Final
+2026-11-10 12:39:00,541 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 26) WFLYHEALTH0001: Activating Base Health Subsystem
+2026-11-10 12:39:00,542 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 27) WFLYCLINF0001: Activating Infinispan subsystem.
+2026-11-10 12:39:00,543 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 34) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2026-11-10 12:39:00,557 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 33) WFLYNAM0001: Activating Naming Subsystem
+2026-11-10 12:39:00,567 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.22.Final)
+2026-11-10 12:39:00,580 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 32) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2026-11-10 12:39:00,581 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 28) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2026-11-10 12:39:00,628 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 30) WFLYCLJG0001: Activating JGroups subsystem. JGroups version 5.5.8
+2026-11-10 12:39:00,640 INFO  [org.jboss.as.naming] (MSC service thread 1-2) WFLYNAM0003: Starting Naming Service
+2026-11-10 12:39:00,665 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 22) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.7)
+2026-11-10 12:39:00,676 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0003: Undertow 2.4.4.Final starting
+2026-11-10 12:39:00,680 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0018: Started Driver service with driver-name = postgresql
+2026-11-10 12:39:00,748 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 35) WFLYUT0112: The value 'require-host-http11' attribute in the '/subsystem=undertow/server=default-server/http-listener=default' resource is 'false', which will be ignored. The server now always enforces the RFC 9112 requirement that HTTP/1.1 request messages include a Host header.
+2026-11-10 12:39:00,792 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-4) WFLYELY00023: KeyStore file '/opt/server/standalone/configuration/application.keystore' does not exist. Used blank.
+2026-11-10 12:39:00,814 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-4) WFLYELY01084: KeyStore /opt/server/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+2026-11-10 12:39:00,864 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2026-11-10 12:39:00,872 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) Queuing requests.
+2026-11-10 12:39:00,873 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0018: Host default-host starting
+2026-11-10 12:39:00,947 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+2026-11-10 12:39:01,112 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
+2026-11-10 12:39:01,191 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/PostgreSQLDS]
+2026-11-10 12:39:02,878 INFO  [org.jboss.as.jpa] (MSC service thread 1-8) WFLYJPA0002: Read persistence.xml for orders
+2026-11-10 12:39:02,989 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-5) WFLYSRV0018: Deployment "deployment.ROOT.war" is using a private module ("org.infinispan.core") which may be changed or removed in future versions without notice.
+2026-11-10 12:39:03,042 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV7020260: Second level cache enabled for ROOT.war#orders
+2026-11-10 12:39:03,107 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 45) WFLYCLJG0040: Configuration of channel ee does not guarantee message confidentiality between cluster members. Consider encrypting intra-cluster communication by configuring the channel transport with TLS or by adding the ASYM_ENCRYPT or SYM_ENCRYPT protocol to the protocol stack.
+2026-11-10 12:39:03,108 WARN  [org.wildfly.clustering.jgroups.config] (ServerService Thread Pool -- 45) WFLYCLJG0039: Configuration of channel ee does not require member authentication. Consider blocking untrusted cluster members by requiring TLS client authentication on the channel transport or by adding the AUTH protocol to the protocol stack.
+2026-11-10 12:39:03,163 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment ROOT.war
+2026-11-10 12:39:03,304 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-6) HV000001: Hibernate Validator 9.1.1.Final
+2026-11-10 12:39:03,336 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 38) WFLYCLJG0032: Connecting 'ee' channel. 'session-scaling-85dc458f7f-9rrcs' joining cluster 'ejb' via /10.42.2.5:7600
+2026-11-10 12:39:03,346 INFO  [org.jgroups.JChannel] (ServerService Thread Pool -- 38) local_addr: session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes), name: session-scaling-85dc458f7f-9rrcs
+2026-11-10 12:39:03,377 INFO  [org.jgroups.protocols.FD_SOCK2] (ServerService Thread Pool -- 38) server listening on /10.42.2.5:7601
+2026-11-10 12:39:03,531 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 38) WFLYCLJG0033: Connected 'ee' channel. 'session-scaling-85dc458f7f-9rrcs' joined cluster 'ejb' with view: [session-scaling-85dc458f7f-r6lfh(v=16.2.3, r=27 bytes)|6] (5) [session-scaling-85dc458f7f-r6lfh(v=16.2.3, r=27 bytes), session-scaling-85dc458f7f-9vkmt(v=16.2.3, r=27 bytes), session-scaling-85dc458f7f-z9hqv(v=16.2.3, r=27 bytes), session-scaling-85dc458f7f-j9qcg(v=16.2.3, r=27 bytes), session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)]
+2026-11-10 12:39:03,767 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV7020260: Second level cache enabled for ROOT.war#orders
+2026-11-10 12:39:04,115 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 44) ISPN000974: Virtual threads support: unavailable
+2026-11-10 12:39:04,266 INFO  [org.jboss.weld.Version] (MSC service thread 1-5) WELD-000900: 6.0.4 (Final)
+2026-11-10 12:39:04,703 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 43) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+2026-11-10 12:39:04,784 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 43) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T12:39:04.782928429Z
+2026-11-10 12:39:04,827 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 38) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+2026-11-10 12:39:04,856 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 38) ISPN000390: Persisted state, version=16.2.3 timestamp=2026-11-10T12:39:04.856123848Z
+2026-11-10 12:39:05,464 INFO  [org.infinispan.LIFECYCLE] (thread-9,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-85dc458f7f-r6lfh, session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], phase READ_OLD_WRITE_ALL, topology id 23
+2026-11-10 12:39:05,471 INFO  [org.infinispan.LIFECYCLE] (thread-10,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-85dc458f7f-r6lfh, session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], phase READ_OLD_WRITE_ALL, topology id 23
+2026-11-10 12:39:05,535 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t5) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-85dc458f7f-r6lfh, session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], topology id 23
+2026-11-10 12:39:05,536 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t5) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-85dc458f7f-r6lfh, session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], topology id 23
+2026-11-10 12:39:05,588 INFO  [org.infinispan.LIFECYCLE] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T12:39:05.510539699Z and done 2026-11-10T12:39:05.587957761Z
+2026-11-10 12:39:05,593 INFO  [org.infinispan.LIFECYCLE] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) ISPN000973: Task 'state-transfer-org.infinispan.CONFIG' started at 2026-11-10T12:39:05.512405229Z and done 2026-11-10T12:39:05.593546707Z
+2026-11-10 12:39:05,808 INFO  [org.infinispan.LIFECYCLE] (thread-13,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], phase READ_OLD_WRITE_ALL, topology id 28
+2026-11-10 12:39:05,836 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t11) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], topology id 28
+2026-11-10 12:39:05,860 INFO  [org.infinispan.LIFECYCLE] (thread-13,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], phase READ_OLD_WRITE_ALL, topology id 28
+2026-11-10 12:39:05,867 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t12) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], topology id 28
+2026-11-10 12:39:05,914 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 43) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'ROOT.war#orders'
+2026-11-10 12:39:05,937 INFO  [org.infinispan.CLUSTER] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-85dc458f7f-r6lfh left the cluster
+2026-11-10 12:39:05,939 INFO  [org.infinispan.CLUSTER] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-85dc458f7f-r6lfh left the cluster
+2026-11-10 12:39:05,942 INFO  [org.infinispan.CLUSTER] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-85dc458f7f-r6lfh left the cluster
+2026-11-10 12:39:05,943 INFO  [org.infinispan.CLUSTER] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) ISPN100001: Node session-scaling-85dc458f7f-r6lfh left the cluster
+2026-11-10 12:39:05,944 INFO  [org.hibernate.orm.jpa] (ServerService Thread Pool -- 43) HHH008540: Processing PersistenceUnitInfo [name: orders]
+2026-11-10 12:39:06,015 INFO  [org.infinispan.LIFECYCLE] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], phase READ_OLD_WRITE_ALL, topology id 30
+2026-11-10 12:39:06,031 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t20) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], topology id 30
+2026-11-10 12:39:06,030 INFO  [org.infinispan.LIFECYCLE] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=org.infinispan.CONFIG] ISPN100002: Starting rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], phase READ_OLD_WRITE_ALL, topology id 30
+2026-11-10 12:39:06,043 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p4-t19) [Context=org.infinispan.CONFIG] ISPN100010: Finished rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], topology id 30
+2026-11-10 12:39:06,076 INFO  [org.infinispan.CONTAINER] (blocking-thread--p5-t2) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2026-11-10 12:39:06,081 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p5-t3) WFLYCLINF0002: Started default-server cache from web container
+2026-11-10 12:39:06,083 INFO  [org.infinispan.LIFECYCLE] (thread-11,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=default-server] ISPN100002: Starting rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], phase READ_OLD_WRITE_ALL, topology id 28
+2026-11-10 12:39:06,086 INFO  [org.infinispan.LIFECYCLE] (non-blocking-thread--p3-t24) [Context=default-server] ISPN100010: Finished rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], topology id 28
+2026-11-10 12:39:06,136 INFO  [org.hibernate.orm.core] (ServerService Thread Pool -- 43) HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-10 12:39:06,147 INFO  [org.jboss.as.clustering.infinispan] (blocking-thread--p5-t2) WFLYCLINF0002: Started ROOT.war cache from web container
+2026-11-10 12:39:06,180 INFO  [org.infinispan.LIFECYCLE] (thread-14,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) ISPN000973: Task 'state-transfer-default-server' started at 2026-11-10T12:39:06.085979167Z and done 2026-11-10T12:39:06.180050237Z
+2026-11-10 12:39:06,209 INFO  [org.hibernate.orm.cache] (ServerService Thread Pool -- 43) HHH90001028: Second-level cache region factory [org.infinispan.hibernate.cache.v6.InfinispanRegionFactory]
+2026-11-10 12:39:06,281 INFO  [org.infinispan.LIFECYCLE] (thread-14,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100002: Starting rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], phase READ_OLD_WRITE_ALL, topology id 30
+2026-11-10 12:39:06,386 INFO  [org.infinispan.LIFECYCLE] (thread-14,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) [Context=ROOT.war] ISPN100010: Finished rebalance with members [session-scaling-85dc458f7f-9vkmt, session-scaling-85dc458f7f-z9hqv, session-scaling-85dc458f7f-j9qcg, session-scaling-85dc458f7f-9rrcs], topology id 30
+2026-11-10 12:39:06,425 INFO  [org.infinispan.LIFECYCLE] (thread-12,ejb,session-scaling-85dc458f7f-9rrcs(v=16.2.3, r=27 bytes)) ISPN000973: Task 'state-transfer-ROOT.war' started at 2026-11-10T12:39:06.365838357Z and done 2026-11-10T12:39:06.425285755Z
+2026-11-10 12:39:06,653 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 43) Envers integration enabled? : true
+2026-11-10 12:39:06,953 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 43) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'ROOT.war#orders'
+2026-11-10 12:39:07,042 INFO  [org.hibernate.orm.connections.pooling] (ServerService Thread Pool -- 43) HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: unknown/unknown
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	JDBC fetch size: undefined/unknown
+	Pool: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-10 12:39:07,969 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 43) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product cache from hibernate container
+2026-11-10 12:39:08,009 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 43) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product-pending-puts cache from hibernate container
+2026-11-10 12:39:08,010 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 43) WFLYCLINF0002: Started ROOT.war#orders.io.github.torstenliermann.sessionscaling.Product-pending-puts cache from hibernate container
+2026-11-10 12:39:13,168 INFO  [jakarta.enterprise.resource.webcontainer.faces.config] (ServerService Thread Pool -- 43) Initializing Mojarra 4.1.13 for context ''
+2026-11-10 12:39:14,005 INFO  [org.primefaces.webapp.PostConstructApplicationEventListener] (ServerService Thread Pool -- 43) Running on PrimeFaces 16.0.2
+2026-11-10 12:39:14,033 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 43) WFLYUT0021: Registered web context: '/' for server 'default-server'
+2026-11-10 12:39:14,059 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
+2026-11-10 12:39:14,124 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2026-11-10 12:39:14,161 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://0.0.0.0:9990/management
+2026-11-10 12:39:14,161 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0054: Admin console is not enabled
+2026-11-10 12:39:14,162 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 42.0.0.Final (WildFly Core 34.0.0.Final) started in 17503ms - Started 487 of 636 services (334 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community

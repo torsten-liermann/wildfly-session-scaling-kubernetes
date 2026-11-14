@@ -1,0 +1,11 @@
+date: 2026-11-10T08:17:34Z
+commit: d0258dd (added afterwards; this script version did not record it: the build in build.log finished at 08:17:33Z, d0258dd is the last commit before it, 08:16:50Z, and introduced the ingress probe that this run recorded)
+image: wildfly-session-scaling:1.0.0-SNAPSHOT sha256:fde4cb887e12f47ab9488952a922f54bb3b6862075e2f1c57e748d4925b97fbc
+k3s image: rancher/k3s:v1.37.1-k3s1
+docker: 29.9.2
+k3d version v5.9.0
+k3s version v1.35.5-k3s1 (default)
+Client Version: v1.37.1
+Server Version: v1.37.1+k3s1
+java: openjdk version "21.0.13" 2026-10-20 LTS
+server: WFLYSRV0025: WildFly 42.0.0.Final 

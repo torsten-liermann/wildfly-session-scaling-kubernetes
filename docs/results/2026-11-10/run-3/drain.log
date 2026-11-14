@@ -1,0 +1,16 @@
+2026-11-10T14:09:27.174Z node/k3d-session-scaling-agent-0 cordoned
+2026-11-10T14:09:27.184Z evicting pod session-scaling/session-scaling-85dc458f7f-vp2vc
+2026-11-10T14:09:27.189Z evicting pod session-scaling/session-scaling-85dc458f7f-nk6br
+2026-11-10T14:09:27.754Z error when evicting pods/"session-scaling-85dc458f7f-nk6br" -n "session-scaling" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+2026-11-10T14:09:32.762Z evicting pod session-scaling/session-scaling-85dc458f7f-nk6br
+2026-11-10T14:09:32.767Z error when evicting pods/"session-scaling-85dc458f7f-nk6br" -n "session-scaling" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+2026-11-10T14:09:37.782Z evicting pod session-scaling/session-scaling-85dc458f7f-nk6br
+2026-11-10T14:09:37.801Z error when evicting pods/"session-scaling-85dc458f7f-nk6br" -n "session-scaling" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+2026-11-10T14:09:39.239Z pod/session-scaling-85dc458f7f-vp2vc evicted
+2026-11-10T14:09:42.809Z evicting pod session-scaling/session-scaling-85dc458f7f-nk6br
+2026-11-10T14:09:42.817Z error when evicting pods/"session-scaling-85dc458f7f-nk6br" -n "session-scaling" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+2026-11-10T14:09:47.820Z evicting pod session-scaling/session-scaling-85dc458f7f-nk6br
+2026-11-10T14:09:47.830Z error when evicting pods/"session-scaling-85dc458f7f-nk6br" -n "session-scaling" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+2026-11-10T14:09:52.836Z evicting pod session-scaling/session-scaling-85dc458f7f-nk6br
+2026-11-10T14:10:04.860Z pod/session-scaling-85dc458f7f-nk6br evicted
+2026-11-10T14:10:04.865Z node/k3d-session-scaling-agent-0 drained
